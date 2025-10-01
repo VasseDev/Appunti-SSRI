@@ -1,0 +1,11 @@
+.DS_Store
+.obsidian/app.json
+.obsidian/appearance.json
+.obsidian/community-plugins.json
+.obsidian/core-plugins.json
+.obsidian/graph.json
+.obsidian/hotkeys.json
+.obsidian/plugins/numerals/main.js
+.obsidian/plugins/numerals/manifest.json
+.obsidian/plugins/numerals/styles.css
+.obsidian/workspace.json
