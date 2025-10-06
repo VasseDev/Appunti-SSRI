@@ -10,7 +10,7 @@ int main(int argc, char *argv[]) {
     int var3 = INT_MAX;
     int var4 = var3 + 1;
     
-    // stampo il valore var1
+    // stampo il valore var3
     printf("Il valore numerico di %d è %d.\n", var3, var4);
 
     var2 = var1 - 32;
