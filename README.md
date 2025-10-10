@@ -8,6 +8,10 @@ Questa repository contiene una raccolta di appunti, slide, esercizi e altro mate
 
 L'obiettivo di questa raccolta è quello di fornire un supporto allo studio, centralizzando le risorse e offrendo un punto di riferimento per tutti gli studenti del corso.
 
+- [📚 Struttura della Repository](README.md#📚%20Struttura%20della%20Repository)
+- [🤝 Come Contribuire](README.md#🤝%20Come%20Contribuire)
+- [⚠️ Disclaimer](README.md#⚠️%20Disclaimer)
+
 ---
 
 ## 📚 Struttura della Repository
