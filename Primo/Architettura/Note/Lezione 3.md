@@ -73,12 +73,69 @@ $XY$ è vera se e solo se $X$ è vera e $Y$ è vera
 $X+Y$ è vera se almeno una tra $X$ e $Y$ è vera
 ![Screenshot 2025-10-10 alle 11.20.17](../../../Immagini/Screenshot%202025-10-10%20alle%2011.20.17.png)
 
-> **ATTENZIONE** 
-> $1+1=1$ e **non** $1+1=10$ come nell'aritmetica binaria
+> **ATTENZIONE** > $1+1=1$ e **non** $1+1=10$ come nell'aritmetica binaria
 
 ### Porte logiche
 
 Sono circuiti di base che calcolano funzioni semplici.
 
-
 ![Screenshot 2025-10-10 alle 11.27.05](../../../Immagini/Screenshot%202025-10-10%20alle%2011.27.05.png)
+
+## Algebra booleana
+
+> Algebra delle variabili binarie e degli operatori logici.
+
+Un'espressione booleana è composta da:
+
+- variabili booleane e costanti 0,1
+- operatori logici
+- parentesi
+
+> Una funzione booleana è espressa con $Y=E$ dove $Y$ è una variabile booleana e $E$ un'espressione booleana.
+
+Se ho $n$ valori in input, la funzione booleana $Y$ è:
+
+- $Y:\{0,1\}^n\rightarrow\{0,1\}$ ($2^n$ possibili input)
+
+### Tabella di verità
+
+Una tabella di verità è composta da:
+
+- $n$ colonne che corrispondono alle variabili indipendenti (input)
+- una colonna che è la variabile dipendente (output)
+
+### Circuiti logici
+
+> Una funzione booleana può essere rappresentata anche con un circuito logico combinatorico composto da porte logiche collegate tra loro da fili.
+
+La rappresentazione con espressione algebrica non è unica:
+$$L=D\overline X+A=D\overline X+\overline DA+DA$$
+
+### Tecniche ottimizzazione
+
+![Screenshot 2025-10-10 alle 12.16.37](../../../Immagini/Screenshot%202025-10-10%20alle%2012.16.37.png)
+
+#### Leggi di De Morgan
+
+$$
+\overline{(X+Y)}=\overline X\cdot\overline Y
+$$
+
+$$
+\overline{(X\cdot Y)}=\overline X+\overline Y
+$$
+
+![Screenshot 2025-10-10 alle 12.37.26](../../../Immagini/Screenshot%202025-10-10%20alle%2012.37.26.png)
+
+#### Semplificazioni
+
+L'algebra booleana può essere utilizzata per semplificare un circuito digitale.
+**Esempio:**
+![Screenshot 2025-10-10 alle 12.40.12](../../../Immagini/Screenshot%202025-10-10%20alle%2012.40.12.png)
+##### Costo di un circuito
+- Numero di termini
+- Numero di letterali
+
+> **Esempio**
+> $$F=\overline XYZ+\overline XY\overline Z+XZ$$
+> 3 termini e 8 letterali
