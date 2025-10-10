@@ -2,13 +2,6 @@
 share: true
 ---
 ![Lezione2-1.pdf](../Slides/Lezione2-1.pdf)
-## Architettura di un elaboratore
-**Architettura di Von Neumann**:
-- CPU
-- Memoria centrale
-- Dispositivi di Input/Output
-- Bus di sistema
-![Screenshot 2025-09-30 alle 15.38.41](../../../Immagini/Screenshot%202025-09-30%20alle%2015.38.41.png)
 
 # Sintasi e Semantica
 > **Sintassi**

@@ -192,6 +192,14 @@ La memoria RAM è l'equivalente del nastro nella MdT
 
 > Avere programma, input, output sulla stessa memoria è un problema di sicurezza (overflow)
 
+## Architettura di un elaboratore
+**Architettura di Von Neumann**:
+- CPU
+- Memoria centrale
+- Dispositivi di Input/Output
+- Bus di sistema
+![Screenshot 2025-09-30 alle 15.38.41](../../../Immagini/Screenshot%202025-09-30%20alle%2015.38.41.png)
+
 ![LezioneSSRI-1 Esercizi.pdf](../Slides/LezioneSSRI-1%20Esercizi.pdf)
 
 # Esercizi
