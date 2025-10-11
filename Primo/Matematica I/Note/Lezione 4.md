@@ -34,17 +34,9 @@ Se invece l'insieme avesse solo un limite inferiore $x>1$ sarebbe illimitato in 
 
 ### Massimo e minimo
 
-> Un elemento $\overline x$ è un **massimo** per $E$ se: $$
-> \overline x\in E\space\land\space x\leq\overline x\space\forall\space x\in E
+> Un elemento $\overline x$ è un **massimo** per $E$ se: $$ \overline x\in E\space\land\space x\leq\overline x\space\forall\space x\in E $$
 
-$$
-
-> Un elemento $\overline x$ è un **minimo** per $E$ se: $$
-
-\overline x\in E\space\land\space x\geq\overline x\space\forall\space x\in E
-
-
-$$
+> Un elemento $\overline x$ è un **minimo** per $E$ se: $$ \overline x\in E\space\land\space x\geq\overline x\space\forall\space x\in E $$
 
 Nel caso dell'esempio di prima
 
@@ -251,4 +243,3 @@ ha due casi distinti:
 - $g(x)$ è negativo:
     - $f(x)\geq 0$
     - $g(x)< 0$
-
