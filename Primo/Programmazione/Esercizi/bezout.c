@@ -26,10 +26,13 @@ int main(int argc, char const *argv[])
 {
     int a, b, c, x, y, mcd, flag;
 
+    do
+    {
     printf("Inserire il primo numero dell'identità di Bezout: ");
     scanf("%d", &a);
     printf("Inserire il secondo numero dell'identità di Bezout: ");
     scanf("%d", &b);
+    } while (a == 0 && b == 0);
 
     mcd = euclide(a, b);
 
