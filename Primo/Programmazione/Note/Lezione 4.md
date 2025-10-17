@@ -12,7 +12,7 @@ share: true
 Ogni struttura di controllo ha un solo **pundo d'ingresso** e un solo **punto d'uscita**.
 
 > Si parla di blocco strutturato.
-> Il programma è una **sequenza di blocchi**. $\rightarrow$ Flusso tra blocchi.
+> Il programma è una **sequenza di blocchi** $\rightarrow$ Flusso tra blocchi.
 
 **Vantaggi**:
 
