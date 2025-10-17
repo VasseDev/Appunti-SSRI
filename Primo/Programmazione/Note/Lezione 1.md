@@ -29,6 +29,10 @@ Una **stringa** è una sequenza finita di simboli.
 **Concatenazione multipla** $\rightarrow$ $a^n$
 **Sottostringa**
 
+> **DOMANDA D'ESAME** 
+> _Cos'è la Kleene star?_
+> La Kleene star* indicata con il simbolo Σ* (Chiusura di Kleene) è l’insieme di tutte le possibili combinazioni di stringhe dell’alfabeto, compresa la combinazione vuota composta da nessun simbolo.
+
 ### I linguaggi
 
 Un **linguaggio formale** è un insieme di parole su un alfabeto.
@@ -57,6 +61,10 @@ Un linguaggio si dice **codice** quando:
 - nessuna parola è **prefisso** di un'altra parola
     > **Esempio** > $C=\{1,10\}$ è un codice
     > $C'=\{bab, aba, ab\}$ non è un codice
+
+> **DOMANDA D'ESAME** 
+> _Cos'è un codice?_
+> Un codice è il testo generato dal linguaggio e l’alfabeto. Un codice inoltre è univocamente interpretabile, perciò, esiste un unico modo per generare quel preciso termine. Un esempio è il seguente: Prendiamo il linguaggio (bab, aba, ab), quest’ultimo non è un codice perché il termine ababab può essere formato in due modi → aba+bab e ab+ab+ab, e quindi non univocamente interpretabile.
 
 ### Appartenenza a un linguaggio
 
@@ -139,6 +147,11 @@ Grafo dell'automa $\rightarrow$ definisce il linguaggio delle soluzioni
 - **Macchina di Mealy**: genera l'output sulla transizione di stato
 - **Macchina di Moore**: genera l'output in funzione dello stato
 
+> **DOMANDA D'ESAME** 
+> _Cosa sono la macchina di Mealy e di Moore?_
+> Una macchina di Mealy è un automa finito in cui l’output dipende sia dallo stato attuale sia dall’input corrente. L’output può cambiare immediatamente se cambia l’input, anche se lo stato non cambia.
+> La macchina di Moore\* è una macchina a stati i cui valori d’uscita dipendono solamente dallo stato corrente.
+
 ### La macchina di Turing
 
 La macchina di Turing anziché avere a che fare con insiemi finiti, lavora con memoria infinita, è dunque più potente dell'elaboratore moderno.
@@ -193,12 +206,14 @@ La memoria RAM è l'equivalente del nastro nella MdT
 > Avere programma, input, output sulla stessa memoria è un problema di sicurezza (overflow)
 
 ## Architettura di un elaboratore
+
 **Architettura di Von Neumann**:
+
 - CPU
 - Memoria centrale
 - Dispositivi di Input/Output
 - Bus di sistema
-![Screenshot 2025-09-30 alle 15.38.41](../../../Immagini/Screenshot%202025-09-30%20alle%2015.38.41.png)
+    ![Screenshot 2025-09-30 alle 15.38.41](../../../Immagini/Screenshot%202025-09-30%20alle%2015.38.41.png)
 
 ![LezioneSSRI-1 Esercizi.pdf](../Slides/LezioneSSRI-1%20Esercizi.pdf)
 
