@@ -86,7 +86,7 @@ int main(int argc, char const *argv[])
 
     mcd = euclide(a, b);
 
-    if (c % mcd != 0)
+    if (c % mcd != 0 || (a < c || b < c))
     {
         printf("Operazione non eseguibile\n");
         return 1;
