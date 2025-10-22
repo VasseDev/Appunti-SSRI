@@ -59,8 +59,9 @@ Un linguaggio si dice **codice** quando:
 - È **univocamente decifrabile**
 - Data una parola in L+ esiste un solo modo di ottenerla come prodotto di parole di L
 - nessuna parola è **prefisso** di un'altra parola
-    > **Esempio** > $C=\{1,10\}$ è un codice
-    > $C'=\{bab, aba, ab\}$ non è un codice
+> **Esempio** 
+> $C=\{1,10\}$ è un codice
+> $C'=\{bab, aba, ab\}$ non è un codice
 
 > **DOMANDA D'ESAME** 
 > _Cos'è un codice?_
@@ -87,7 +88,7 @@ Esistono due approcci per determinare se una parola è valida in un certo lingua
 > **Definizione**
 > È un modello matematico che dato un ingresso discreto dà un'uscita discreta.
 
-Un automa finito M su un alfabeto $\Sigma$ è una quintupla $<K, \Sigma, Delta, q_0, F>$
+Un automa finito $M$ su un alfabeto $\Sigma$ è una quintupla $<K, \Sigma, \delta, q_0, F>$
 
 - $K$ è un insieme finito e non vuoto di stati in cui si può trovare $M$
 - $\Sigma$ è un alfabeto finito di simboli in ingresso
@@ -128,7 +129,8 @@ Archi $\rightarrow$ transizioni
 Grafo dell'automa $\rightarrow$ definisce il linguaggio delle soluzioni
 
 - $x\in\{l,p,c,b\}^*$ | _iniziando in uno stato iniziale e seguendo gli archi definiti da x si arriva nello stato finale_
-    > **Il linguaggio è infinito**
+
+ > **Il linguaggio è infinito**
 
 ### Proprietà
 
@@ -150,7 +152,7 @@ Grafo dell'automa $\rightarrow$ definisce il linguaggio delle soluzioni
 > **DOMANDA D'ESAME** 
 > _Cosa sono la macchina di Mealy e di Moore?_
 > Una macchina di Mealy è un automa finito in cui l’output dipende sia dallo stato attuale sia dall’input corrente. L’output può cambiare immediatamente se cambia l’input, anche se lo stato non cambia.
-> La macchina di Moore\* è una macchina a stati i cui valori d’uscita dipendono solamente dallo stato corrente.
+> La macchina di Moore è una macchina a stati i cui valori d’uscita dipendono solamente dallo stato corrente.
 
 ### La macchina di Turing
 
@@ -165,7 +167,7 @@ Serve per calcolare:
 - complessità
 - equivalenza di algoritmi
 
-> La **Macchina di Turing** (MdT) è una macchina basata su un automa a stati finiti) avente **nastro potenzialmente infinito**.
+> La **Macchina di Turing** (MdT) è una macchina basata su un automa a stati finiti avente **nastro potenzialmente infinito**.
 
 - Automa $\rightarrow$ **dispositivo di controllo**
 - Nastro $\rightarrow$ **sequenza di celle**, sulla quale agisce una testina che può leggere e scrivere in ogni cella

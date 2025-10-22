@@ -1,7 +1,7 @@
 ---
 share: true
 ---
-
+![Architettura04](../Slides/Architettura04.pdf)
 # Forme canoniche
 
 > Le _forme canoniche_ sono particolari forme algebriche che facilitano la semplificazione delle espressioni.
@@ -105,4 +105,70 @@ La _SOP_ è anche detta _forma a due livelli_:
 - livello di AND
 
 ![Screenshot 2025-10-17 alle 11.34.18](../../../Immagini/Screenshot%202025-10-17%20alle%2011.34.18.png)
+
+### Semplificazione
+
+La complessità di un circuito dipende dalla complessità dell'espressione algebrica.
+
+> La tabella di verità è _unica_, ma possono esistere diverse espressioni corrispondenti:
+>
+> -   è necessario trovare la migliore
+> -   e trovare la metrica per valutare quale sia la migliore
+
+Esistono tre metodi per trovare la migliore espressione algebrica per una funzione booleana:
+
+1. **Equivalenze**
+2. **Mappe di Karnaugh (K-mappe)**
+3. **Sintesi logica**
+
+#### Mappe di Karnaugh
+
+> Una _mappa di Karnaugh_ è:
+>
+> -   una matrice le cui celle rappresentano i mintermini di $f$
+> -   equivalente ad una tabella di verità
+> -   una rappresentazione unica
+
+Le celle vicine corrispondono a _mintermini che hanno un solo letterale diverso_.
+
+- es. $\overline{A}BCD$ e $ABCD$ sono in celle vicine
+
+Ciò è utile poiché due mintermini in celle vicine _si possono unire in un solo prodotto che contiene solo i letterali uguali._
+
+- es. $\overline{A}BCD+ABCD=(\overline{A}+A)BCD=1\cdot BCD=BCD$
+
+##### K-Mappe a 2 variabili
+
+| X   | Y   | F   |
+| --- | --- | --- |
+| 0   | 0   | 0   |
+| 0   | 1   | 1   |
+| 1   | 0   | 2   |
+| 1   | 1   | 3   |
+
+| X\Y |  0  |  1  |
+|:---:|:---:|:---:|
+|  0  |  0  |  1  |
+|  1  |  2  |  3  |
+
+| X\Y |        0        |       1…        |
+|:---:|:---------------:|:---------------:|
+|  0  | $\overline{XY}$ | $\overline{X}Y$ |
+|  1  | $X\overline{Y}$ |      $XY$       |
+
+$$
+\overline{X}Y+XY=Y
+$$
+
+###### Esempio
+
+![Screenshot 2025-10-17 alle 12.23.32](../../../Immagini/Screenshot%202025-10-17%20alle%2012.23.32.png)
+
+##### K-Mappe a 3 variabili
+
+![Screenshot 2025-10-17 alle 12.33.54](../../../Immagini/Screenshot%202025-10-17%20alle%2012.33.54.png)
+
+##### K-Mappe a 4 variabili
+
+![Screenshot 2025-10-17 alle 13.47.51](../../../Immagini/Screenshot%202025-10-17%20alle%2013.47.51.png)
 
