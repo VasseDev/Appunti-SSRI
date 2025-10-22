@@ -2,15 +2,13 @@
 share: true
 ---
 
+```table-of-contents
+```
 # Sicurezza dei Sistemi e delle Reti Informatiche - Università degli Studi di Milano
 
 Questa repository contiene una raccolta di appunti, slide, esercizi e altro materiale utile per il corso di **Sicurezza dei Sistemi e delle Reti Informatiche**, tenuto presso l'Università degli Studi di Milano (Unimi).
 
 L'obiettivo di questa raccolta è quello di fornire un supporto allo studio, centralizzando le risorse e offrendo un punto di riferimento per tutti gli studenti del corso.
-
-- [📚 Struttura della Repository](README.md#📚%20Struttura%20della%20Repository)
-- [🤝 Come Contribuire](README.md#🤝%20Come%20Contribuire)
-- [⚠️ Disclaimer](README.md#⚠️%20Disclaimer)
 
 ---
 
@@ -22,6 +20,20 @@ Il materiale è organizzato in cartelle tematiche per facilitarne la consultazio
 - **`/Slides`**: Le slide ufficiali del corso, solitamente fornite dai docenti e organizzate per argomento o per lezione.
 - **`/Libri`**: Link e riferimenti a libri di testo consigliati, articoli scientifici e altre risorse online utili per approfondire gli argomenti trattati.
 - **`/Progetti`** (opzionale): Eventuali progetti o tesine sviluppate durante il corso, utili come esempio
+---
+## 🧩 Plugin Obsidian Consigliati
+
+Per visualizzare correttamente gli appunti e sfruttare tutte le funzionalità offerte, si consiglia di installare i seguenti **plugin Obsidian**:
+
+| Plugin                          | Descrizione                                                                                                                       | Link alla repository                                                                                                                |
+| :------------------------------ | :-------------------------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------- |
+| **Advanced Tables**             | Migliora la gestione e l’editing delle tabelle Markdown, aggiungendo allineamento automatico e formattazione dinamica.            | 🔗 [github.com/tgrosinger/advanced-tables-obsidian](https://github.com/tgrosinger/advanced-tables-obsidian)                         |
+| **Automatic Table of Contents** | Genera automaticamente un indice dei contenuti (table of contents) all’interno delle note, come quello usato in questo documento. | 🔗 [github.com/johansatge/obsidian-automatic-table-of-contents](https://github.com/johansatge/obsidian-automatic-table-of-contents) |
+| **Execute Code**                | Permette di eseguire blocchi di codice (Python, C, JavaScript, ecc.) direttamente all’interno delle note.                         | 🔗 [github.com/twibiral/obsidian-execute-code](https://github.com/twibiral/obsidian-execute-code)                                   |
+| **Numerals**                    | Visualizza e converte automaticamente numeri in vari formati (es. frazioni, numeri romani, notazioni scientifiche).               | 🔗 [github.com/gtg922r/obsidian-numerals](https://github.com/gtg922r/obsidian-numerals)                                             |
+| **Obsidian Functionplot**       | Consente di visualizzare grafici di funzioni matematiche all’interno delle note usando la libreria *function-plot*.               | 🔗 [github.com/leonhma/obsidian-functionplot](https://github.com/leonhma/obsidian-functionplot)                                     |
+
+👉 Tutti questi plugin possono essere installati direttamente da **Settings → Community Plugins → Browse** in Obsidian, oppure scaricati manualmente dalle rispettive repository GitHub.
 
 ---
 
