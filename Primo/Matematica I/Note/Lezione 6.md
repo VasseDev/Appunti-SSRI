@@ -393,39 +393,56 @@ $$
 > con parte reale nulla, sono detti immaginari puri, vivono sull'asse $y$.
 
 ## Somma
+
 $$
 (x+iy)+(x'+iy')=x+x'+i(y+y')
 $$
+
 ### Esempio
+
 $$
 (2+3i)+(-1-2i)=1+i
 $$
+
 ## Prodotto
+
 $$
 (x+iy)\cdot(x'+iy')=xx'+ixy'+iyx'+i^2yy'=xx'-yy'+i(xy'yx')
 $$
+
 ### Esempio
+
 $$
 (2+3i)\cdot(-1-2i)=-2-4i-3i-6i^2=4-7i
 $$
+
 ### Esercizio
+
 Scrivi in forma algebrica ($x+iy$)
+
 $$
 \frac{2-2i}{1+3i}
 $$
+
 $$
 =\frac{2-2i}{1+3i}\cdot\frac{1-3i}{1-3i}=\frac{2-6i-2i-6}{1-3i+3i+9}=\frac{-4-8i}{10}=-\frac{2}{5}-\frac{4}{5}i
 $$
+
 $$
 Re=-\frac{2}{5}\quad Im=-\frac{4}{5}
 $$
+
 ## Coniugato
+
 > Se $$z=x+iy$$
 > è un complesso, definiamo il suo coniugato $$\overline{z}=x-iy$$
 
 ## Modulo
+
 > Il modulo di $$z=x+iy$$
 > numero complesso è $$|z|=\sqrt{x^2+y^2}$$
 
 Il modulo di un numero complesso è sempre un numero reale $\geq 0$.
+
 ### Esempio
+
