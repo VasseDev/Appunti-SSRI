@@ -2,6 +2,7 @@
 share: true
 ---
 
+
 ```table-of-contents
 
 ```
@@ -50,11 +51,11 @@ g(x)=abs(sin(x))
 ```
 
 > **IMPORTANTE** $$\sqrt{x^2}=|x|$$
-> sempre positiva.
+> Sempre positiva.
 > $$\sqrt{x^2}=x$$
 > è errata. Infatti già non vale per
 > $$x=-3$$
-> che diventa
+> Che diventa
 > $$3=-3$$
 
 ## Equazioni
@@ -149,7 +150,7 @@ f(x)<0\\
 \end{cases}
 $$
 
-notare che
+Notare che
 
 $$
 |f(x)|=
@@ -171,7 +172,7 @@ $$
 f(x)\geq c\quad\lor\quad f(x)\leq -c
 $$
 
-oppure
+Oppure
 
 $$
 |f(x)|\leq c\quad\text{con}\quad c>0\quad\text{costante}
@@ -205,7 +206,7 @@ f(x)<0\\
 \end{cases}
 $$
 
-oppure
+Oppure
 
 $$
 |f(x)|\geq g(x)
@@ -327,13 +328,13 @@ $$
 x,y\in\mathbb{R}:\quad|x+y|\leq|x|+|y|
 $$
 
-perché?
+Perché?
 
 $$
 -|x|\leq x\leq|x|\quad-|y|\leq y\leq|y|
 $$
 
-sommo membro a membro
+Sommo membro a membro
 
 $$
 -|x|-|y|\leq x+y\leq|x|+|y|
@@ -343,7 +344,7 @@ $$
 -(|x|+|y|)\leq x+y\leq|x|+|y|
 $$
 
-equivalente a
+Equivalente a
 
 $$
 |x+y|\leq|x|+|y|
@@ -387,7 +388,7 @@ $$
 ![Screenshot 2025-10-22 alle 14.54.56](../../../Immagini/Screenshot%202025-10-22%20alle%2014.54.56.png)
 
 > Ogni reale $x$ è un numero complesso in questo modo: $$x+i0$$
-> cioè _i reali sono numeri complessi con parte immaginaria nulla_.
+> Cioè _i reali sono numeri complessi con parte immaginaria nulla_.
 
 > I complessi del tipo $$iy$$
 > con parte reale nulla, sono detti immaginari puri, vivono sull'asse $y$.
@@ -444,5 +445,569 @@ $$
 
 Il modulo di un numero complesso è sempre un numero reale $\geq 0$.
 
-### Esempio
+## Proposizione
 
+$$
+|z|^2=z\overline{z}
+$$
+
+Perché?
+
+$$
+z=x+iy
+$$
+
+$$
+z\overline{z}=(x+iy)(x-iy)=x^2-ixy+ixy+y^2=x^2+y^2=|z|^2
+$$
+
+> **Osservazione**
+> Se $$z=0$$
+> allora $$|z=0|$$
+> Vale anche viceversa.
+
+Perché?
+
+$$
+|z|=\sqrt{x^2+y^2}=0
+$$
+
+$$
+x^2+y^2\Rightarrow
+\begin{cases}
+x^2=0\\
+y^2=0
+\end{cases}
+\Rightarrow
+\begin{cases}
+x=0\\
+y=0
+\end{cases}
+\Rightarrow
+z=0+i0=0
+$$
+
+quindi $z=0$ è l'unico complesso che ha modulo nullo.
+
+## Proprietà
+
+1.  $$
+    \overline{z_1+z_2}=\overline{z_1}+\overline{z_2}
+    $$
+2.  $$
+    \overline{z_1\cdot z_2}=\overline{z_1}\cdot\overline{z_2}
+    $$
+3.  $$
+    \overline{\left(\frac{1}{z}\right)}=\frac{1}{z}
+    $$
+4.  $$
+    \overline{\overline{z}}=z
+    $$
+
+### Proprietà del modulo
+
+1
+
+$$
+|z|\geq0
+$$
+
+ed inoltre $|z|=0$ se e solo se $z=0$
+2
+
+$$
+|z_1\cdot z_2|=|z_1|\cdot|z_2|
+$$
+
+3
+
+$$
+|z|=|\overline{z}|
+$$
+
+4
+
+$$
+|z_1+z_2|\leq|z_1|+|z_2|
+$$
+
+(disuguaglianza triangolare)
+
+> **Osservazione** $$x\in\mathbb{R}=x+0i$$ > $|x|$ come numero reale
+> $|x|$ come numero complesso
+> Per i reali i due concetti sono uguali $$|x+0i|=\sqrt{x^2+0^2}=\sqrt{x^2}=|x|$$
+
+## Equazioni
+
+Reali:
+
+$$
+x\in\mathbb{R}:x^2+1=0
+$$
+
+$$
+S=\varnothing
+$$
+
+Complessi:
+
+$$
+z\in\mathbb{C}:z^2+1=0
+$$
+
+$$
+z=x+iy
+$$
+
+$$
+z^2=z\cdot z=(x+iy)^2=x^2+(iy)^2+2ixy=x^-y^2+2ixy
+$$
+
+$$
+z^2+1=0\longleftrightarrow x^2-y^2+2ixy+1=0\longleftrightarrow x^2-y^2+1+i(2xy)
+=0
+$$
+
+due numeri complessi sono uguali $\Leftrightarrow$ hanno stessa parte reale e immaginaria
+
+$$
+\begin{cases}
+x^2-y^2+1=0\\
+2xy=0
+\end{cases}
+$$
+
+$$
+2xy=0<
+\begin{align}
+x=0\\
+y=0
+\end{align}
+$$
+
+caso $x=0$: sostituisco nella prima equazione
+
+$$
+-y^2+1=0
+$$
+
+$$
+y_{1,2}=\pm\sqrt{1}=\pm1
+$$
+
+$$
+z_{1,2}=\pm i
+$$
+
+caso $y=0$: sostituisco nella prima equazione
+
+$$
+x^2-0^2+1=0
+$$
+
+$$
+x^2=-1
+$$
+
+$$
+\nexists\space x\in\mathbb{R}
+$$
+
+### Esercizi
+
+1.  $$
+    z^2+iIm(z)+2\overline{z}=0
+    $$
+    $$
+    z=x+iy
+    $$
+    $$
+    z^2=x^2+2ixy+(iy)^2=x^2-y^2+2ixy
+    $$
+    $$
+    Im(z)=y
+    $$
+    $$
+    \overline{z}=x-iy
+    $$
+    $$
+    x^2-y^2+i(2xy)+iy+2x-2iy=0\leftrightarrow x^2-y^2+2x+i(2xy+y-2y)=0
+    $$
+    $$
+    \begin{cases}
+    x^2-y^2+2x=0\\
+    2xy-y=0
+    \end{cases}
+    \quad
+    \begin{cases}
+    x^2-y^2+2x=0\\
+    y(2x-1)=0
+    \end{cases}
+    $$
+    $$
+    y(2x-1)=0<
+    \begin{align}
+    y=0\\
+    x=1/2
+    \end{align}
+    $$
+    caso $y=0$:
+    $$
+    x^2+2x=0\leftrightarrow x(x+2)=0<
+    \begin{align}
+    x=0\\
+    x=-2
+    \end{align}
+    $$
+    $$
+    z_1=0+0i=0\quad z_2=-2+0i=-2
+    $$
+    caso $x=1/2$:
+    $$
+    \frac{1}{4}-y^2+1=0\leftrightarrow y^2=\frac{5}{4}\leftrightarrow y=\pm\frac{\sqrt{5}}{2}
+    $$
+    $$
+    z_3=\frac{1}{2}+\frac{\sqrt{5}}{2}i\quad z_3=\frac{1}{2}-\frac{\sqrt{5}}{2}i
+    $$
+2.  $$
+    iRe(z)+z^2=|z|^2+1
+    $$
+    $$
+    ix+x^2-y^2+i(2xy)=x^2+y^2+1
+    $$
+    $$
+    -2y^2-1+i(x+2xy)=0
+    $$
+    $$
+    \begin{cases}
+    -2y^2-1=0\\
+    x+2xy=0
+    \end{cases}
+    \begin{cases}
+    *\\
+    x(1+2y)=0
+    \end{cases}
+    $$
+    $$
+    x(1+2y)=0<
+    \begin{align}
+    x=0\\
+    y=-1/2
+    \end{align}
+    $$
+    caso $x=0$:
+    $$
+    z=0
+    $$
+    caso $y=-1/2$:
+    $$
+    -2\left(\frac{1}{4}\right)-1=0\leftrightarrow -\frac{1}{2}-1=0\leftrightarrow -\frac{3}{4}=0
+    $$
+    $$
+    \nexists\space y\in\mathbb{R}
+    $$
+3.  $$
+    z^2+\overline{z}=0
+    $$
+    $$
+    x^2-y^2+i(2xy)+x-iy=0\leftrightarrow x^2-y^2+x+i(2xy-y)=0
+    $$
+    $$
+    \begin{cases}
+    x^2-y^2+x=0\\
+    2xy-y=0
+    \end{cases}
+    \quad
+    \begin{cases}
+    *\\
+    y(2x-1)=0
+    \end{cases}
+    $$
+    $$
+    y(2x-1)=0<
+    \begin{align}
+    y=0\\
+    x=1/2
+    \end{align}
+    $$
+
+caso $y=0$:
+
+$$
+x^2-0+x=0\leftrightarrow x^2+x=0\leftrightarrow x(x+1)=0<
+\begin{align}
+x=0\\
+x=-1
+\end{align}
+$$
+
+$$
+z_1=0+0i=0\quad z_2=-1+0i=-1
+$$
+
+caso $x=1/2$:
+
+$$
+\frac{1}{4}-y^2+\frac{1}{2}=0\leftrightarrow y^2=\frac{3}{4}\leftrightarrow y=\pm\frac{\sqrt{3}}{2}
+$$
+
+$$
+z_3=\frac{\sqrt{3}}{2}i\quad z_4=-\frac{\sqrt{3}}{2}
+$$
+
+4.  $$
+    \frac{1+i}{\sqrt{3}+i}\space\text{scrivere in forma algebrica}
+    $$
+    $$
+    \frac{1+i}{\sqrt{3}+i}\cdot\frac{\sqrt{3}-i}{\sqrt{3}-i}0=\frac{(1+i)(\sqrt{3}-i)}{3+1}=\frac{\sqrt{3}-i+i\sqrt{3}+1}{4}=\frac{\sqrt{3}+1-i(1+\sqrt{3})}{4}=\frac{\sqrt{3+1}}{4}-i\frac{1+\sqrt{3}}{4}
+    $$
+
+# Trigonometria
+
+> $\cos x$ = proiezione lungo l'asse $x$ > $\sin x$ = proiezione lungo l'asse $y$
+
+$$
+P=(\cos x,\sin x)
+$$
+
+Vive sulla circonferenza $x^2+y^2=1$
+
+$$
+\Rightarrow\cos^2x+\sin^2x=1
+$$
+
+Relazione fondamentale della trigonometria.
+
+> **Notazione** > $$\cos^2x=(\cos x)^2$$ > $$sin^2x=(sin x)^2$$
+
+$\cos x$ e $\sin x$ sono funzioni periodiche di periodo $2\pi$.
+
+$$
+\sin(x+2\pi)=\sin x
+$$
+
+$$
+\cos(x+2\pi)=\cos x
+$$
+
+## Valori fondamentali
+
+$$
+\sin 0=0\quad \cos 0=0
+$$
+
+$$
+\sin(\pi/2)=1\quad\cos(\pi/2)=0
+$$
+
+$$
+\sin(\pi)=0\quad\cos(\pi)=-1
+$$
+
+$$
+\sin\left(\frac{3}{2}\pi\right)=-1\quad\cos\left(\frac{3}{2}\pi\right)=0
+$$
+
+## Grafici
+
+$$
+y=\sin x
+$$
+
+```functionplot
+---
+title:
+xLabel:
+yLabel:
+bounds: [-10,10,-10,10]
+disableZoom: true
+grid: false
+---
+f(x)=sin(x)
+```
+
+$$
+y=\cos x
+$$
+
+```functionplot
+---
+title:
+xLabel:
+yLabel:
+bounds: [-10,10,-10,10]
+disableZoom: true
+grid: false
+---
+f(x)=cos(x)
+```
+
+## Funzioni limitate
+
+$$
+-1\leq\sin x\leq 1
+$$
+
+$$
+-1\leq\cos x\leq1
+$$
+
+$$
+\forall\space x\in\mathbb{R}
+$$
+
+## Equazione
+
+$$
+\sin x=\frac{1}{2}
+$$
+
+$$
+x=\frac{\pi}{6}
+$$
+
+Le soluzioni sono
+
+$$
+\frac{\pi}{6}+2k\pi\quad k\in\mathbb{Z}
+$$
+
+$$
+\pi-x=\pi-\frac{\pi}{6}=\frac{5}{6}\pi
+$$
+
+$$
+\frac{5}{6}\pi+2k\pi\quad k\in\mathbb{Z}
+$$
+
+### Esercizio
+
+$$
+	2\sin^2x=3\cos x
+$$
+
+$$
+2(1-\cos^2x)=3\cos x
+$$
+
+$$
+2-2\cos^2x-3\cos x=0
+$$
+
+$$
+-2\cos^2x-3\cos x+2=0
+$$
+
+$$
+y=\cos x
+$$
+
+$$
+-2y^2-3y+2=0
+$$
+
+$$
+2y^2+3y-2=0
+$$
+
+$$
+y_{1,2}=\frac{-3\pm\sqrt{9+16}}{4}=\frac{-3\pm5}{4}<
+\begin{align}
+1/2\\
+-2
+\end{align}
+$$
+
+$$
+y_1=\cos{\frac{1}{2}}=\pm\frac{\pi}{3}+2k\pi,\quad k\in\mathbb{Z}
+$$
+
+$$
+y_2=\cos(-2)\rightarrow\text{non ha soluzioni perché}\space -1\leq\cos x\leq1
+$$
+
+## Tangente
+
+$$
+\tan x=\frac{\sin x}{\cos x}\quad\text{per definizione}
+$$
+
+- La $\tan x$ non è definita in $\pi/2+k\pi$
+- È periodica di periodo $\pi\rightarrow\tan(x+\pi)=\tan(x)$
+- Non è una funzione limitata
+
+### Grafico
+
+```functionplot
+---
+title:
+xLabel:
+yLabel:
+bounds: [-10,10,-10,10]
+disableZoom: true
+grid: false
+---
+f(x)=tan(x)
+h(x)=100000000*(x-(3.14/2))
+h(x)=100000000*(x+(3.14/2))
+h(x)=100000000*(x-(3/2)(3.14))
+h(x)=100000000*(x+(3/2)(3.14))
+h(x)=100000000*(x-(5/2)(3.14))
+h(x)=100000000*(x+(5/2)(3.14))
+```
+
+## Cotangente
+
+$$
+\cot(x)=\frac{\cos(x)}{\sin(x)}
+$$
+
+$\cot(x)$ non è definita quando $sin(x)=0$, ovvero $x=k\pi\quad k\in\mathbb{Z}$
+
+### Esercizio
+
+1.  Calcolare
+    $$
+    \sin(x)=\sqrt{3}\cos(x)
+    $$
+        Divido per $\cos(x)$ quando è $\neq0$.
+        Quindi prima discuto cosa succede quando $\cos(x)=0$
+        $$
+        \cos(x)\Rightarrow x=\frac{\pi}{2}+k\pi
+        $$
+        non sono soluzioni dell'equazione, infatti
+        $$
+        \sin\left(\frac{\pi}{2}+k\pi\right)=\sqrt{3}\cos\left(\frac{\pi}{2}+k\pi\right)\rightarrow\pm1=0
+        $$
+
+```functionplot
+---
+title:
+xLabel:
+yLabel:
+bounds: [-10,10,-10,10]
+disableZoom: true
+grid: false
+---
+f(x)=sqrt(3)cos(x)-sin(x)
+```
+
+$$
+\frac{\sin(x)}{\cos(x)}=\sqrt{3}
+$$
+
+$$
+\tan(x)=\sqrt{3}
+$$
+
+$$
+x=\frac{\pi}{3}\pm k\pi\quad k\in\mathbb{Z}
+$$
+
+2.  Calcolare $\cos(x)$ sapendo che
+    $$
+    \sin(x)=\frac{5}{13}\quad\text{e}\quad\frac{\pi}{2}<\alpha<\pi
+    $$
+    $$
+    \cos(x)=\pm\sqrt{1-\sin^2(x)}\rightarrow\cos(x)=\pm\sqrt{1-\frac{25}{169}}=\pm\sqrt{\frac{144}{169}}=\pm\frac{12}{13}
+    $$
