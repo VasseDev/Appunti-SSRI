@@ -17,9 +17,11 @@ Due tipi:
 
 > **Mintermine** (m)
 > _Prodotto delle n_ variabili dove ciascuna variabile può apparire negata o non.
+> Esempio: $XYZ\quad X\overline{Y}Z\quad\overline{X}Y\overline{Z}$
 
 > **Maxtermine** (M)
 > _Somma delle n_ variabili dove ciascuna variabile può apparire negata o non.
+> Esempio: $X+Y+Z\quad X+\overline{Y}+\overline{Z}\quad X+\overline{Y}+Z$
 
 Esistono $2^n$ possibili mintermini e $2^n$ possibili maxtermini.
 
