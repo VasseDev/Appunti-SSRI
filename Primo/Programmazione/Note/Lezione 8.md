@@ -7,7 +7,8 @@ share: true
 
 # Funzioni
 
-> **Definizione astratta** > _Un programma computa una funzione che mappa input nell'output._
+> **Definizione astratta** 
+> _Un programma computa una funzione che mappa input nell'output._
 
 Nel **concreto** il programma è la funzione `main()`.
 
@@ -190,7 +191,64 @@ Si usa l'approccio **Top Down** per scomporre il macro problema in problemi più
 
 ![Screenshot 2025-10-30 alle 12.29.25](../../../Immagini/Screenshot%202025-10-30%20alle%2012.29.25.png)
 
+## Call and return
+
+Le funzioni (o procedure) sono ambiti di esecuzione separati $\rightarrow$ viene scatenata una serie di eventi:
+
+- avviene un salto nell'esecuzione della funzione chiamante
+- viene sospesa l'esecuzione della funzione chiamante
+- avviene un salto indietro quando la funzione chiamata termina
+
+![Screenshot 2025-10-30 alle 13.29.58](../../../Immagini/Screenshot%202025-10-30%20alle%2013.29.58.png)
+
+### Stack
+
+> Lo _stack_ è una struttura di supporto (segmento di memoria) che memorizza l'indirizzo di ritorno dopo la chiamata, i parametri passati e utilizzati da procedure o funzioni.
+
+È una struttura dati astratta che agisce come una _pila_ (LIFO).
+
+![Screenshot 2025-10-30 alle 13.33.49](../../../Immagini/Screenshot%202025-10-30%20alle%2013.33.49.png)
+
+#### Record di attivazione
+
+> L'insieme degli oggetti che vengono caricati nello stack ad ogni chiamata si chiama _record di attivazione_.
+
+Ogni esecuzione di sottoprogramma ha il suo _record di attivazione_.
+
+- Anche il main ha un record di attivazione.
+
+**Esempio**
+
+```c
+void Prima (int a){
+	int b;
+}
+
+void **Seconda**(double c){
+}
+
+int main{
+	int num=100;
+	Prima(10);
+	Seconda(num);
+}
+```
+
+![Screenshot 2025-10-30 alle 13.45.29](../../../Immagini/Screenshot%202025-10-30%20alle%2013.45.29.png)
+
+> Quando la funzione termina, lo spazio viene deallocato e il valore di ritorno ritornato.
+> L'indirizzo di ritorno viene usato per tornare al chiamante.
+
+> **N.B.**
+> Il programmatore non può manipolare lo stack.
+
 # Tipizzazione
+
+I tipi associati alle variabili si estendono alle espressioni:
+
+- _overload:_ significati diversi a seconda del contesto;
+- _coercion:_ promozioni automatiche a tipi differenti per risolvere conflitti
+- _polimorfismo:_ una funzione polimorfica ha un tipo parametrico o generico
 
 > **Tipizzazione**
 > regole che un linguaggio impone circa la tipizzazione dei dati
@@ -262,3 +320,4 @@ In C l'indirizzo di una variabile viene gestito come un tipo particolare che si 
 ## Ritorni di funzioni
 
 > Posso ottenere _solo un valore di ritorno_ e uno solo.
+
