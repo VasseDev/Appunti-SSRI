@@ -139,3 +139,44 @@ L'algebra booleana può essere utilizzata per semplificare un circuito digitale.
 > **Esempio**
 > $$F=\overline XYZ+\overline XY\overline Z+XZ$$
 > 3 termini e 8 letterali
+
+
+# Esercizi
+## Esercizio 1
+### Parte 1
+Costruire la tabella di verità e il circuito logico per la funzione:
+$$
+F=\overline{XY}+\overline{Z}
+$$
+
+|  x  |  y  |  Z  | XY  | $\overline{XY}$ | $\overline Z$ | $\overline{XY}+\overline{Z}$ |
+|:---:|:---:|:---:|:---:|:---------------:|:-------------:|:----------------------------:|
+|  0  |  0  |  0  |  0  |        1        |       1       |              1               |
+|  0  |  0  |  1  |  0  |        1        |       0       |              1               |
+|  0  |  1  |  0  |  0  |        1        |       1       |              1               |
+|  0  |  1  |  1  |  0  |        1        |       0       |              1               |
+|  1  |  0  |  0  |  0  |        1        |       1       |              1               |
+|  1  |  0  |  1  |  0  |        1        |       0       |              1               |
+|  1  |  1  |  0  |  1  |        0        |       1       |              1               |
+|  1  |  1  |  1  |  1  |        0        |       0       |              0               |
+
+![Screenshot 2025-10-30 alle 16.28.38](../../../Immagini/Screenshot%202025-10-30%20alle%2016.28.38.png)
+
+### Parte 2
+
+$$
+F=X(Y+\overline{Z})
+$$
+
+|  X  |  Y  |  Z  | $\overline{Z}$ | Y+$\overline Z$ | $X(Y+\overline{Z})$ |
+| :-: | :-: | :-: | :------------: | :-------------: | :-----------------: |
+|  0  |  0  |  0  |       1        |        1        |          0          |
+|  0  |  0  |  1  |       0        |        0        |          0          |
+|  0  |  1  |  0  |       1        |        1        |          0          |
+|  0  |  1  |  1  |       0        |        1        |          0          |
+|  1  |  0  |  0  |       1        |        1        |          1          |
+|  1  |  0  |  1  |       0        |        0        |          0          |
+|  1  |  1  |  0  |       1        |        1        |          1          |
+|  1  |  1  |  1  |       0        |        1        |          1          |
+
+![Screenshot 2025-10-30 alle 16.43.54](../../../Immagini/Screenshot%202025-10-30%20alle%2016.43.54.png)
