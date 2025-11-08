@@ -101,11 +101,37 @@ $$
 \forall a,b\in\mathbb{Z} : -(a\cdot b) = (-a)\cdot b = a \cdot (-b)  
 $$  
   
-3. Legge di cancellazione  
+4. Legge di cancellazione del prodotto  
   
 $$  
-  
+\forall a,b,c\in\mathbb{Z} : a\cdot c = b\cdot c \text{ e } c \neq 0 \Rightarrow a=b  
 $$  
+  
+4. Se $a\dot b=0$ allora $a=0$ oppure $b=0$.  
+  
+**Dimostriamo la legge di cancellazione**  
+  
+Sappiamo che:  
+$$  
+a\cdot c = b\cdot c  
+$$  
+Sottraendo $b\cdot c$ da entrambi i membri otteniamo:  
+$$  
+a\cdot c - b\cdot c = 0  
+$$  
+Applicando la proprietà distributiva otteniamo:  
+$$  
+(a - b)\cdot c = 0  
+$$  
+Essendo $c \neq 0$, per la proprietà dell'annullamento del prodotto, deve essere:  
+$$  
+a - b = 0  
+$$  
+Da cui segue che:  
+$$  
+a = b  
+$$  
+## Divisibilità in $\mathbb{Z}$  
   
 # Massimo Comun Divisore (MCD)  
   
