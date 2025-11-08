@@ -8,29 +8,24 @@ share: true
   
 $$  
 \mathbb{Z} = \{\ldots,-3,-2,-1,0,1,2,3,\ldots\}\longrightarrow \text{ Insieme dei numeri interi (prototipo di anello commutativo con unità)}  
-$$  
-  
-In $\mathbb{Z}$ sono definite due operazioni:  
-  
+$$2 $\mathbb{Z}$ sono definite due operazioni:  
 1. Somma ($+$)  
-2. Prodotto ($\cdot$)  
-  
-$$  
+2. Prodotto ($\cdot $ 1$$  
 \forall a,b,c\in\mathbb{Z}: a+b\in\mathbb{Z} \quad\text{(Chiusura della somma)}  
 $$  
   
 $$  
 \forall a,b,c\in\mathbb{Z}: a\cdot b\in\mathbb{Z} \quad\text{(Chiusura del prodotto)}  
-$$  
   
+$$  
 Per cui valgono le seguenti proprietà:  
   
 1. Proprietà commutativa della somma e del prodotto:  
-  
 $$  
+  
 \forall a,b\in\mathbb{Z}: a+b=b+a  
-$$  
   
+$$  
 $$  
 \forall a,b\in\mathbb{Z}: a\cdot b=b\cdot a  
 $$  
@@ -43,29 +38,26 @@ $$
   
 $$  
 \forall a,b,c\in\mathbb{Z}: (a\cdot b)\cdot c=a\cdot(b\cdot c)  
-$$  
   
+$$  
 3. Elemento neutro della somma:  
-  
 $$  
+  
 \exists 0\in\mathbb{Z} : \forall a\in\mathbb{Z} : a+0=a  
-$$  
   
+$$  
 4. Elemento neutro del prodotto:  
-  
 $$  
+  
 \exists 1\in\mathbb{Z} : \forall a\in\mathbb{Z} : a\cdot 1=a  
-$$  
   
+$$  
 5. Inverso additivo:  
-  
 $$  
+  
 \forall a\in\mathbb{Z} : \exists -a\in\mathbb{Z} : a + (-a) = 0  
-$$  
   
-    - In realtà l'opposto di $a$ è unico e possiamo definite l'operazione differenza:  
-  
-$$  
+$$2 $ a$1$$  
 \forall a,b\in\mathbb{Z} : a - b = a + (-b)  
 $$  
   
@@ -105,21 +97,14 @@ $$
   
 $$  
 \forall a,b,c\in\mathbb{Z} : a\cdot c = b\cdot c \text{ e } c \neq 0 \Rightarrow a=b  
-$$  
-  
-4. Se $a\dot b=0 $ allora $ a=0 $ oppure $ b=0$.  
-  
+$$2 $ a\dot b=0$2 $ a=0$2 $ b=0$.  
 **Dimostriamo la legge di cancellazione**  
   
 Sappiamo che:  
   
 $$  
 a\cdot c = b\cdot c  
-$$  
-  
-Sottraendo $b\cdot c$ da entrambi i membri otteniamo:  
-  
-$$  
+$$2 $ b\cdot c$1$$  
 a\cdot c - b\cdot c = 0  
 $$  
   
@@ -127,11 +112,7 @@ Applicando la proprietà distributiva otteniamo:
   
 $$  
 (a - b)\cdot c = 0  
-$$  
-  
-Essendo $c \neq 0$, per la proprietà dell'annullamento del prodotto, deve essere:  
-  
-$$  
+$$2 $ c \neq 0$1$$  
 a - b = 0  
 $$  
   
@@ -139,19 +120,14 @@ Da cui segue che:
   
 $$  
 a = b  
-$$  
-  
-## Divisibilità in $\mathbb{Z}$  
-  
+$$2 $\mathbb{Z}$  
 # Massimo Comun Divisore (MCD)  
   
 **Definizione**  
-Siano $a $ e $ b $ due numeri interi non entrambi nulli. Il _massimo comun divisore_ $ z $ di $ a $ e $ b $, indicato con $ z=MCD(a,b)$, è il più grande intero positivo che divide sia $ a $ che $ b$.  
+Siano $a $ 2$b $ 2$z $ 2$a $ 2$b $ 1$z=MCD(a,b)$ 1 $a$ 2 $b$.  
 Cioè:  
   
-1. deve essere un divisore comune di $a $ e $ b$:  
-  
-$$  
+1. deve essere un divisore comune di $a $ 2$b $ 1$$  
     z|a \quad\text{e}\quad z|b  
 $$  
   
@@ -165,50 +141,46 @@ $$
   
 $$  
     MCD(4,6)=2  
-$$  
-  
-$$  
+$$2$$  
     MCD(4,6)=2  
-  
 $$  
+  
 > **Osservazione**  
-> Se $d $ è un MCD anche $-d$ lo è.  
-> Cioè se $d $ soddisfa le due proprietà allora anche $-d$ le soddisfa.  
+> Se $d $ 2$-d$ lo è.  
+> Cioè se $d $ 2$-d$ le soddisfa.  
   
 Tuttavia per convenzione si sceglie sempre il MCD positivo.  
   
 **Altri esempi:**  
-$$  
   
+$$  
 MCD(3,10)=1  
-  
 $$  
+  
 Quando il MCD di due numeri è 1, si dice che i numeri sono _coprimi_ o _primi tra loro_.  
 Non hanno fattori comuni diversi da 1 e -1.  
-$$  
   
+$$  
 MCD(a,b)=MCD(b,a)  
-  
 $$  
+  
 Non conta l'ordine degli argomenti.  
-$$  
   
+$$  
 MCD(0,a), a\neq 0 = |a|  
-  
-$$  
 $$  
   
+$$  
 MCD(0,0) \text{ non è definito}  
-$$  
   
+$$  
 Non è definito il MCD di 0 e 0 perché ogni numero intero divide 0, quindi non esiste un massimo tra tutti i numeri interi.  
   
 ## Teorema delle divisioni successive  
   
-Dati due numeri interi $a $ e $ b$ non nulli, allora esiste l'MCD.  
-Inoltre si può scrivere l'MCD come combinazione lineare intera di $a $ e $ b$:  
+Dati due numeri interi $a $ 2$b$ non nulli, allora esiste l'MCD.  
+Inoltre si può scrivere l'MCD come combinazione lineare intera di $a $ 2$b $ 1$$  
   
-$$  
 d=MCD(a,b) = ax + by  
 $$  
   
@@ -228,9 +200,7 @@ $$
   
 Usiamo l'algoritmo di Euclide delle divisioni successive:  
   
-1. Divido $a $ per $ b$:  
-  
-$$  
+1. Divido $a $ 2$b $ 1$$  
     21 = 1 \cdot 15 + 6  
 $$  
   
@@ -238,11 +208,7 @@ $$
   
 $$  
      	 r = 21 - 1 \cdot 15 = 6  
-$$  
-  
-3. Divido $b$ per il resto:  
-  
-$$  
+$$2 $ b$1$$  
      	 15 = 2 \cdot 6 + 3  
 $$  
   
@@ -266,10 +232,10 @@ $$
   
 **Riassunto:**  
   
-1. Divido $a $ per $ b$.  
+1. Divido $a $ 2$b$.  
 2. Ricavo il resto $r$.  
-3. Se $r=0 $ allora l'MCD è $ b$.  
-4. Altrimenti ripeto il procedimento con $b $ e $ r$.  
+3. Se $r=0 $ 2$b$.  
+4. Altrimenti ripeto il procedimento con $b $ 2$r$.  
   
 ### Scriviamo l'identità di Bézout  
   
@@ -303,14 +269,14 @@ $$
   
 $$  
 x = -2, \quad y = 3  
-$$  
   
+$$  
 ## Esercizi per casa  
-  
 $$  
+  
 MCD(90,126)  
-$$  
   
+$$  
 $$  
 MCD(247,121)  
 $$  
