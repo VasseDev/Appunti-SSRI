@@ -8,9 +8,9 @@ share: true
   
 $$  
 \mathbb{Z} = \{\ldots,-3,-2,-1,0,1,2,3,\ldots\}\longrightarrow \text{ Insieme dei numeri interi (prototipo di anello commutativo con unità)}  
-$$2 $\mathbb{Z}$ sono definite due operazioni:  
+$$In $\mathbb{Z}$ sono definite due operazioni:  
 1. Somma ($+$)  
-2. Prodotto ($\cdot $ 1$$  
+2. Prodotto ($\cdot $)$$  
 \forall a,b,c\in\mathbb{Z}: a+b\in\mathbb{Z} \quad\text{(Chiusura della somma)}  
 $$  
   
@@ -57,7 +57,7 @@ $$
   
 \forall a\in\mathbb{Z} : \exists -a\in\mathbb{Z} : a + (-a) = 0  
   
-$$2 $ a$1$$  
+$$- In realtà l'opposto di $ a$ è unico e possiamo definite l'operazione differenza:$$  
 \forall a,b\in\mathbb{Z} : a - b = a + (-b)  
 $$  
   
@@ -97,14 +97,14 @@ $$
   
 $$  
 \forall a,b,c\in\mathbb{Z} : a\cdot c = b\cdot c \text{ e } c \neq 0 \Rightarrow a=b  
-$$2 $ a\dot b=0$2 $ a=0$2 $ b=0$.  
+$$4. Se $ a\dot b=0$allora $ a=0$oppure $ b=0$.  
 **Dimostriamo la legge di cancellazione**  
   
 Sappiamo che:  
   
 $$  
 a\cdot c = b\cdot c  
-$$2 $ b\cdot c$1$$  
+$$Sottraendo $ b\cdot c$ da entrambi i membri otteniamo:$$  
 a\cdot c - b\cdot c = 0  
 $$  
   
@@ -112,7 +112,7 @@ Applicando la proprietà distributiva otteniamo:
   
 $$  
 (a - b)\cdot c = 0  
-$$2 $ c \neq 0$1$$  
+$$Essendo $ c \neq 0$, per la proprietà dell'annullamento del prodotto, deve essere:$$  
 a - b = 0  
 $$  
   
@@ -120,14 +120,14 @@ Da cui segue che:
   
 $$  
 a = b  
-$$2 $\mathbb{Z}$  
+$$## Divisibilità in $\mathbb{Z}$  
 # Massimo Comun Divisore (MCD)  
   
 **Definizione**  
-Siano $a $ 2$b $ 2$z $ 2$a $ 2$b $ 1$z=MCD(a,b)$ 1 $a$ 2 $b$.  
+Siano $a $ e$b $ due numeri interi non entrambi nulli. Il _massimo comun divisore_$z $ di$a $ e$b $, indicato con$ z=MCD(a,b)$, è il più grande intero positivo che divide sia $ a$che $ b$.  
 Cioè:  
   
-1. deve essere un divisore comune di $a $ 2$b $ 1$$  
+1. deve essere un divisore comune di $a $ e$b $:$$  
     z|a \quad\text{e}\quad z|b  
 $$  
   
@@ -141,13 +141,13 @@ $$
   
 $$  
     MCD(4,6)=2  
-$$2$$  
+$$ $$  
     MCD(4,6)=2  
 $$  
   
 > **Osservazione**  
-> Se $d $ 2$-d$ lo è.  
-> Cioè se $d $ 2$-d$ le soddisfa.  
+> Se $d $è un MCD anche$-d$ lo è.  
+> Cioè se $d $ soddisfa le due proprietà allora anche$-d$ le soddisfa.  
   
 Tuttavia per convenzione si sceglie sempre il MCD positivo.  
   
@@ -178,8 +178,8 @@ Non è definito il MCD di 0 e 0 perché ogni numero intero divide 0, quindi non 
   
 ## Teorema delle divisioni successive  
   
-Dati due numeri interi $a $ 2$b$ non nulli, allora esiste l'MCD.  
-Inoltre si può scrivere l'MCD come combinazione lineare intera di $a $ 2$b $ 1$$  
+Dati due numeri interi $a $ e$b$ non nulli, allora esiste l'MCD.  
+Inoltre si può scrivere l'MCD come combinazione lineare intera di $a $ e$b $:$$  
   
 d=MCD(a,b) = ax + by  
 $$  
@@ -200,7 +200,7 @@ $$
   
 Usiamo l'algoritmo di Euclide delle divisioni successive:  
   
-1. Divido $a $ 2$b $ 1$$  
+1. Divido $a $ per$b $:$$  
     21 = 1 \cdot 15 + 6  
 $$  
   
@@ -208,7 +208,7 @@ $$
   
 $$  
      	 r = 21 - 1 \cdot 15 = 6  
-$$2 $ b$1$$  
+$$3. Divido $ b$ per il resto:$$  
      	 15 = 2 \cdot 6 + 3  
 $$  
   
@@ -232,10 +232,10 @@ $$
   
 **Riassunto:**  
   
-1. Divido $a $ 2$b$.  
+1. Divido $a $ per$b$.  
 2. Ricavo il resto $r$.  
-3. Se $r=0 $ 2$b$.  
-4. Altrimenti ripeto il procedimento con $b $ 2$r$.  
+3. Se $r=0 $ allora l'MCD è$b$.  
+4. Altrimenti ripeto il procedimento con $b $ e$r$.  
   
 ### Scriviamo l'identità di Bézout  
   
