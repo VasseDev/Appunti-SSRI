@@ -12,8 +12,8 @@ $$
   
 In $\mathbb{Z}$ sono definite due operazioni:  
   
-1. Somma ( $1$ )  
-2. Prodotto ( $1$ )  
+1. Somma ($+$)  
+2. Prodotto ($\cdot$)  
   
 $$  
 \forall a,b,c\in\mathbb{Z}: a+b\in\mathbb{Z} \quad\text{(Chiusura della somma)}  
@@ -107,7 +107,7 @@ $$
 \forall a,b,c\in\mathbb{Z} : a\cdot c = b\cdot c \text{ e } c \neq 0 \Rightarrow a=b  
 $$  
   
-4. Se $1$ 2$1$ 2$1$ .  
+4. Se $1$ 2$1$ 2$b=0$.  
   
 **Dimostriamo la legge di cancellazione**  
   
@@ -129,7 +129,7 @@ $$
 (a - b)\cdot c = 0  
 $$  
   
-Essendo $1$ , per la proprietà dell'annullamento del prodotto, deve essere:  
+Essendo $c \neq 0$, per la proprietà dell'annullamento del prodotto, deve essere:  
   
 $$  
 a - b = 0  
@@ -146,10 +146,10 @@ $$
 # Massimo Comun Divisore (MCD)  
   
 **Definizione**  
-Siano $1$ 2$1$ 2$1$ 2$1$ 2$1$ 2$1$ 2$1$ 2$1$ .  
+Siano $1$ 2$1$ 2$1$ 2$1$ 2$1$ 2$z=MCD(a,b)$1$ a $1$ b$.  
 Cioè:  
   
-1. deve essere un divisore comune di $1$ 2$1$ :  
+1. deve essere un divisore comune di $1$ 2$b$:  
   
 $$  
     z|a \quad\text{e}\quad z|b  
@@ -206,7 +206,7 @@ Non è definito il MCD di 0 e 0 perché ogni numero intero divide 0, quindi non 
 ## Teorema delle divisioni successive  
   
 Dati due numeri interi $1$ 2$b$ non nulli, allora esiste l'MCD.  
-Inoltre si può scrivere l'MCD come combinazione lineare intera di $1$ 2$1$ :  
+Inoltre si può scrivere l'MCD come combinazione lineare intera di $1$ 2$b$:  
   
 $$  
 d=MCD(a,b) = ax + by  
@@ -228,7 +228,7 @@ $$
   
 Usiamo l'algoritmo di Euclide delle divisioni successive:  
   
-1. Divido $1$ 2$1$ :  
+1. Divido $1$ 2$b$:  
   
 $$  
     21 = 1 \cdot 15 + 6  
@@ -266,10 +266,10 @@ $$
   
 **Riassunto:**  
   
-1. Divido $1$ 2$1$ .  
-2. Ricavo il resto $1$ .  
-3. Se $1$ 2$1$ .  
-4. Altrimenti ripeto il procedimento con $1$ 2$1$ .  
+1. Divido $1$ 2$b$.  
+2. Ricavo il resto $r$.  
+3. Se $1$ 2$b$.  
+4. Altrimenti ripeto il procedimento con $1$ 2$r$.  
   
 ### Scriviamo l'identità di Bézout  
   
