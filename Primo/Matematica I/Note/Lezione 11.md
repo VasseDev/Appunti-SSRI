@@ -2,7 +2,7 @@
 share: true
 ---
   
-![L11 (04.11.2025)](../Slides/L11%20(04.11.2025).pdf)  
+[Slide: Lezione 10](<Primo/Matematica I/Slides/L10 (30.10.2025).pdf>)  
   
 # Proprietà degli interi  
   
@@ -75,19 +75,22 @@ $$
 \forall a,b,c\in\mathbb{Z} : a\cdot (b+c) = a\cdot b + a\cdot c  
 $$  
   
-## Conseguenze  
+**Conseguenze**  
   
 1. Proprietà dell'annullamento del prodotto:  
   
 $$  
 \forall a,b\in\mathbb{Z} : a\cdot b = 0 \Rightarrow (a=0 \text{ oppure } b=0)  
 $$  
+  
 	- Dimostrazione:  
   
 $$  
 0=1+(-1)=1-1  
 $$  
+  
 quindi  
+  
 $$  
 0\cdot a=(1-1)\cdot a=1\cdot a - 1\cdot a = a - a = 0  
 $$  
@@ -99,6 +102,10 @@ $$
 $$  
   
 3. Legge di cancellazione  
+  
+$$  
+  
+$$  
   
 # Massimo Comun Divisore (MCD)  
   
