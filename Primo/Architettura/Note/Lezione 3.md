@@ -18,10 +18,10 @@ share: true
   
 ## Livelli di astrazione di un calcolatore  
   
-- **Algoritmi**: descrivono i passi necessari per risolvere un prolema  
+- **Algoritmi**: descrivono i passi necessari per risolvere un problema  
 - **Linguaggi di programmazione**: passi di un algoritmi descritti in un linguaggio di programmazione di alto livello  
 - **Sistema operativo**: gestisce le risorse del computer  
-- **Architettura dell'insieme delle istruzioni (ISA)**: istruzioni eseguite dal processore  
+- **Architettura dell'insieme delle istruzioni (ISA: Instruction Set Architecture)**: istruzioni eseguite dal processore  
 - **Microarchitettura**: architettura del processore  
 - **Gestore dei trasferimenti dei dati**  
 - **Porte logiche**  
