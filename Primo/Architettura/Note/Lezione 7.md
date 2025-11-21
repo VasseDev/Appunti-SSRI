@@ -152,7 +152,7 @@ Convenzione sui registri:
   
 ## Operazioni aritmetiche  
   
-`add a,b,c`  
+1. `add a,b,c`  
   
 - somma i valori nei registri b e c  
 - memorizza il risultato nel registro a  
@@ -168,7 +168,7 @@ _Esempio_
 add $t0, $t1, $t2  # $t0 = $t1 + $t2  
 ```  
   
-`mult a,b`  
+2. `mult a,b`  
   
 - moltiplica i valori nei registri a e b  
 - memorizza il risultato in registri speciali `hi` e `lo`  
@@ -183,7 +183,7 @@ _Esempio_
   
 ![Screenshot 2025-11-10 alle 19.11.27](../../../Immagini/Screenshot%202025-11-10%20alle%2019.11.27.png)  
   
-`div a,b`  
+3. `div a,b`  
   
 - divide il valore nel registro a per il valore nel registro b  
 - memorizza il quoziente in `lo` e il resto in `hi`  
@@ -191,6 +191,7 @@ _Esempio_
 ### Operandi immediati  
   
 Alcune istruzioni MIPS supportano operandi immediati, che sono valori costanti inclusi direttamente nell'istruzione.  
+  
 `addi a,b,imm`  
   
 - somma il valore nel registro b con l'immediato imm  
@@ -229,7 +230,7 @@ La memoria MIPS è organizzata in byte (8 bit).
 I byte in una parola possono essere disposti in due modi:  
   
 1. **Big-endian**: il byte più significativo (MSB) è memorizzato all'indirizzo più basso.  
-2. **Little-endian**: il byte meno significativo (LSB) è memorizzato all'indirizzo più basso.  
+2. **Little-endian**: il byte meno significativo (LSB) è memorizzato all'indirizzo più alto.  
   
 > **MIPS** utilizza il formato big-endian per default.  
   
@@ -379,7 +380,7 @@ f = i + g + h;
 Scrivere il codice assembler MIPS che corrisponde alla seguenti istruzioni ad alto livello. Si supponga che le variabili `i` e `j`, siano assegnate rispettivamente ai registri `$s3` e `$s4`. Si assuma che l’indirizzo base dei vettori `A` e `B` sia contenuto rispettivamente nei registri `$s6` e `$s7`  
   
 - `B[8] = A[i-j]`  
-- `B[8] = A[i] + A[j]`\  
+- `B[8] = A[i] + A[j]`  
   
 ```assembly  
 # a  
@@ -435,3 +436,30 @@ andi $t2, $t2, 0xFFEF
 **Esercizio 7**  
 Determinare la sequenza più corta di istruzioni MIPS che consente di estrarre i bit da 11 a 16 dal registro `$t0` e li sostituisce ai bit da 26 a 31 del registro `$t1`, lasciando inalterati tutti gli altri bit di `$t1` e `$t0`.  
   
+```assembly  
+srl $t2, $t0, 11  
+sll $t2, $t2, 26   
+or $t1, $t1, $t2  
+and $t1, $t1, $t2  
+```  
+  
+**Esercizio 8**  
+Determinare una sequenza di istruzioni MIPS che si possono utilizzare per mettere in `$t2` il NOT del contenuto di `$t2`.  
+  
+```  
+nor $t1, $t2, $zero  
+```  
+  
+**Esercizio 9**  
+Determinare una sequenza di istruzioni MIPS che si possono utilizzare per tradurre la seguente istruzione:  
+  
+```  
+A = C[0] << 4  
+```  
+  
+Si supponga che `$t1 = A`, `$t2 = B` e `$s1` contenga l'indirizzo base di `C`.  
+  
+```assembly  
+lw $t0, 0($s1)    # carica C[0] in $t0  
+sll $t1, $t0, 4   # A = C[0] << 4  
+```
