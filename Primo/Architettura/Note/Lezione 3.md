@@ -75,7 +75,8 @@ $XY$ è vera se e solo se $X$ è vera e $Y$ è vera
 $X+Y$ è vera se almeno una tra $X$ e $Y$ è vera  
 ![Screenshot 2025-10-10 alle 11.20.17](../../../Immagini/Screenshot%202025-10-10%20alle%2011.20.17.png)  
   
-> **ATTENZIONE** > $1+1=1$ e **non** $1+1=10$ come nell'aritmetica binaria  
+> **ATTENZIONE**  
+>  $1+1=1$ e **non** $1+1=10$ come nell'aritmetica binaria  
   
 ### Porte logiche  
   
@@ -140,7 +141,8 @@ L'algebra booleana può essere utilizzata per semplificare un circuito digitale.
 - Numero di termini  
 - Numero di letterali  
   
-> **Esempio** > $$F=\overline XYZ+\overline XY\overline Z+XZ$$  
+> **Esempio**   
+> $$F=\overline XYZ+\overline XY\overline Z+XZ$$  
 > 3 termini e 8 letterali  
   
 # Esercizi  
