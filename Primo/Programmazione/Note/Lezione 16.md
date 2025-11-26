@@ -80,4 +80,3 @@ ADT rappresentato con l'uso di *class*
 Oggetti istanze di classi che incapsulano stato e comportamento.  
   
 *Information hiding* supportata nativamente con i modificatori di accesso (public, private, protected).  
-  
