@@ -2,7 +2,6 @@
 share: true
 ---
   
-  
 # Java  
   
 Java rispetta la programmazione ad oggetti in modo dogmatico.  
@@ -12,6 +11,10 @@ La memoria associata ad un oggetto contiene lo stato dell'oggetto, rappresentato
 ## Responsabilità e astrazione (*S*OLID)  
   
 - Single Responsibility Principle (SRP): una classe deve avere una sola responsabilità e tale responsabilità deve essere completamente incapsulata dalla classe.  
+- Open/Closed Principle (OCP): le classi devono essere aperte per l'estensione ma chiuse per la modifica.  
+- Liskov Substitution Principle (LSP): gli oggetti di una classe derivata devono poter essere sostituiti con oggetti della classe base senza alterare il corretto funzionamento del programma.  
+- Interface Segregation Principle (ISP): molte interfacce specifiche sono meglio di una interfaccia generale.  
+- Dependency Inversion Principle (DIP): le classi di alto livello non devono dipendere da classi di basso livello; entrambe devono dipendere da astrazioni.  
   
 ## Esempio  
   
@@ -36,7 +39,7 @@ public class Contatore {
 	public int getValore() {  
 		return this.valore;  
 	}  
-	  
+  
 	public void resetta() {  
 		this.valore = 0;  
 	}  
@@ -103,4 +106,16 @@ public class MathUtils {
 }  
 ```  
   
-In questo esempio, il metodo `somma` è statico e può essere chiamato direttamente sulla classe `MathUtils` senza creare un'istanza della classe.
+In questo esempio, il metodo `somma` è statico e può essere chiamato direttamente sulla classe `MathUtils` senza creare un'istanza della classe.  
+  
+## Relazione tra classi  
+  
+Concetti o classi diverse possono essere collegati tra di loro.  
+Ogni classe ha un ruolo specifico all'interno della relazione.  
+  
+- Associazione: una classe utilizza un'altra classe.  
+- Aggregazione: una classe contiene un'altra classe come parte del suo stato.  
+- Composizione: una classe contiene un'altra classe come parte del suo stato, e la vita dell'oggetto contenuto dipende dalla vita dell'oggetto contenitore.  
+- Ereditarietà: una classe deriva da un'altra classe, ereditando i suoi attributi e metodi.  
+- Polimorfismo: una classe può essere trattata come un'istanza di una classe base, permettendo di utilizzare metodi sovrascritti.  
+  
