@@ -1,7 +1,6 @@
 ---
 share: true
 ---
-  
 ![Architettura08](../Slides/Architettura08.pdf)  
   
 # Assembler MIPS  
@@ -281,4 +280,4 @@ I 26-bit di indirizzo nelle jump sono un indirizzo di word ovvero un indirizzo d
 Per saltare ad indirizzi superiori a $2^{28}$ byte si usa:  
 ```  
 jr rs # jump register con formato R  
-```  
+```
