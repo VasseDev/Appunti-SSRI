@@ -1,7 +1,6 @@
 ---
 share: true
 ---
-  
 ![Architettura09](../Slides/Architettura09.pdf)  
 ![Lezione9](../Libri/Lezione9.pdf)  
   
