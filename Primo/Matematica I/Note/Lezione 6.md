@@ -935,9 +935,19 @@ $$
 \tan x=\frac{\sin x}{\cos x}\quad\text{per definizione}  
 $$  
   
-- La $\tan x$ non è definita in $\pi/2+k\pi$  
+- La $\tan x$ non è definita in $\pi/2+k\pi$, ma tende a $+\infty$  
 - È periodica di periodo $\pi\rightarrow\tan(x+\pi)=\tan(x)$  
 - Non è una funzione limitata  
+  
+**Valori**  
+$$  
+\begin{align}  
+&\tan(0)=0\\  
+&\tan(\frac{\pi}{4})=1\\  
+&\tan(\frac{\pi}{6})=\frac{\sqrt{3}}{3}\\  
+&\tan(\frac{\pi}{3})=\sqrt{3}  
+\end{align}  
+$$  
   
 ### Grafico  
   
