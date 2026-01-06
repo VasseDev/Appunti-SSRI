@@ -276,20 +276,20 @@ $$
 $\theta$ è nel 2° quadrante.  
   
 $$  
-\cos\left(\frac{2\pi}{3}\right)=-\frac{1}{2}\quad\sin  
+\cos\left(\frac{2\pi}{3}\right)=-\frac{1}{2}\qquad\sin\left(\frac{2\pi}{3}\right)=\frac{\sqrt{3}}{2}  
 $$  
   
 $$  
 z=4\left(\cos{\frac{2\pi}{3}}+i\sin\frac{2\pi}{3}\right)  
 $$  
   
-**Altra formula per $\theta$**  
+**Altra formula per** $\theta$  
   
 $$  
 \theta=  
 \begin{cases}  
 \arctan\left(\frac{y}{x}\right)\quad se\quad x>0\quad e \quad y \quad\text{qualsiasi}\\  
-\arctan\left(\frac{y}{x}\right)+\pi \quad se\quad x<0\quad e \quad y\geq\\  
+\arctan\left(\frac{y}{x}\right)+\pi \quad se\quad x<0\quad e \quad y\geq0\\  
 \arctan\left(\frac{y}{x}\right)-\pi\quad se\quad x<0\quad e \quad y<0\\  
 \frac{\pi}{2}\quad se\quad x=0\quad e \quad y>0\\  
 -\frac{\pi}{2}\quad se\quad x=0\quad e \quad y<0  
@@ -302,6 +302,29 @@ $$
   
 Si usa se $\theta$ non è un angolo notevole.  
   
+**Esempio**  
+$$  
+z=-5+2i  
+$$  
+$$  
+\rho=\sqrt{(-5)^2+2^2}=\sqrt{29}  
+$$  
+$$  
+\begin{cases}  
+\cos\theta=\frac{x}{\rho}=-\frac{5}{\sqrt{29}}\\  
+\sin\theta=\frac{y}{\rho}=\frac{2}{\sqrt{29}}  
+\end{cases}  
+$$  
+  
+$\theta$ non è un angolo notevole, uso la formula con l'arctan.  
+  
+$$  
+x=-5<0\qquad y=2>0  
+$$  
+$$  
+\theta=\arctan\left(-\frac{2}{5}\right)+\pi\approx0,38+\pi\text{ rad}  
+$$  
+  
 ### Potenze  
   
 $$  
@@ -309,13 +332,13 @@ z=\rho\left(\cos\theta+i\sin\theta\right)
 $$  
   
 $$  
-z^n=\rho^n\left(\cos\left(n\theta\right)+i\sin\left(n\theta\right)\right)\quad n\space\text{intero positivo}  
+z^n=\rho^n\left(\cos\left(n\theta\right)+i\sin\left(n\theta\right)\right)\quad n=\text{intero positivo}  
 $$  
   
 ### Radici n-esime  
   
 $$  
-0\neq w=r\left(\cos\left(\varphi\right)+i\sin\left(\varphi\right)\right)\quad n\space\text{intero positivo}  
+0\neq w=r\left(\cos\left(\varphi\right)+i\sin\left(\varphi\right)\right)\quad n=\text{intero positivo}  
 $$  
   
 posso risolvere $z^n=w$?  
@@ -474,10 +497,14 @@ $$
 $$  
 z^3=\rho^3\left(\cos\left(3\theta\right)+i\sin\left(3\theta\right)\right)  
 $$  
-sostituiamo in $z^3-|z|=0rightarrow z^3=|z|$  
+sostituiamo in $z^3-|z|=0\leftrightarrow z^3=|z|$  
 $$  
 \rho^3\left(\cos\left(3\theta\right)+i\sin\left(3\theta\right)\right)=\rho  
 $$  
+$$  
+\rho=\rho(\overset{\overset{1}{||}}{\cos\theta}+i\overset{\overset{0}{||}}{\sin\theta})  
+$$  
+  
 Due complessi sono uguali se hanno stesso modulo e stesso argomento a meno di multipli di $2\pi$.  
   
 $$  
@@ -493,7 +520,7 @@ $$
 \end{cases}  
 \quad  
 \begin{cases}  
-\rho\left(\rho^3-1\right)=0\\  
+\rho\left(\rho^2-1\right)=0\\  
 \theta=\frac{2k\pi}{3}\quad\text{con}\quad k\in\mathbb{Z}  
 \end{cases}  
 \quad  
@@ -502,11 +529,13 @@ $$
 \theta=\frac{2k\pi}{3}\quad\text{con}\quad k\in\mathbb{Z}  
 \end{cases}  
 $$  
-caso $\rho=0:\quad z=0$ \left(se $|z|=0$ allora $z=0$\right)  
+caso $\rho=0:\quad z=0\quad\left(\text{se } |z|=0 \text{ allora } z=0\right)$  
 caso $\rho=1:\quad\theta=0,\frac{2\pi}{3},\frac{4\pi}{3}$  
-	$z=_1=\cos0+i\sin0=1$  
+	$z_1=\cos0+i\sin0=1$  
 	$z_2=\cos\left(\frac{2\pi}{3}\right)+i\sin\left(\frac{2\pi}{3}\right)=-\frac{1}{2}+i\frac{\sqrt{3}}{2}$  
 	$z_3=\cos\left(\frac{4\pi}{3}\right)+i\sin\left({\frac{4\pi}{3}}\right)=-\frac{1}{2}-\frac{\sqrt{3}}{2}$  
+  
+ho 4 soluzioni.  
   
 **Esercizi**  
 1.   
@@ -515,7 +544,7 @@ A=\{z\in\mathbb{C}||z|\geq1\space\text{e}\space\theta\in\left(\pi,\frac{3\pi}{2}
 $$  
 2.   
 $$  
-z^2+1+i=-\frac{i}{z^2}\quad c.e.\space z^2\neq0\Rightarrow z\neq0  
+z^2+1+i=-\frac{i}{z^2}\qquad c.e.\space z^2\neq0\Rightarrow z\neq0  
 $$  
 $$  
 z^2(z^2+1+i)=z^2(-\frac{i}{z^2})  
@@ -572,4 +601,4 @@ $$
 z=\frac{\sqrt{2}}{2}-\frac{\sqrt{2}}{2}i  
 $$  
 Ho 4 soluzioni  
-### Esercizi per casa  
+  
