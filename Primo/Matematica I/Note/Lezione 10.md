@@ -11,7 +11,7 @@ share: true
 Una relazione $R$ su un insieme $X$ è un sottoinsieme del prodotto cartesiano $X^2$ (cioè un insieme di coppie $(x,y)$ dove $x$ e $y$ appartengono a $X$).  
   
 $$  
-x=\{a,b,c,d\}\quad R\subseteq x^2=\{(x,y)|x,y\in X\}  
+x=\{a,b,c,d\}\quad R\subseteq X^2=\{(x,y)|x,y\in X\}  
 $$  
   
 $$  
@@ -115,9 +115,28 @@ L'induzione matematica è un metodo di dimostrazione utilizzato per stabilire la
   
 Se entrambi i passaggi sono completati con successo, si conclude che la proposizione è vera per tutti i numeri naturali.  
   
-## Esempi  
+> **Buon ordinamento**  
+> $\mathbb{N}$ è ben ordinato, cioè $\forall\space X\subseteq\mathbb{N},X\neq\varnothing$ allora $X$ ha un minimo.  
   
-**Esempio 1:** somma dei primi $n$ numeri dispari  
+## Osservazione  
+  
+$$  
+\begin{align}  
+&1=1=1^2\\  
+&1+3=4=2^2\\  
+&1+3+5=9=3^2\\  
+&1+3+5+7=16=4^2  
+\end{align}  
+$$  
+  
+Sommo i primi $n$ numeri dispari $\rightarrow$ la somma viene $n^2$  
+  
+$$  
+\forall\space n\sum^{n}_{i=1}(2i-1)=n^2  
+$$  
+$$  
+(1+3+5+\dots+(2n-1))=n^2  
+$$  
   
 $$  
 P(n):\sum_{i=1}^{n} (2i-1)=n^2  
@@ -132,7 +151,7 @@ $$
     - **Tesi induttiva** $(P(n+1))$: dobbiamo dimostrare che $\sum_{i=1}^{n+1} (2i-1)=(n+1)^2$.  
     - **Dimostrazione:** partiamo dal lato sinistro della tesi e usiamo l'ipotesi.  
         - $\sum_{i=1}^{n+1} (2i-1)=\sum_{i=1}^{n} (2i-1)+(2(n+1)-1)$  
-        - Ora sostituiamo i primi $n$ termini con $n^2$ (usando l'ipotesi induttiva): $=n^2+(2n+2-1)=n^2+2n+1=(n+1)^2$  
+        - Ora sostituiamo i primi $n$ termini con $n^2$ (usando l'ipotesi induttiva): $=n^2+(2n+2-1)=n^2+2n+1=(n+1)^2\leftarrow\square$  
         - Siamo arrivati esattamente al lato destro della tesi. Abbiamo dimostrato che se $P(n)$ è vera, allora $P(n+1)$ è vera. La prova è completa.  
   
 ## Principio di Induzione (I forma)  
@@ -153,6 +172,30 @@ Allora $P(n)$ è vera per ogni numero naturale $n\geq0$.
     2. scrivere la tesi induttiva  
     3. dimostrare la tesi usando l'ipotesi  
   
+### Esercizi  
+  
+#### 1)  
+  
+Dimostrare che  
+$$  
+\forall\space n\geq1\quad\sum^{n}_{i=1}i=\frac{n(n+1)}{2}  
+$$  
+Passo 1:  
+$$  
+P(n):\sum^{n}_{i=1}i=\frac{n(n+1)}{2}  
+$$  
+Passo 2:  
+$$  
+P(n_0)=P(1)=\frac{1(1+1)}{2}=1  
+$$  
+Passo 3:  
+Ipotesi induttiva: $\sum^{n}_{i=1}i=\frac{n(n+1)}{2}$  
+Tesi induttiva: $\sum^{n+1}_{i=1}i=\frac{(n+1)(n+2)}{2}$  
+Dimostrazione:  
+$$  
+\sum^{n+1}_{i=1}i=\sum^{n}_{i=1}i+n+1=\frac{n(n+1)}{2}+n+1=\frac{n^2+n+2n+2}{2}=\frac{n^2+3n+2}{2}=\frac{(n+1)(n+2)}{2}\leftarrow\square  
+$$  
+  
 ## Principio di Induzione (II forma)  
   
 Sia $P(n)$ una proposizione che dipende da un numero naturale $n$. Se:  
@@ -167,4 +210,5 @@ Questa forma è necessaria quando la proposizione non è vera per tutti i numeri
 **La differenza chiave**: L'ipotesi induttiva.  
 - **Forma 1 (Debole)**: Assumi solo P(n).  
 - **Forma 2 (Forte)**: Assumi che $P(k)$ sia vera per tutti i $k$ compresi tra $m$ e $n$ ($m\leq k\leq n$).  
+  
   
