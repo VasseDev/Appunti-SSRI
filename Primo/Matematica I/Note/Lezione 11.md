@@ -7,7 +7,7 @@ share: true
 # Proprietà degli interi  
   
 $$  
-\mathbb{Z} = \{\ldots,-3,-2,-1,0,1,2,3,\ldots\}\longrightarrow \text{ Insieme dei numeri interi (prototipo di anello commutativo con unità)}  
+\underset{\text{Insieme dei numeri interi (prototipo di anello commutativo con unità)}}{\mathbb{Z} = \{\ldots,-3,-2,-1,0,1,2,3,\ldots\}}  
 $$  
   
 In $\mathbb{Z}$ sono definite due operazioni:  
@@ -35,7 +35,7 @@ $$
 \forall a,b\in\mathbb{Z}: a\cdot b=b\cdot a  
 $$  
   
-2. Proprietà associativa della somma e del prodotto::  
+2. Proprietà associativa della somma e del prodotto:  
   
 $$  
 \forall a,b,c\in\mathbb{Z}: (a+b)+c=a+(b+c)  
@@ -83,7 +83,7 @@ $$
 \forall a,b\in\mathbb{Z} : a\cdot b = 0 \Rightarrow (a=0 \text{ oppure } b=0)  
 $$  
   
-	- Dimostrazione:  
+Dimostrazione:  
   
 $$  
 0=1+(-1)=1-1  
@@ -101,13 +101,17 @@ $$
 \forall a,b\in\mathbb{Z} : -(a\cdot b) = (-a)\cdot b = a \cdot (-b)  
 $$  
   
-4. Legge di cancellazione del prodotto  
+$$  
+(-a)\cdot(-b)=ab  
+$$  
+  
+3. Legge di cancellazione del prodotto  
   
 $$  
 \forall a,b,c\in\mathbb{Z} : a\cdot c = b\cdot c \text{ e } c \neq 0 \Rightarrow a=b  
 $$  
   
-4. Se $a\dot b=0$ allora $a=0$ oppure $b=0$.  
+4. Se $a\cdot b=0$ allora $a=0$ oppure $b=0$.  
   
 **Dimostriamo la legge di cancellazione**  
   
@@ -132,6 +136,158 @@ $$
 a = b  
 $$  
 ## Divisibilità in $\mathbb{Z}$  
+  
+**Definizione**  
+Siano  
+$$  
+a,b\in\mathbb{Z}  
+$$  
+si dice che $a$ divide $b$ se esiste $q\in\mathbb{Z}$ tale che  
+$$  
+b=aq  
+$$  
+si scrive $a\mid b$.  
+  
+*Esempio*  
+$2\mid 12$ perché $12=2\cdot \underset{q}{6}$  
+  
+**Nota**  
+$$  
+a\mid b\Leftrightarrow a\mid(-b)\Leftrightarrow (-a)\mid b\Leftrightarrow(-a)\mid(-b)  
+$$  
+  
+**Nota**  
+$$  
+\text{se }a\mid b\text{ e }b\mid a\text{ allora }b=\pm a  
+$$  
+  
+### Algoritmo della divisione euclidea  
+  
+Siano $a,b\in\mathbb{Z}$ con $b\neq0$ allora esistono *unici* $q\in\mathbb{Z}$ e $r\in\mathbb{Z}$ tali che  
+$$  
+a=b\cdot q+r  
+$$  
+$$  
+\text{con }0\leq r\leq|b|\qquad |b|=  
+\begin{cases}  
+b&\text{ se }b\geq 0\\  
+-b&\text{ se }b<0  
+\end{cases}  
+$$  
+$q$ è detto *quoziente* della divisione  
+$r$ è detto *resto*  
+  
+#### Dimostrazione  
+  
+**Unicità**  
+Supponiamo che  
+$$  
+a=bq+r\qquad0\leq r\leq|b|  
+$$  
+e  
+$$  
+a=b\overline{q}+\overline{r}\qquad0\leq\overline{r}\leq|b|  
+$$  
+sottraggo  
+$$  
+0=a-a=bq+r-(b\overline{q}+\overline{r})=b(q-\overline{q})+(r-\overline{r})  
+$$  
+$$  
+\Rightarrow\overline{r}-r=b(q-\overline{q})  
+$$  
+$$  
+\Rightarrow|\overline{r}-r|=|b||(q-\overline{q})|  
+$$  
+sappiamo che  
+$$  
+|\overline{r}-r|<|b|  
+$$  
+perché  
+$$  
+0\leq r\leq|b|\qquad\text{e}\qquad0\leq\overline{r}\leq|b|  
+$$  
+quindi otteniamo  
+$$  
+|\overline{r}-r|=\cancel{|b|}|q-\overline{q}|<\cancel{|b|}  
+$$  
+$$  
+\Rightarrow|q-\overline{q}|<1  
+$$  
+$$  
+\Rightarrow q=\overline{q}\qquad\text{perché sono interi}  
+$$  
+  
+#### Esistenza  
+  
+Si esaminano 4 casi a seconda del segno di $a$ e $b$.  
+Dimostriamo solamente il caso  
+$$  
+a\geq0\text{ e }b>0  
+$$  
+per semplicità.  
+  
+Si procede per induzione su $a$ fissato e $b$ arbitrario.  
+  
+**Passo base**  
+$$  
+a=0  
+$$  
+è vero che  
+$$  
+0=bq+r?\qquad\text{con }0\leq r<b  
+$$  
+Sì, basta prendere  
+$$  
+\begin{align}  
+&q=0\\  
+&r=0  
+\end{align}  
+$$  
+  
+**Passo induttivo**  
+$$  
+a\overset{?}{\Rightarrow}a+1  
+$$  
+supponendo che  
+$$  
+a=bq+r\qquad\text{con }0\leq r<b  
+$$  
+posso scrivere  
+$$  
+a+1=b\overline{q}+\overline{r}\qquad\text{con }0\leq\overline{r}<b?  
+$$  
+Partiamo dall'ipotesi  
+$$  
+a=bq+r\qquad0\leq r<b  
+$$  
+$$  
+a+1=bq+(r+1)\qquad1\leq r+1\leq b  
+$$  
+  
+**A)**  
+se  
+$$  
+r+1=b  
+$$  
+allora  
+$$  
+a+1=bq+\overset{r+1}{b}=b(q+1)=b(q+1)=b(q+1)+0  
+$$  
+$$  
+\overline{r}=0  
+$$  
+in questo caso ho la divisione di $a+1$ per $b$.  
+  
+**B)**  
+se  
+$$  
+1\leq r+1<b  
+$$  
+so che  
+$$  
+a+1=bq+(r+1)\qquad1\leq\overline{r}=r+1<b  
+$$  
+questa è già la divisione di $a+1$ per $b$.  
   
 # Massimo Comun Divisore (MCD)  
   
@@ -164,7 +320,7 @@ Tuttavia per convenzione si sceglie sempre il MCD positivo.
 **Altri esempi:**  
   
 $$  
-MCD(3,10)=1  
+MCD(3,-10)=1  
 $$  
   
 Quando il MCD di due numeri è 1, si dice che i numeri sono _coprimi_ o _primi tra loro_.  
@@ -201,7 +357,7 @@ $$
 x,y\in\mathbb{Z}  
 $$  
   
-Questa è chimata \_identità di Bézout.  
+Questa è chimata _identità di Bézout_.  
   
 ## Calcolo MCD  
   
@@ -245,6 +401,12 @@ Usiamo l'algoritmo di Euclide delle divisioni successive:
   
 ### Scriviamo l'identità di Bézout  
   
+$$  
+3=21x+15y  
+$$  
+$x,y$ interi da determinare.  
+  
+Dal passo 2 sappiamo che:  
 $$  
 3 = 15 - 2 \cdot 6  
 $$  
