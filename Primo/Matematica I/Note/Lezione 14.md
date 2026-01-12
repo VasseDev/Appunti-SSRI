@@ -116,7 +116,7 @@ $$
 [2]_{2n}\text{ non ha inverso}\qquad [2]_{2n+1}\text{ ha inverso}  
 $$  
   
-Se $a$ ha un inverso modulo $n$ sto cercando $b$ per cuoi $a\cdot b\equiv 1\mod n$, cioè deve esistere $k\in\mathbb{Z}$ tale che  
+Se $a$ ha un inverso modulo $n$: sto cercando $b$ per cui $a\cdot b\equiv 1\mod n$, cioè deve esistere $k\in\mathbb{Z}$ tale che  
   
 $$  
 a\cdot b + k n = 1\rightarrow\text{identità di Bezout}  
@@ -172,7 +172,7 @@ es. $n=7$ primo, ogni $a\in\{1,2,3,4,5,6\}$ ha inverso modulo $7$. Simile ai raz
   
 _Equazioni lineari_: dati $a,b\in\mathbb{Q}\quad ax=b$ trovami $x$.  
   
-_Congruenze lineari_: dati $a,b\in\mathbb{Z}\quad [a]_n \cdot [x]_n = [b]_n$ trovami $[x]_n$.  
+_Congruenze lineari_: dati $a,b\in\mathbb{Z}/n\mathbb{Z}\quad [a]_n \cdot [x]_n = [b]_n$ trovami $[x]_n$.  
   
 ### Problema 1  
   
