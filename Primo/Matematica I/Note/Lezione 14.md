@@ -1,13 +1,13 @@
 ---
 share: true
 ---
-  
+[Lezione 14: Slides](<Primo/Matematica I/Slides/L14 (13.11.2025).pdf>)  
 ```table-of-contents  
   
 ```  
   
 # Congruenze  
-  
+	  
 **Congruenze**: fissato $n\in\mathbb{N}$, dati $a,b\in\mathbb{Z}$ diciamo che $a\equiv b\mod n$ se $a$ e $b$ lasciano lo stesso resto nella divisione per $n$.  
 i.e. $a-b$ sia diviso da $n$  
   
@@ -242,7 +242,7 @@ $$
 Dove $n_0=n/d$ e $k\in\mathbb{Z}$.  
   
 $$  
-\text{es. } 3x\equiv b\mod6\quad d=3\quad  
+\text{es. } 3x\equiv b\mod6\quad d=(3,6)=3\quad  
 \begin{align}  
 \text{domanda 1 }:&\text{ ha soluzione }\Leftrightarrow 3\mid b\\  
 \text{domanda 2 }:&\text{ quante soluzioni? In }\mathbb{Z}/6\mathbb{Z}\text{ ce ne sono }d=3\\  
@@ -259,9 +259,10 @@ _Proposizione_
 1. Se $(c,n)=1$, allora $a\equiv b\mod n \Leftrightarrow ac\equiv bc\mod n$  
 2. Se $ka\equiv kb\mod kn$ allora $a\equiv b\mod n$  
   
-> $ax\equiv\mod n$ > _modo generale_: Bezout  
+> $ax\equiv\mod n$   
+> _modo generale_: Bezout  
 > _modo due_: se $n$ è piccolo (o altri motivi speciali) si trova a occhio  
-> _modo tre_: $ax\equiv b$ ha soluzione in $\mathbb{Z}$. Se ha soluzione $x$ in $\mathbb{Z}$, allora $[x]_n$ é soluzione in $\mathbb{Z}/\mathbb{Z}$ qualsiasi sia $n$.  
+> _modo tre_: $ax= b$ ha soluzione in $\mathbb{Z}$. Se ha soluzione $x$ in $\mathbb{Z}$, allora $[x]_n$ é soluzione in $\mathbb{Z}/\mathbb{Z}$ qualsiasi sia $n$.  
   
 _Esempi_:  
 1  
@@ -271,7 +272,7 @@ $$
 $$  
   
 $$  
-2x\equiv4\mod6\qquad2x=4\qquad x=2\in\mathbb{Z}  
+2x\equiv4\mod5\qquad2x=4\qquad x=2\in\mathbb{Z}  
 $$  
   
 $$  
@@ -358,7 +359,7 @@ x\equiv27\mod21
 $$  
   
 _Fatto 1:_ una soluzione c'è perché i moduli sono a due a due primi.  
-_Fatto2:_ se trovi una soluzione $c$ tutte le altre sono della forma $c+k\cdot 8\cdot 5\cdot 21=c+840k$  
+_Fatto 2:_ se trovi una soluzione $c$ tutte le altre sono della forma $c+k\cdot 8\cdot 5\cdot 21=c+840k$  
   
 #### Osservazione 2  
   
@@ -564,9 +565,9 @@ $$
   
 #### Teorema cinese del resto generalizzato  
   
-Il sistema $\begin{cases}x\equiv b_1\mod n_1\\ \vdots\\ x\equiv b_r\mod n_r\end{cases}$ ha soluzione se e solo se per ogni coppia $1,j\leq r$ che $MCD(n_i,n_j)\mid(b_i-b_j)$. Se solo due equazioni si parlano, anche i $b_i$ si devono parlare.  
+Il sistema $\begin{cases}x\equiv b_1\mod n_1\\ \vdots\\ x\equiv b_r\mod n_r\end{cases}$ ha soluzione se e solo se per ogni coppia $i,j\leq r$ si ha che $MCD(n_i,n_j)\mid(b_i-b_j)$. Se due equazioni si parlano, anche i $b_i$ si devono parlare.  
   
-Se ho una soluzione $c_1$, le altee sono della forma $c_1 + k N$, con $N=MCM(n_1,n_2,\dots,n_r)$.  
+Se ho una soluzione $c_1$, le altre sono della forma $c_1 + k N$, con $N=mcm(n_1,n_2,\dots,n_r)$.  
   
 _Esempio_  
   
@@ -580,11 +581,11 @@ x\equiv4\mod8
 \begin{align}  
 MCD(15,6)=3 &\mid (5-2)=3\\  
 MCD(15,8)=1 &\mid (5-4)=1\\  
-MCD(6,8)=2 &\nmid (2-4)=-2  
+MCD(6,8)=2 &\mid (2-4)=-2  
 \end{align}  
 $$  
   
-le soluzioni sono $\mod 120=MCM(15,6,8)$.  
+le soluzioni sono $\mod 120=mcm(15,6,8)$.  
   
 Spezzo le equazioni  
 $$  
