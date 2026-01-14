@@ -301,7 +301,7 @@ che ha esattamente $d$ soluzioni modulo $n$.
 > $ax\equiv\mod n$   
 > _modo generale_: Bezout  
 > _modo due_: se $n$ è piccolo (o altri motivi speciali) si trova a occhio  
-> _modo tre_: $ax= b$ ha soluzione in $\mathbb{Z}$. Se ha soluzione $x$ in $\mathbb{Z}$, allora $[x]_n$ é soluzione in $\mathbb{Z}/\mathbb{Z}$ qualsiasi sia $n$.  
+> _modo tre_: $ax= b$ ha soluzione in $\mathbb{Z}$. Se ha soluzione $x$ in $\mathbb{Z}$, allora $[x]_n$ é soluzione in $\mathbb{Z}/\mathbb{Z}_n$ qualsiasi sia $n$.  
   
 #### Sistemi di congruenze lineari  
 $$  
@@ -344,3 +344,69 @@ $$
 x\equiv\sum_{i=1}^r b_i\cdot N_i\cdot y_i\mod N  
 $$  
 ##### Teorema cinese del resto generalizzato  
+  
+  
+#### Funzione di Eulero  
+Sia $n\in\mathbb{N}, n>1$.  
+$$  
+\varphi(n)\begin{align}&=\#\{a\in\mathbb{Z}\mid1\leq a< n\text{ e }MCD(a,n)=1\}\\ &=\#\{\text{classi invertibili in }\mathbb{Z}_n\}\end{align}  
+$$  
+##### Come si calcola  
+**A) Se $p$ è un numero primo**  
+$$  
+\varphi(p)=p-1  
+$$  
+**B) Se $p$ è un numero primo e $h\in\mathbb{N}, h\geq1$**  
+$$  
+\varphi(p^h)=p^h-p^{h-1}=p^h\left(1-\frac{1}{p}\right)  
+$$  
+**C) Se $n$ è un intero positivo con scomposizione in fattori primi**  
+$$  
+\varphi(n)=\varphi(p_1^{h_1})\cdot\varphi(p_2^{h_2})\cdots\varphi(p_r^{h_r})  
+$$  
+#### Piccolo teorema di Fermat  
+Sia $p$ un numero primo e sia $a\in\mathbb{Z}$ con $p\nmid a$. Allora:  
+$$  
+a^p\equiv a\mod p\longrightarrow a^{p-1}\equiv 1\mod p  
+$$  
+#### Teorema di Eulero  
+Sia $n\in\mathbb{N}, n>1$ e sia $a\in\mathbb{Z}$ con $MCD(a,n)=1$. Allora:  
+$$  
+a^{\varphi(n)}\equiv 1\mod n  
+$$  
+### Gruppi  
+Un gruppo (G, \*) è un'insieme G dotato di una operazione binaria  
+$$  
+\ast: G \times G \to G  
+$$  
+tale che  
+1. $\ast$ è associativa: per ogni a, b, c in G, (a \* b) \* c = a \* (b \* c)  
+2. Esiste un elemento neutro e in G tale che per ogni a in G, a \* e = e \* a = a  
+3. Per ogni a in G, esiste un elemento inverso a^-1 in G tale che a \* a^-1 = a^-1 \* a = e  
+4. (Se il gruppo è commutativo o abeliano) Per ogni a, b in G, a \* b = b \* a  
+### Anelli  
+_Definizione_   
+un anello $(R, +, \cdot)$ è un insieme dotato di due operazioni binarie:  
+$$  
++: R \times R \to R  
+$$  
+$$  
+\cdot: R \times R \to R  
+$$  
+tali che  
+1.    
+	- $+$ è associativa: $(a+b))+c=a+(b+c)$  
+    - esiste l'elemento neutro $0\in\mathbb{R}$ rispetto alla $+$: $a+0=a=0+a\quad\forall\space a\in\mathbb{R}$  
+    - $\forall\space a\in\mathbb{R}\space\exists-a\in\mathbb{R}$ detto elemento opposto tale che: $\begin{align} &a+(-a)=0\\ &(-a)+a=0\end{align}$  
+    - $+$ è commutativa: per ogni a, b in R, $a + b = b + a$  
+2. $\cdot$ è associativa: per ogni a, b, c in R, $(a \cdot b) \cdot c = a \cdot (b \cdot c)$  
+3.  la moltiplicazione è distributiva rispetto alla somma:  
+    - per ogni a, b, c in R, $a \cdot (b + c) = (a \cdot b) + (a \cdot c)$  
+    - per ogni a, b, c in R, $(a + b) \cdot c = (a \cdot c) + (b \cdot c)$  
+  
+_osservazione:_ $(R, +)$ è un gruppo abeliano.  
+Se vale che $\cdot$ è commutativo si dice che l'anello è commutativo.  
+Se vale che esiste l'elemento neutro $1\in R$ rispetto al prodotto si dice che l'anello è _unitario_.  
+### Campo  
+_Definizione_   
+un campo è un anello commutativo unitario in cui ogni elemento diverso da 0 è invertibile.
