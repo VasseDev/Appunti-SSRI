@@ -1,18 +1,18 @@
 ---
 share: true
 ---
-  
+[Lezione 18: Slides](<Primo/Matematica I/Slides/L18 (25.11.2025).pdf>)  
 # Gruppi  
   
 Un gruppo (G, \*) è un'insieme G dotato di una operazione binaria  
   
 $$  
-*: G \times G \to G  
+\ast: G \times G \to G  
 $$  
   
 tale che  
   
-1. \* è associativa: per ogni a, b, c in G, (a \* b) \* c = a \* (b \* c)  
+1. $\ast$ è associativa: per ogni a, b, c in G, (a \* b) \* c = a \* (b \* c)  
 2. Esiste un elemento neutro e in G tale che per ogni a in G, a \* e = e \* a = a  
 3. Per ogni a in G, esiste un elemento inverso a^-1 in G tale che a \* a^-1 = a^-1 \* a = e  
 4. (Se il gruppo è commutativo o abeliano) Per ogni a, b in G, a \* b = b \* a  
@@ -38,7 +38,8 @@ $$
 ## Proposizioni  
   
 **L'elemento neutro è unico**  
-_Dim_ supponiamo che ce ne siano due distinti  
+_Dimostrazione_   
+supponiamo che ce ne siano due distinti  
   
 $$  
 e,e'\in G  
@@ -116,7 +117,7 @@ Se tale r esiste, diciamo che r è di ordine g, si indica con o(g).
 Se non esiste, diciamo che g è di ordine infinito e scriviamo o(g)=∞.  
   
 **Esempio**  
-In $(\mathbb{Z}_4,+)$ ogni elemento è di ordine infinito.  
+In $(\mathbb{Z}_4,+)$.  
 \[2\] qual è il suo ordine?  
 Calcoliamo le potenze di 2:  
   
@@ -127,16 +128,31 @@ $$
 $$  
   
 **Esempio**  
+$$  
+(\mathbb{Z}_4,+)  
+$$  
   
+$$  
+o(1)=4  
+$$  
+$$  
+\begin{align}  
+&[1]^1=[1]\neq[0]\\  
+&[1]^2=[1]+[1]=[2]\neq[0]\\  
+&[1]^3=[1]+[1]+[1]=[3]\neq[0]\\  
+&[1]^4=[1]+[1]+[1]+[1]=[0]=e\Rightarrow o([1])=4  
+\end{align}  
+$$  
+  
+**Esempio**  
 $$  
 (\mathbb{Z},+)  
 $$  
-  
 $$  
-o(1)=?\quad\text{Infinito}  
+o(n)=\infty\quad\forall n\in\mathbb{Z}, n\neq0  
 $$  
   
-_Def_ un gruppo è detto finito di ordine R se G ha un numero finito di elementi, si indica con |G| il numero di elementi di G, che è anche detto ordine del gruppo se è finito.  
+_Def_ un gruppo è detto finito di ordine R se G ha un numero finito di elementi uguali a R. Si indica con |G| il numero di elementi di G, che è anche detto ordine del gruppo se è finito.  
   
 ### Teorema di Lagrange  
   
@@ -152,10 +168,13 @@ $$
   
 ossia l'ordine di un elemento divide l'ordine del gruppo.  
   
+**Esempio**  
+In un gruppo di ordine 6, gli ordini possibili degli elementi sono 1, 2, 3, 6.  
+  
 _Def_ un gruppo è detto ciclico se è generato da un solo elemento, cioè  
   
 $$  
-\exists g \in G : G = \{ g^i : i \in \mathbb{Z} \}  
+\exists g \in G : G = \{ g^i : i \in \mathbb{Z} \}=\{g,g^2,g^3,\dots,g^0=e,g^{-1},g^{-2},\dots\}  
 $$  
   
 e si indica con  
@@ -175,6 +194,7 @@ $$
 | a       | a   | e   |  
   
 $a\cdot a=e$ perché a è l'inverso di a.  
+$a^2=a\cdot a=e$.  
 Possiamo scrivere  
   
 $$  
@@ -183,9 +203,18 @@ $$
   
 è un gruppo ciclico.  
   
+> Ogni gruppo di ordine 2 è ciclico.  
+  
 3. $|G| = 3 ⇒ G = \{e, g, g^2\}$  
   
-    ogni gruppo di ordine 3 è ciclico.  
+ogni gruppo di ordine 3 è ciclico.  
+  
+$$  
+G=\{e,g,g^2\}=\langle g \rangle  
+$$  
+$$  
+g^3=e  
+$$  
   
 | $\cdot$ | $e$   | $g$   | $g^2$ |  
 | ------- | ----- | ----- | ----- |  
@@ -204,7 +233,7 @@ $$
 G=\{e,a,b,ab\}\quad\text{con } a^2=b^2=e,\ ab=ba  
 $$  
   
-### Proprietà del gruppo ciclico  
+**Proprietà del gruppo ciclico di ordine 4**  
   
 $$  
 G=\langle g\rangle=\{e,g,g^2,g^3\}  
@@ -229,7 +258,7 @@ $$
 ### Proprietà del gruppo di Klein  
   
 $$  
-G=\{e,a,b,ab\}\quad\text{con } a^2=b^2=e,\ ab=ba  
+G=\{e,a,b,c\}\quad\text{con } a^2=b^2=e,\ c=ab=ba  
 $$  
   
 | $\cdot$ | $e$  | $a$  | $b$  | $ab$ |  
@@ -248,7 +277,7 @@ $$
 \end{align}  
 $$  
   
-### Esercizi  
+**Esercizio**  
   
 $$  
 U_8=\{\text{classi resto invertibili di } \mathbb{Z}_8\}=\{[1],[3],[5],[7]\}  
@@ -263,7 +292,13 @@ Verificare che $(U_8,\cdot)$ è il gruppo di Klein.
   
 5. |G| = 5 ⇒ G è ciclico di ordine 5.  
   
-6. |G| = 6 ⇒ molto difficile  
+ogni gruppo di ordine 5 è ciclico.  
+  
+$$  
+G=\{e,g,g^2,g^3,g^4\}=\langle g \rangle  
+$$  
+  
+6. |G| = 6 ⇒ molto difficile, più strutture.  
   
 ## Teorema 1  
   
@@ -294,11 +329,12 @@ $$
   
 tali che  
   
-1.  -   $\cdot$ è associativa: per ogni a, b, c in R, $(a \cdot b) \cdot c = a \cdot (b \cdot c)$  
-    - $\cdot$ esiste l'elemento neutro rispetto alla somma, indicato con 0, tale che per ogni a in R, $a + 0 = 0 + a = a$  
-    - ogni elemento è invertibile rispetto alla somma: per ogni a in R, esiste $-a$ in R tale che $a + (-a) = (-a) + a = 0$  
-    - la somma è commutativa: per ogni a, b in R, $a + b = b + a$  
-2.  1.  la moltiplicazione è associativa: per ogni a, b, c in R, $(a \cdot b) \cdot c = a \cdot (b \cdot c)$  
+1.    
+	- $+$ è associativa: $(a+b))+c=a+(b+c)$  
+    - esiste l'elemento neutro $0\in\mathbb{R}$ rispetto alla $+$: $a+0=a=0+a\quad\forall\space a\in\mathbb{R}$  
+    - $\forall\space a\in\mathbb{R}\space\exists-a\in\mathbb{R}$ detto elemento opposto tale che: $\begin{align} &a+(-a)=0\\ &(-a)+a=0\end{align}$  
+    - $+$ è commutativa: per ogni a, b in R, $a + b = b + a$  
+2. $\cdot$ è associativa: per ogni a, b, c in R, $(a \cdot b) \cdot c = a \cdot (b \cdot c)$  
 3.  la moltiplicazione è distributiva rispetto alla somma:  
     - per ogni a, b, c in R, $a \cdot (b + c) = (a \cdot b) + (a \cdot c)$  
     - per ogni a, b, c in R, $(a + b) \cdot c = (a \cdot c) + (b \cdot c)$  
@@ -321,10 +357,14 @@ $$
 (\mathbb{Z}, +, \cdot) \text{ è un anello commutativo unitario}  
 $$  
   
-$1\rightarrow$ elemento neutro rispetto alla moltiplicazione.  
-$0\rightarrow$ elemento neutro rispetto alla somma.  
+$1\rightarrow$ elemento neutro rispetto a $\cdot$.  
+$0\rightarrow$ elemento neutro rispetto a $+$.  
   
 Non è un campo perché non tutti gli elementi sono invertibili rispetto alla moltiplicazione.  
+  
+$$  
+\nexists\space x\in\mathbb{Z}:3\cdot x=1  
+$$  
   
 2  
   
@@ -334,6 +374,14 @@ $$
   
 perché ogni elemento diverso da 0 è invertibile rispetto alla moltiplicazione.  
   
+$$  
+\forall\space a\in\mathbb{Q}\quad a\neq0\quad\exists\space b\in\mathbb{Q}:a\cdot b=1  
+$$  
+*Esempio*  
+$$  
+3\cdot\frac{1}{3}=1  
+$$  
+  
 3  
   
 $$  
@@ -341,4 +389,4 @@ $$
 $$  
   
 Non è un campo perché non tutti gli elementi sono invertibili rispetto alla moltiplicazione.  
-Se n è primo allora $(\mathbb{Z}_p, +, \cdot)$ è un campo.
+Se n è primo allora $(\mathbb{Z}_p, +, \cdot)$ è un campo, perché tutti gli elementi sono coprimi con p e quindi invertibili rispetto alla moltiplicazione modulo p.
