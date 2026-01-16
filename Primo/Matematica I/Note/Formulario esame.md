@@ -384,6 +384,15 @@ tale che
 2. Esiste un elemento neutro e in G tale che per ogni a in G, a \* e = e \* a = a  
 3. Per ogni a in G, esiste un elemento inverso a^-1 in G tale che a \* a^-1 = a^-1 \* a = e  
 4. (Se il gruppo è commutativo o abeliano) Per ogni a, b in G, a \* b = b \* a  
+#### Teorema di Lagrange  
+$$  
+\forall g\in G\quad\text{con G gruppo finito}  
+$$  
+allora  
+$$  
+o(g) \mid |G|  
+$$  
+ossia l'ordine di un elemento divide l'ordine del gruppo.  
 ### Anelli  
 _Definizione_   
 un anello $(R, +, \cdot)$ è un insieme dotato di due operazioni binarie:  
@@ -406,7 +415,7 @@ tali che
   
 _osservazione:_ $(R, +)$ è un gruppo abeliano.  
 Se vale che $\cdot$ è commutativo si dice che l'anello è commutativo.  
-Se vale che esiste l'elemento neutro $1\in R$ rispetto al prodotto si dice che l'anello è _unitario_.  
+Se vale che esiste l'elemento neutro $I\in R$ rispetto al prodotto si dice che l'anello è _unitario_.  
 ### Campo  
 _Definizione_   
 un campo è un anello commutativo unitario in cui ogni elemento diverso da 0 è invertibile.
