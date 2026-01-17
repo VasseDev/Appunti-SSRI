@@ -564,8 +564,193 @@ $$
 # Algebra lineare  
 ## Spazio vettoriale  
   
+Uno spazio vettoriale su un campo $\mathbb{K}$ è un insieme $V$ dotato di due operazioni:  
   
+1. somma: $+: V \times V \rightarrow V$  
+2. prodotto per scalare: $\cdot: \mathbb{K} \times V \rightarrow V$  
   
+tali che valgono le seguenti proprietà:  
   
+1. $(V, +)$ è un gruppo abeliano  
+2. $c\cdot (u + v) = c \cdot u + c \cdot v$ per ogni $c \in \mathbb{K}$ e per ogni $u, v \in V$  
+3. $(c_1 + c_2) \cdot v = c_1 \cdot v + c_2 \cdot v$ per ogni $c_1, c_2 \in \mathbb{K}$ e per ogni $v \in V$  
+4. $(c_1 c_2) \cdot v = c_1 \cdot (c_2 \cdot v)$ per ogni $c_1, c_2 \in \mathbb{K}$ e per ogni $v \in V$  
+5. $1 \cdot v = v$ per ogni $v \in V$, dove $1$ è l'elemento neutro del campo $\mathbb{K}$  
   
+**conseguenze immediate**  
   
+1. il vettore nullo $0$ è unico  
+2. $0\cdot v = 0$ per ogni $v \in V$  
+3. $c \cdot 0 = 0$ per ogni $c \in \mathbb{K}$  
+  
+*Esempio*  
+  
+$$  
+\mathbb{R}^2=\{\begin{pmatrix}x\\y\end{pmatrix} : x,y \in \mathbb{R}\}  
+$$  
+  
+è l'insieme dei vettori colonna a due entrate.  
+  
+![Screenshot 2026-01-16 alle 21.01.09](../../../Immagini/Screenshot%202026-01-16%20alle%2021.01.09.png)  
+  
+$\mathbb{R}^2$ è uno spazio vettoriale su $\mathbb{R}$ con le operazioni. Perché?  
+  
+1. somma: $\begin{pmatrix}x_1\\y_1\end{pmatrix} + \begin{pmatrix}x_2\\y_2\end{pmatrix} = \begin{pmatrix}x_1 + x_2\\y_1 + y_2\end{pmatrix}$  
+2. prodotto per scalare: $c \cdot \begin{pmatrix}x\\y\end{pmatrix} = \begin{pmatrix}c x\\c y\end{pmatrix}$  
+  
+si può verificare che valgono le proprietà di spazio vettoriale facilmente.  
+  
+Chi è il vettoriale nullo di $\mathbb{R}^2$?  
+  
+$$  
+0 = \begin{pmatrix}0\\0\end{pmatrix}\in \mathbb{R}^2  
+$$  
+  
+Chi è l'opposto di un vettore $\begin{pmatrix}x\\y\end{pmatrix}$?  
+  
+$$  
+-\begin{pmatrix}x\\y\end{pmatrix} = \begin{pmatrix}-x\\-y\end{pmatrix}  
+$$  
+  
+![Screenshot 2026-01-16 alle 21.04.00](../../../Immagini/Screenshot%202026-01-16%20alle%2021.04.00.png)  
+  
+*Altri esempi*  
+  
+$$  
+\mathbb{R}^3=\{\begin{pmatrix}x\\y\\z\end{pmatrix} : x,y,z \in \mathbb{R}\}  
+$$  
+  
+![Screenshot 2026-01-16 alle 21.04.42](../../../Immagini/Screenshot%202026-01-16%20alle%2021.04.42.png)  
+  
+in generale  
+  
+$$  
+\mathbb{R}^N=\{\begin{pmatrix}x_1\\x_2\\\vdots\\x_N\end{pmatrix} : x_i \in \mathbb{R}, i=1,\ldots,N\}  
+$$  
+  
+l'insieme dei vettori colonna a $N$ entrate.  
+  
+---  
+  
+L'insieme delle matrici quadrate $N\times N$ è uno spazio vettoriale su su $\mathbb{R}$:  
+  
+$$  
+M(\mathbb{R}, N) = \{\text{matrici quadrate }N\times N\text{ a coefficienti in }\mathbb{R}\}  
+$$  
+  
+$$  
+A,B\in M(\mathbb{R}, N)\text{ allora } A + B \in M(\mathbb{R}, N)  
+$$  
+  
+$$  
+c \in \mathbb{R}, A \in M(\mathbb{R}, N) \text{ allora } c \cdot A \in M(\mathbb{R}, N)  
+$$  
+  
+Sono definite le 2 operazioni.  
+  
+Il vettore nullo in $M(\mathbb{R}, N)$ è la matrice nulla  
+  
+$$  
+0 = \begin{pmatrix}  
+0 & 0 & \cdots & 0\\  
+0 & 0 & \cdots & 0\\  
+\vdots & \vdots & \ddots & \vdots\\  
+0 & 0 & \cdots & 0  
+\end{pmatrix}  
+$$  
+  
+---  
+  
+### Polinomi di grado $\leq N$  
+  
+È uno spazio vettoriale su $\mathbb{R}$.  
+  
+$$  
+R_N[x] = \{p(x) = a_0 + a_1 x + a_2 x^2 + \cdots + a_N x^N : a_i \in \mathbb{R}, i=0,\ldots,N\}  
+$$  
+  
+$$  
+p(x), q(x) \in R_N[x] \implies p(x) + q(x) \in R_N[x]  
+$$  
+  
+$$  
+c \in \mathbb{R}, p(x) \in R_N[x] \implies c \cdot p(x) \in R_N[x]  
+$$  
+  
+il vettore nullo di $R_N[x]$ è il polinomio nullo  
+  
+### Sottospazi  
+  
+> **Definizione**  
+> Un sottoinsieme non vuoto $W$ di uno spazio vettoriale $V$ sul campo $\mathbb{K}$ si dice sottospazio vettoriale di $V$ se:  
+  
+1. $W$ è chiuso rispetto alla somma:  
+  
+$$  
+u,v \in W \implies u + v \in W  
+$$  
+  
+2. $W$ è chiuso rispetto al prodotto per scalare:  
+  
+$$  
+c \in \mathbb{K}, v \in W \implies c \cdot v \in W  
+$$  
+  
+*Osservazione*  
+$W$ è di nuovo uno spazio vettoriale.  
+  
+*Esempi*  
+  
+$$  
+V=M(\mathbb{R}, 2)  
+$$  
+  
+$$  
+V\supset W=\{A\in M(\mathbb{R}, 2)\mid A=\begin{pmatrix}  
+a & 0\\  
+0 & b  
+\end{pmatrix}\}  
+$$  
+  
+$W$ è un sottospazio vettoriale di $V$?  
+  
+$W$ chiuso rispetto alla somma? Sì  
+  
+$$  
+A_1=\begin{pmatrix}  
+a_1 & 0\\  
+0 & b_1  
+\end{pmatrix},  
+\quad  
+A_2=\begin{pmatrix}  
+a_2 & 0\\  
+0 & b_2  
+\end{pmatrix}  
+$$  
+  
+$$  
+A_1 + A_2 = \begin{pmatrix}  
+a_1 + a_2 & 0\\  
+0 & b_1 + b_2  
+\end{pmatrix} \in W  
+$$  
+  
+$W$ è chiuso rispetto alla moltiplicazione per scalare? Sì  
+  
+$$  
+c \in \mathbb{R},\quad  
+A=\begin{pmatrix}  
+a & 0\\  
+0 & b  
+\end{pmatrix}  
+\in W  
+$$  
+  
+$$  
+c \cdot A = \begin{pmatrix}  
+c a & 0\\  
+0 & c b  
+\end{pmatrix} \in W  
+$$  
+  
+Quindi $W$ è un sottospazio vettoriale di $V$.
