@@ -181,8 +181,8 @@ $$
 $$  
   
 $$  
-\begin{align*}&\mathbb{R}^2 = \left\{ a\begin{pmatrix} 1\\ 0 \end{pmatrix} + b\begin{pmatrix} 0\\ 1  
-\end{pmatrix} \mid a,b\in\mathbb{R} \right\} \\&f\begin{pmatrix} a\\ b \end{pmatrix} = \begin{pmatrix} a\\  
+\begin{align*}&\mathbb{R}^2 = \{ a\begin{pmatrix} 1\\ 0 \end{pmatrix} + b\begin{pmatrix} 0\\ 1  
+\end{pmatrix} \mid a,b\in\mathbb{R} \} \\&f\begin{pmatrix} a\\ b \end{pmatrix} = \begin{pmatrix} a\\  
 \end{pmatrix} \\[1em]&\text{Addittività:} \\&f\left(\begin{pmatrix} a\\ b \end{pmatrix} + \begin{pmatrix}  
 c\\ d \end{pmatrix}\right) = f\begin{pmatrix} a+c\\ b+d \end{pmatrix} = \begin{pmatrix} a+c\\ 0  
 \end{pmatrix} \\&f\begin{pmatrix} a\\ b \end{pmatrix} + f\begin{pmatrix} c\\ d \end{pmatrix} =  
@@ -319,5 +319,15 @@ W=\{p(x)\in\mathbb{R}[x]\mid\deg(p)\leq 3\}
 $$  
   
 $$  
-ax^3+bx^2+cx+d  
-$$
+ax^3+bx^2+cx+d\quad\longleftrightarrow\quad\begin{pmatrix}a\\ b\\ c\\ d\end{pmatrix}  
+$$  
+  
+$$  
+f:\mathbb{R}^4\to W\quad f\begin{pmatrix}a\\ b\\ c\\ d\end{pmatrix}=ax^3+bx^2+cx+d  
+$$  
+  
+$$  
+\text{applicazioni lineari}\quad\longleftrightarrow\quad\text{matrici}  
+$$  
+  
+## Rappresen
