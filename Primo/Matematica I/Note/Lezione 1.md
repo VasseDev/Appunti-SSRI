@@ -1,7 +1,7 @@
 ---
 share: true
 ---
-  
+[Lezione 1: Slides](<Primo/Matematica I/Slides/L01 (30.09.2025).pdf>)  
 # Insiemi  
   
 > Collezione di oggetti chiamati elementi  
