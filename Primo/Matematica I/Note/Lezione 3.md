@@ -1,7 +1,7 @@
 ---
 share: true
 ---
-  
+[Lezione 3: Slides](<Primo/Matematica I/Slides/L03 (07.10.2025).pdf>)  
 ## Funzioni  
   
 > **Ricordiamo:** una relazione $\rho$ da $A$ a $B$ è un sottoinsieme del prodotto cartesiano $A\times B$.  
