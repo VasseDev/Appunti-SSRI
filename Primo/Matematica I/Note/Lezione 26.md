@@ -1,6 +1,7 @@
 ---
 share: true
 ---
+  
 [Lezione 26: Slides](<Primo/Matematica I/Slides/L26 (23.12.2025).pdf>)  
   
 # Coordinate  
