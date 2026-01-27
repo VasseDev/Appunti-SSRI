@@ -1,7 +1,7 @@
 ---
 share: true
 ---
-  
+[Lezione 4: Slides](<Primo/Matematica I/Slides/L04 (09.10.2025).pdf>)  
 ## Sottoinsiemi limitati  
   
 $\mathbb{R}$ è:  
