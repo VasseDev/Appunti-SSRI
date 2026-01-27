@@ -1,7 +1,7 @@
 ---
 share: true
 ---
-  
+[Lezione 5: Slides](<Primo/Matematica I/Slides/L05 (14.10.2025).pdf>)  
 ## Grafici di potenze  
   
 $$y=x^k$$  
