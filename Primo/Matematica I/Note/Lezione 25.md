@@ -94,6 +94,7 @@ Cioè: controlla davvero $m_g(a)$ quando $m_a(a)\geq 2$.
 *In particolare:* se tutti gli autovalori hanno $m_a(a)=1$, allora $A$ è diagonalizzabile.  
   
 *Esempio*  
+  
 $$  
 A=\begin{pmatrix}  
 0 & 1\\  
@@ -135,11 +136,13 @@ f(\sum_{i=1}^n k_iv_i)=\sum_{i=1}^n k_if(v_i)
 $$  
   
 *esempio*  
+  
 $$  
 f(3v_1+7v_2-5v_3)=3f(v_1)+7f(v_2)-5f(v_3)  
 $$  
   
 *Esempi*  
+  
 $$  
 V=W=\mathbb{R}^2,\quad \underset{\text{è lineare}}{f(x)=0}\quad \underset{0}{f(x+y)}=\underset{0}{f(x)}+\underset{0}{f(y)}  
 $$  
@@ -314,6 +317,7 @@ $$
 $$  
   
 *Esempio*  
+  
 $$  
 W=\{p(x)\in\mathbb{R}[x]\mid\deg(p)\leq 3\}  
 $$  
@@ -330,4 +334,95 @@ $$
 \text{applicazioni lineari}\quad\longleftrightarrow\quad\text{matrici}  
 $$  
   
-## Rappresen
+## Rappresentazione degli omomorfismi  
+  
+**Proposizione 1**  
+  
+Siano $V,W$ spazi vettoriali su $\mathbb{K}$.  
+Sia $B=\{v_1,\dots,v_n\}$ base di $V$.  
+Siano $w_1,\dots,w_n$ vettori qualsiasi di $W$.  
+Allora $\exists!\ f:V\to W$ applicazione lineare tale che  
+  
+$$  
+\begin{align}  
+f(v_1)&=w_1\\  
+f(v_2)&=w_2\\  
+&\vdots\\  
+f(v_n)&=w_n  
+\end{align}  
+$$  
+  
+*Dimostrazione*  
+  
+Se $f(v_i)=w_i$  
+  
+$$  
+f(\sum_{i=1}^n k_iv_i)=\sum_{i=1}^n k_if(v_i)=\sum_{i=1}^n k_iw_i  
+$$  
+  
+---  
+  
+Sia $f:V\to W$ un'applicazione lineare.  
+  
+$$  
+\begin{align}  
+&\mathbb{V}=\{v_1,\dots,v_n\}\text{ base di }V\\  
+&\mathbb{W}=\{w_1,\dots,w_m\}\text{ base di }W  
+\end{align}  
+\qquad  
+f\text{ lo rappresento come matrice usando }V,W  
+$$  
+  
+*Passo 1*  
+  
+$$  
+\begin{align}  
+&f(v_1)=a_{11}w_1+a_{21}w_2+\dots+a_{m1}w_m\\  
+&f(v_2)=a_{12}w_1+a_{22}w_2+\dots+a_{m2}w_m\\  
+&\vdots\\  
+&f(v_n)=a_{1n}w_1+a_{2n}w_2+\dots+a_{mn}w_m  
+\end{align}  
+$$  
+  
+$$  
+A=\begin{pmatrix}  
+a_{11} & a_{12} & \cdots & a_{1n}\\  
+a_{21} & a_{22} & \cdots & a_{2n}\\  
+\vdots & \vdots & \ddots & \vdots\\  
+a_{m1} & a_{m2} & \cdots & a_{mn}  
+\end{pmatrix}  
+$$  
+  
+Quindi:  
+  
+$$  
+v=\sum_{i=1}^n b_iv_i  
+$$  
+  
+$$  
+f(v)=f\left(\sum_{i=1}^n b_iv_i\right)=\overset{\text{vettori}}{(w_1,\dots,w_m)}^TA\cdot\begin{pmatrix}b_1\\ b_2\\ \vdots\\ b_n\end{pmatrix}  
+$$  
+  
+Se sai che $v$ ha coefficienti $b_1,\dots, b_n$ rispetto alla base $\mathbb{V}$, allora $f(v)$ ha coefficienti $^TA\cdot\begin{pmatrix}b_1\\ b_2\\ \vdots\\ b_n\end{pmatrix}$ rispetto alla base $\mathbb{W}$.  
+  
+*Esempio*  
+  
+$$  
+\begin{pmatrix}  
+1 & 0 & 5\\  
+2 & -3 & 8  
+\end{pmatrix}  
+\qquad f(v)=?  
+$$  
+  
+$$  
+\underset{\mathbb{V}\in\mathbb{R}^3}{v=\begin{pmatrix}1,-1,5\end{pmatrix}}  
+\quad f(v)=A\begin{pmatrix}1\\ -1\\ 5\end{pmatrix}=  
+\begin{pmatrix}  
+1 & 0 & 5\\  
+2 & -3 & 8  
+\end{pmatrix}\begin{pmatrix}1\\ -1\\ 5\end{pmatrix}=  
+\begin{pmatrix}  
+26\\ 45  
+\end{pmatrix}  
+$$
