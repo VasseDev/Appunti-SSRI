@@ -2,7 +2,7 @@
 share: true
 ---
   
-![L07 (21.10.2025)](../Slides/L07%20(21.10.2025).pdf)  
+[Lezione 7: Slides](<Primo/Matematica I/Slides/L07 (21.10.2025).pdf>)  
   
 # Numeri complessi  
   
