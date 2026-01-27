@@ -1,7 +1,7 @@
 ---
 share: true
 ---
-  
+[Lezione 2: Slides](<Primo/Matematica I/Slides/L02 (02.10.2025).pdf>)  
 ## Riepilogo  
   
 ### Appartenenza  

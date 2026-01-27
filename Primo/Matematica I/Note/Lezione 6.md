@@ -1,13 +1,13 @@
 ---
 share: true
 ---
-  
+[Lezione 6: Slides](<Primo/Matematica I/Slides/L06 (16.10.2025).pdf>)  
   
 ```table-of-contents  
   
 ```  
   
-![L06 (16.10.2025)](../Slides/L06%20(16.10.2025).pdf)  
+![Lezione 6: Slides](../Slides/L06%20(16.10.2025).pdf)  
   
 # Modulo di un reale  
   

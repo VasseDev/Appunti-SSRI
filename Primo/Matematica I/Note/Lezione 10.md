@@ -2,7 +2,7 @@
 share: true
 ---
   
-![L10 (30.10.2025)](../Slides/L10%20(30.10.2025).pdf)  
+[Lezione 10: Slides](<Primo/Matematica I/Slides/L10 (30.10.2025).pdf>)  
   
 # Relazione di equivalenza  
   

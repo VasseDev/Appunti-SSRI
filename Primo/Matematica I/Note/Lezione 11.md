@@ -2,7 +2,7 @@
 share: true
 ---
   
-[Slide: Lezione 10](<Primo/Matematica I/Slides/L10 (30.10.2025).pdf>)  
+[Slide: Lezione 11](<Primo/Matematica I/Slides/L11 (04.11.2025).pdf>)  
   
 # Proprietà degli interi  
   

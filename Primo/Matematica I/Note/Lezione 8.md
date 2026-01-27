@@ -1,6 +1,7 @@
 ---
 share: true
 ---
+[Lezione 8: Slides](<Primo/Matematica I/Slides/L08 (23.10.2025).pdf>)  
 # Ripasso di trigonometria (seconda parte)  
 ## Formule di addizione/sottrazione  
 $$  
