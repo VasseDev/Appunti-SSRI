@@ -501,15 +501,15 @@ $$
   
   
   
-| moltiplicazione algebrica      | $m_A(3)=1$          | $m_A(-3)=1$             |  
-| ------------------------------ | ------------------- | ----------------------- |  
-| **moltiplicazione geometrica** | $\dim V_3=1=m_G(3)$ | $\dim V_{-3}=1=m_G(-3)$ |  
+| molteplicità algebrica      | $m_A(3)=1$          | $m_A(-3)=1$             |  
+| --------------------------- | ------------------- | ----------------------- |  
+| **molteplicità geometrica** | $\dim V_3=1=m_G(3)$ | $\dim V_{-3}=1=m_G(-3)$ |  
   
 $$  
 m_A(3)=m_G(3)\qquad m_A(-3)=m_G(-3)  
 $$  
   
-le moltiplicazioni algebriche/geometriche di ogni autovalore coincidono  
+le molteplicità algebriche/geometriche di ogni autovalore coincidono  
 $\implies$ valgono entrambe le condizioni del criterio  
 $\implies A$ è diagonalizzabile.  
 $\implies$ cioè ammette una forma diagonale  
