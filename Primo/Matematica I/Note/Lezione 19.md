@@ -581,7 +581,7 @@ somma è posizione per posizione.
   
 1. $A+B=B+A$ (commutativa) è possibile perché $\mathbb{K}$ è un anello.  
 2. $(A+B)+C=A+(B+C)$ (associativa) è possibile perché $\mathbb{K}$ è un anello.  
-3. Esiste l'elemento neutro $0$ tale che $A+0=A$ per ogni $A\in M_{m\times n}(\mathbb{K})$. $0$ è la matrice con tutti gli elementi uguali [](.md)a 0.  
+3. Esiste l'elemento neutro $0$ tale che $A+0=A$ per ogni $A\in M_{m\times n}(\mathbb{K})$. $0$ è la matrice con tutti gli elementi uguali a 0.  
 4. Per ogni $A\in M_{m\times n}(\mathbb{K})$ esiste l'inverso $-A$ tale che $A+(-A)=0$. $-A$ si ottiene cambiando il segno a tutti gli elementi di $A$.  
   
 ### Trasposta  

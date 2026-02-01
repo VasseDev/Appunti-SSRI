@@ -127,7 +127,7 @@ I= \begin{pmatrix}
 $$  
   
 $$  
-A\cdot B=I\iff A\cdot \underline{b_i} = \begin{pmatrix}  
+A\cdot B=I\iff A\cdot \underline{b_1} = \begin{pmatrix}  
 1\\  
 0\\  
 \vdots\\  

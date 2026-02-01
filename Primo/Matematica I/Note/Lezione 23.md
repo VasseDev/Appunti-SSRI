@@ -194,7 +194,7 @@ $$
 \quad\text{è una base}  
 $$  
   
-## Completamento ad una base  
+## Completamento a una base  
   
 Dati vettori di $V$ linearmente indipendenti, possiamo aggiungere altri vettori in modo da ottenere una base di $V$.  
   

@@ -45,7 +45,7 @@ Q(x)=0\quad Q(a)=0?\quad
 \end{align}  
 $$  
   
-**Moltiplicazione algebrica:**   
+**Molteplicità algebrica:**   
   
 massimo $m$ t.c. $(x-a)^m|P(x)$  
   
@@ -59,7 +59,7 @@ $$
 (x-1)^1(x+2)^1=0\quad m_a(1)=1,\quad m_a(-2)=1  
 $$  
   
-**Moltiplicazione geometrica:**  
+**Molteplicità geometrica:**  
   
 Ho $a$ autovalore. Autospazio di $a$  
   
@@ -179,7 +179,7 @@ $$
 &f(v)=k\cdot v\\  
 &f(v_1+v_2)=f(v_1)+f(v_2)\\  
 &k(v_1+v_2)=kv_1+kv_2\\  
-&f(hv_1))=hf(v_1)\\  
+&f(hv_1)=hf(v_1)\\  
 \end{align}  
 $$  
   
