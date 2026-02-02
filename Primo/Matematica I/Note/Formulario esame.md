@@ -296,12 +296,20 @@ $$
 y_0=x_0+kn_0\quad n_0=n/d,\space k\in\mathbb{Z}  
 $$  
 che ha esattamente $d$ soluzioni modulo $n$.  
+  
 3. Se $(c,n)=1$, allora $a\equiv b\mod n \Leftrightarrow ac\equiv bc\mod n$  
 4. Se $ka\equiv kb\mod kn$ allora $a\equiv b\mod n$  
-> $ax\equiv\mod n$   
-> _modo generale_: Bezout  
-> _modo due_: se $n$ è piccolo (o altri motivi speciali) si trova a occhio  
-> _modo tre_: $ax= b$ ha soluzione in $\mathbb{Z}$. Se ha soluzione $x$ in $\mathbb{Z}$, allora $[x]_n$ é soluzione in $\mathbb{Z}/\mathbb{Z}_n$ qualsiasi sia $n$.  
+  
+$ax\equiv b\mod n$   
+_modo generale_: Bezout  
+$$  
+ax+ny=b  
+$$  
+_modo due_: se $n$ è piccolo (o altri motivi speciali) si trova a occhio  
+_modo tre_: $ax= b$ ha soluzione in $\mathbb{Z}$. Se ha soluzione $x$ in $\mathbb{Z}$, allora $[x]_n$ é soluzione in $\mathbb{Z}/\mathbb{Z}_n$ qualsiasi sia $n$.  
+  
+> Ricordati di ridurre sempre tutto a modulo $n$ prima di fare qualsiasi passaggio.  
+> Se il termine noto è negativo, aggiungi $n$ fino a renderlo positivo.  
   
 #### Sistemi di congruenze lineari  
 $$  
@@ -344,7 +352,40 @@ $$
 x\equiv\sum_{i=1}^r b_i\cdot N_i\cdot y_i\mod N  
 $$  
 ##### Teorema cinese del resto generalizzato  
+Il sistema ha soluzione se e solo se per ogni coppia di numeri non coprimi tra di loro $i,j\leq r$ si ha che $MCD(n_i,n_j)\mid(b_i-b_j)$.  
+Se ho una soluzione $c_1$, le altre sono della forma $c_1 + k N$, con $N=mcm(n_1,n_2,\dots,n_r)$.  
   
+Spezzo le congruenze in congruenze con moduli coprimi a due a due (scomponendo i moduli nei loro fattori primi) e risolvo ogni sistema ottenuto con il teorema cinese del resto.  
+$$  
+\begin{cases}  
+x\equiv5\mod15\\  
+x\equiv2\mod6\\  
+x\equiv4\mod8  
+\end{cases}  
+\quad  
+\begin{align}  
+MCD(15,6)=3 &\mid (5-2)=3\\  
+MCD(15,8)=1 &\mid (5-4)=1\\  
+MCD(6,8)=2 &\mid (2-4)=-2  
+\end{align}  
+$$  
+$$  
+\begin{cases}  
+x\equiv5\mod15\\  
+x\equiv2\mod6\\  
+x\equiv4\mod8  
+\end{cases}  
+\quad  
+\Longleftrightarrow  
+\quad  
+\begin{cases}  
+x\equiv5\mod3\\  
+x\equiv5\mod5\\  
+x\equiv0\mod2\\  
+x\equiv2\mod3\\  
+x\equiv4\mod8  
+\end{cases}  
+$$  
   
 #### Funzione di Eulero  
 Sia $n\in\mathbb{N}, n>1$.  
@@ -661,6 +702,15 @@ Operazioni permesse:
 1. scambiare di posto due equazioni  
 2. moltiplicare una equazione per uno scalare (= numero reale) non nullo  
 3. sostituire una equazione con la somma di se stessa e un multiplo scalare di un'altra equazione  
+  
+*Esempio*  
+$$  
+\begin{pmatrix} 1 & 2 & 3 & \vdots & 4\\ 2 & 5 & 3 & \vdots & 7\\ 4 & 4 & 9 & \vdots & 10 \end{pmatrix}  
+\quad  
+\underset{R_2-2R_1\to R_2}{\longrightarrow}  
+\quad  
+\begin{pmatrix} 1 & 2 & 3 & \vdots & 4\\ 0 & 1 & -3 & \vdots & -1\\ 4 & 4 & 9 & \vdots & 10 \end{pmatrix}  
+$$  
   
 $(A\ \vdots\ \underline{b})$ è detta matrice completa associata al sistema  
   
@@ -1438,7 +1488,7 @@ f(\sum_{i=1}^n k_iv_i)=\sum_{i=1}^n k_if(v_i)
 $$  
 per ogni $n\in\mathbb{N}$, $v_1,v_2,\ldots,v_n\in V$ e $k_1,k_2,\ldots,k_n\in\mathbb{K}$.  
   
-**Definizione**  
+#### Nucleo e immagine  
 $$  
 \begin{align}  
 &\boxed{1}\ \mathrm{Ker}(f)=\{v\in V\mid f(v)=0\}\quad\text{nucleo di }f\\  
@@ -1448,3 +1498,63 @@ $$
 $$  
 \underset{V}{\mathrm{Ker}}\curvearrowright\underset{W}{\mathrm{Im}}  
 $$  
+$$  
+\begin{align}  
+&\boxed{1}\ \mathrm{Ker}(f)\text{ è sottospazio vettoriale di }V\\  
+&\boxed{2}\ \mathrm{Im}(f)\text{ è sottospazio vettoriale di }W  
+\end{align}  
+$$  
+  
+#### Teorema nullità + rango  
+Sia $f:V\to W$ un'applicazione lineare con $V$ di dimensione finita. Allora  
+$$  
+\dim(V)=\dim(\mathrm{Ker}(f))+\dim(\mathrm{Im}(f))  
+$$  
+  
+#### Terminologia  
+Un applicazione lineare si dice:  
+$$  
+\begin{align}  
+&\boxed{1}\text{ iniettiva, quando è iniettiva come funzione}\\  
+&\boxed{2}\text{ suriettiva, quando è suriettiva come funzione}\\  
+&\boxed{3}\text{ isomorfismo, quando è biettiva come funzione}  
+\end{align}  
+$$  
+  
+#### Rappresentazione  
+Sia $f:V\to W$ un'applicazione lineare.  
+$$  
+\begin{align}  
+&\mathbb{V}=\{v_1,\dots,v_n\}\text{ base di }V\\  
+&\mathbb{W}=\{w_1,\dots,w_m\}\text{ base di }W  
+\end{align}  
+\qquad  
+f\text{ lo rappresento come matrice usando }V,W  
+$$  
+*Passo 1*  
+$$  
+\begin{align}  
+&f(v_1)=a_{11}w_1+a_{21}w_2+\dots+a_{m1}w_m\\  
+&f(v_2)=a_{12}w_1+a_{22}w_2+\dots+a_{m2}w_m\\  
+&\vdots\\  
+&f(v_n)=a_{1n}w_1+a_{2n}w_2+\dots+a_{mn}w_m  
+\end{align}  
+$$  
+$$  
+A=\begin{pmatrix}  
+a_{11} & a_{12} & \cdots & a_{1n}\\  
+a_{21} & a_{22} & \cdots & a_{2n}\\  
+\vdots & \vdots & \ddots & \vdots\\  
+a_{m1} & a_{m2} & \cdots & a_{mn}  
+\end{pmatrix}  
+$$  
+Quindi:  
+$$  
+v=\sum_{i=1}^n b_iv_i  
+$$  
+$$  
+f(v)=f\left(\sum_{i=1}^n b_iv_i\right)=\overset{\text{vettori}}{(w_1,\dots,w_m)}^TA\cdot\begin{pmatrix}b_1\\ b_2\\ \vdots\\ b_n\end{pmatrix}  
+$$  
+Se sai che $v$ ha coefficienti $b_1,\dots, b_n$ rispetto alla base $\mathbb{V}$, allora $f(v)$ ha coefficienti $^TA\cdot\begin{pmatrix}b_1\\ b_2\\ \vdots\\ b_n\end{pmatrix}$ rispetto alla base $\mathbb{W}$.  
+  
+### Coordinate
