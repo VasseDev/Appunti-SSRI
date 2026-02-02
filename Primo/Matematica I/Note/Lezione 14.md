@@ -623,3 +623,18 @@ x\equiv b\mod p_2^{d_2}\\
 x\equiv b\mod p_k^{d_k}  
 \end{cases}  
 $$  
+*Esempio*  
+$$  
+\begin{cases}  
+x\equiv3\mod12\\  
+x\equiv7\mod18  
+\end{cases}  
+\quad  
+\Longleftrightarrow  
+\quad  
+\begin{cases}  
+x\equiv3\mod4\\  
+x\equiv3\mod3\\  
+x\equiv7\mod9  
+\end{cases}  
+$$  
