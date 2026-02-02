@@ -540,12 +540,14 @@ Prodotto:
 $$  
 \left(\sum_{i=0}^n a_ix^i\right)\cdot\left(\sum_{j=0}^m b_jx^j\right)=\sum_{k=0}^{n+m}\left(\sum_{i+j=k}a_ib_j\right)x^k  
 $$  
+  
 #### Teorema di Ruffini  
 Sia $A$ un anello commutativo unitario e sia $f(x)\in A[x]$ un polinomio di grado $n\geq1$. Allora per ogni $a\in A$ esistono un polinomio $q(x)\in A[x]$ di grado $n-1$ e un elemento $r\in A$ tali che:  
 $$  
 f(x)=(x-a)q(x)+r  
 $$  
 In particolare, si ha che $r=f(a)$.  
+  
 ### Matrici  
 Fissiamo $A$ anello.  
 Una matrice di tipo $(m,n)$, con $m,n\in\mathbb{N}_{\geq1}$ è un una tabella  
@@ -647,6 +649,7 @@ La riga $i$ di $A$ per la colonna $j$ di $B$.
 $$  
 A\cdot B\neq B\cdot A  
 $$  
+  
 **Proprietà**  
 Date $A,B,C,D$ matrici compatibili per le operazioni:  
 1. $A\cdot (B\cdot C)=(A\cdot B)\cdot C$ (associativa)  
@@ -800,6 +803,62 @@ $$
 \iff\left(A\ \vdots\ I\right)\underset{\text{dall'alto e dal basso}}{\overset{\text{Gauss-Jordan}}{\longrightarrow}}\left(I\ \vdots\ B\right)  
 $$  
 con $B=A^{-1}$ matrice inversa.  
+  
+*Esempio*  
+$$  
+A=\begin{pmatrix}  
+1 & 2 & 3\\  
+0 & 1 & 4\\  
+5 & 6 & 0  
+\end{pmatrix}  
+\quad  
+\left(A\ \vdots\ I\right)=\begin{pmatrix}  
+1 & 2 & 3 & \vdots & 1 & 0 & 0\\  
+0 & 1 & 4 & \vdots & 0 & 1 & 0\\  
+5 & 6 & 0 & \vdots & 0 & 0 & 1  
+\end{pmatrix}  
+$$  
+$$  
+\underset{R_3-5R_1\to R_3}{\longrightarrow}  
+\begin{pmatrix}  
+1 & 2 & 3 & \vdots & 1 & 0 & 0\\  
+0 & 1 & 4 & \vdots & 0 & 1 & 0\\  
+0 & -4 & -15 & \vdots & -5 & 0 & 1  
+\end{pmatrix}  
+$$  
+$$  
+\underset{R_3+4R_2\to R_3}{\longrightarrow}  
+\begin{pmatrix}  
+1 & 2 & 3 & \vdots & 1 & 0 & 0\\  
+0 & 1 & 4 & \vdots & 0 & 1 & 0\\  
+0 & 0 & 1 & \vdots & -5 & 4 & 1  
+\end{pmatrix}  
+$$  
+$$  
+\underset{R_2-4R_3\to R_2}{\longrightarrow}  
+\begin{pmatrix}  
+1 & 2 & 3 & \vdots & 1 & 0 & 0\\  
+0 & 1 & 0 & \vdots & 20 & -15 & -4\\  
+0 & 0 & 1 & \vdots & -5 & 4 & 1  
+\end{pmatrix}  
+$$  
+$$  
+\underset{R_1-3R_3\to R_1}{\longrightarrow}  
+\begin{pmatrix}  
+1 & 0 & 0 & \vdots & 16 & -12 & -3\\  
+0 & 1 & 0 & \vdots & 20 & -15 & -4\\  
+0 & 0 & 1 & \vdots & -5 & 4 & 1  
+\end{pmatrix}  
+$$  
+$$  
+\Longrightarrow  
+\quad  
+A^{-1}=\begin{pmatrix}  
+16 & -12 & -3\\  
+20 & -15 & -4\\  
+-5 & 4 & 1  
+\end{pmatrix}  
+$$  
   
 **Formule**  
 1. $(AB)^{-1}=B^{-1}A^{-1}$  
