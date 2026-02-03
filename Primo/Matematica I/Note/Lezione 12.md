@@ -50,7 +50,13 @@ $$
 u_n<2^n\quad u_{n-1}<2^{n-1}\quad u_{n-2}<2^{n-2}  
 $$  
 $$  
-  
+u_{n+1}<2^n+2^{n-1}+2^{n-2}=2^{n-2}(4+2+1)=7\cdot2^{n-2}  
+$$  
+$$  
+7\cdot2^{n-2}<8\cdot2^{n-2}=2^{n+1}  
+$$  
+$$  
+u_{n+1}<2^{n+1}\quad\blacksquare  
 $$  
 ### Quanti numeri primi ci sono?  
   
@@ -61,7 +67,7 @@ $$
 x=p_1\cdot...\cdot p_n+1  
 $$  
   
-x è primo= vorrebbe dire $x\in p$, ma $x>p_n$  
+$x$ è primo $=$ vorrebbe dire $x\in p$, ma $x>p_n$  
 quindi c'è uno dei $p_i$ che lo divide  
   
 $$  
@@ -133,7 +139,7 @@ Passo induttivo:
 - $P(n)$: "ogni numero fino ad n ha una fattorizzazione come prodotto di primi"  
 - $P(n+1)$: "n+1 ha una fattorizzazione come prodotto di primi"  
   
-$n+1$. Se $n+i$ è primo: fine.  
+$n+1$. Se $n+1$ è primo: fine.  
   
 Altrimenti se $n+1$ non è primo $(n+1)=a\cdot b$  
   
@@ -146,7 +152,7 @@ b\text{ è un prodotto di primi}
 $$  
   
 $$  
-[60=\underset{2\cdot3}{6}\cdot\underset{2\cdot5}{10}=60=2\cdot3\cdot2\cdot5=2^2\cdot3\cdot5]]  
+[60=\underset{2\cdot3}{6}\cdot\underset{2\cdot5}{10}=60=2\cdot3\cdot2\cdot5=2^2\cdot3\cdot5]  
 $$  
   
 **Unicità**  

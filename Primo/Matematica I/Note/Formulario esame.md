@@ -473,6 +473,11 @@ $$
 $$  
 L'ordine di un ciclo di lunghezza k è k.  
   
+**Elevamento a potenza**  
+$$  
+f^n(x)=\underbrace{f\circ f\circ f\circ \dots \circ f}_{n\text{ volte}}(x)  
+$$  
+  
 **Neutro**  
 $$  
 id\circ g(x)=g\circ id(x)=g(x)  
@@ -717,6 +722,22 @@ $$
   
 $(A\ \vdots\ \underline{b})$ è detta matrice completa associata al sistema  
   
+##### Passi da seguire sempre nello stesso ordine  
+**1. Parti dalla prima colonna**  
+- Cerca il **pivot** (un numero ≠ 0).  
+- Se in alto c’è 0, **scambia righe**.  
+**2. Rendi il pivot uguale a 1**  
+- Dividi **tutta la riga** per il valore del pivot.  
+**3. Azzera tutta la colonna del pivot**  
+- Usa il pivot per fare **zeri sopra e sotto**.  
+- Alla fine, in quella colonna deve restare **solo il 1 del pivot**.  
+**4. Passa alla colonna successiva**  
+- Scendi di una riga e ripeti **esattamente gli stessi passi**.  
+  
+👉 Continui finché:  
+- ottieni l’identità (se stai invertendo una matrice), oppure  
+- non puoi più scendere (fine algoritmo).  
+  
 **Forme a gradini**  
 $$  
 \begin{pmatrix}  
@@ -930,7 +951,7 @@ $$
 $$  
 è l'insieme dei vettori colonna a due entrate.  
   
-Uno spazio vettoriale su un campo $\mathbb{K}$ è un insieme $V$ dotato di due operazioni:  
+Uno spazio vettoriale su un campo $\mathbb{K}$ è un insieme chiuso $V$ dotato di due operazioni:  
 1. somma: $+: V \times V \rightarrow V$  
 2. prodotto per scalare: $\cdot: \mathbb{K} \times V \rightarrow V$  
   
@@ -964,6 +985,12 @@ $$
 $$  
 \mathbb{R}^N=\{\begin{pmatrix}x_1\\x_2\\\vdots\\x_N\end{pmatrix} : x_i \in \mathbb{R}, i=1,\ldots,N\}  
 $$  
+  
+#### Dimostrare che un insieme è uno spazio vettoriale  
+1. Definire le due operazioni  
+2. Verificare la chiusura rispetto alle due operazioni  
+3. Verificare esistenza del vettore nullo  
+4. Verificare l'esistenza dell'opposto  
   
 #### Insieme matrici quadrate  
 L'insieme delle matrici quadrate $N\times N$ è uno spazio vettoriale su su $\mathbb{R}$:  
@@ -1070,6 +1097,12 @@ $$
 \mathbb{R}^n.\qquad\{\begin{pmatrix}1 \\ 0 \\ \vdots \\ 0\end{pmatrix}, \begin{pmatrix}0 \\ 1 \\ \vdots \\ 0\end{pmatrix}, \ldots, \begin{pmatrix}0 \\ 0 \\ \vdots \\ 1\end{pmatrix}\} \text{ è una base di } \mathbb{R}^n\qquad\dim(\mathbb{R}^n) = n  
 $$  
 Questa è una base "speciale" formata dai vettori canonici, detta **base canonica** di $\mathbb{R}^n$.  
+  
+##### Trovare la base di uno spazio dato con parametri  
+1. separi i parametri  
+2. scrivi come combinazione lineare  
+3. i vettori che moltiplicano i parametri **sono i generatori**  
+4. se sono indipendenti → base  
   
 ##### Teorema di equicardinalità delle basi  
 Tutte le basi di uno spazio vettoriale $V$ hanno lo stesso numero di vettori.  
@@ -1194,7 +1227,7 @@ $$
 $$  
   
 **Definizione**  
-$S,T\subseteq V$ sottospazis e $S+T=V$ e $S\cap T=\{0\}$ si dice che  
+$S,T\subseteq V$ sottospazi e $S+T=V$ e $S\cap T=\{0\}$ si dice che  
 $$  
 V=S\oplus T  
 $$  
@@ -1564,6 +1597,10 @@ $$
 \end{align}  
 $$  
   
+Esempio:  
+- se $f(x,y)=(x,0)$, allora $\ker(f)=\{(0,y)\}$  
+  
+> Un’applicazione lineare preserva le combinazioni lineari; il suo nucleo misura la perdita di informazione, la sua immagine ciò che viene effettivamente raggiunto.  
 #### Teorema nullità + rango  
 Sia $f:V\to W$ un'applicazione lineare con $V$ di dimensione finita. Allora  
 $$  
@@ -1616,4 +1653,495 @@ f(v)=f\left(\sum_{i=1}^n b_iv_i\right)=\overset{\text{vettori}}{(w_1,\dots,w_m)}
 $$  
 Se sai che $v$ ha coefficienti $b_1,\dots, b_n$ rispetto alla base $\mathbb{V}$, allora $f(v)$ ha coefficienti $^TA\cdot\begin{pmatrix}b_1\\ b_2\\ \vdots\\ b_n\end{pmatrix}$ rispetto alla base $\mathbb{W}$.  
   
-### Coordinate
+#### **Esempio**  
+Sia  
+$$  
+f:\mathbb R^2 \to \mathbb R^2 \quad\text{definita da}\quad f(x,y)=(x+2y,\;3x+y).  
+$$  
+##### **1️. Basi scelte**  
+Usiamo le **basi canoniche**:  
+$$  
+V=\{e_1=(1,0),\ e_2=(0,1)\},\qquad W=\{e_1,e_2\}.  
+$$  
+  
+##### **2️. Immagine dei vettori di base**  
+Calcoliamo:  
+$$  
+f(e_1)=f(1,0)=(1,3)=1e_1+3e_2  
+$$  
+$$  
+f(e_2)=f(0,1)=(2,1)=2e_1+1e_2  
+$$  
+  
+##### **3️. Matrice associata a** f  
+Le colonne sono le coordinate di $f(e_1)$ e $f(e_2)$:  
+$$  
+A= \begin{pmatrix} 1 & 2\\ 3 & 1 \end{pmatrix}  
+$$  
+  
+##### **4️. Uso della matrice**  
+Prendiamo  
+$$  
+v=(4,-1).  
+$$  
+Coordinate in base canonica:  
+$$  
+[v]=\begin{pmatrix}4\\-1\end{pmatrix}.  
+$$  
+Calcolo:  
+$$  
+A[v]= \begin{pmatrix} 1 & 2\\ 3 & 1 \end{pmatrix} \begin{pmatrix} 4\\-1 \end{pmatrix} = \begin{pmatrix} 2\\ 11 \end{pmatrix}.  
+$$  
+  
+##### **5️. Verifica diretta**  
+Calcolo diretto:  
+$$  
+f(4,-1)=(4+2(-1),\;3\cdot4-1)=(2,11).  
+$$  
+coincide.  
+  
+##### **6️. Collegamento con nucleo e immagine**  
+- $\ker f = \{(0,0)\}$ ⇒ f è **iniettiva**  
+- $\det A = 1-6=-5 \neq 0$ ⇒ f è **invertibile**  
+  
+### Coordinate  
+$V$ spazio vettoriale su $\mathbb{R}$ (in generale su un campo qualsiasi $\mathbb{K}$).  
+Fissiamo una base $\mathbb{B}=\{\underline{v_1},\underline v_2,\ldots,\underline{v_n}\}$ di $V$. Quindi $\dim V=N$  
+  
+**Teorema**  
+Ogni vettore $\underline v\in V$ si scrive in modo unico come combinazione lineare dei vettori della base, cioè  
+$$  
+\underline v=x_1\underline{v_1}+x_2\underline{v_2}+\ldots+x_n\underline{v_n}  
+$$  
+con  
+$$  
+x_i\in \mathbb{R}\quad i=1,2,\ldots,n  
+$$  
+univocamente determinati.  
+Il vettore  
+$$  
+\begin{pmatrix}  
+x_1\\  
+x_2\\  
+\vdots\\  
+x_n  
+\end{pmatrix}\in \mathbb{R}^n  
+$$  
+è detto vettore delle coordinate.  
+Si indica con  
+  
+$$  
+[\underline{v}]_\mathbb{B}=\begin{pmatrix}  
+x_1\\ x_2\\ \vdots\\ x_n  
+\end{pmatrix}\ \text{ oppure con }\ \underline{x}=\begin{pmatrix} x_1\\ x_2\\ \vdots\\ x_n \end{pmatrix}  
+$$  
+  
+*Esempio 1*  
+$\mathbb{R}^2$ con base canonica  
+$$  
+\mathcal{E}=\{\begin{pmatrix}1\\0\end{pmatrix},\begin{pmatrix}0\\1\end{pmatrix}\}  
+$$  
+$$  
+\underline{v}=\begin{pmatrix}  
+2\\  
+3  
+\end{pmatrix}  
+$$  
+Qual è il vettore delle cordinate di $\underline{v}$ rispetto alla base $\mathcal{E}$?  
+$$  
+\begin{pmatrix}  
+2\\  
+3  
+\end{pmatrix}= 2\begin{pmatrix}  
+1\\  
+0  
+\end{pmatrix}+3\begin{pmatrix}  
+0\\  
+1  
+\end{pmatrix}\implies [\begin{pmatrix}  
+2\\  
+3  
+\end{pmatrix}]_\mathcal{E}=\begin{pmatrix}  
+2\\  
+3  
+\end{pmatrix}  
+$$  
+> **Nota**  
+> Le coordinate rispetto alla base canonica è il vettore stesso  
+$$  
+[\begin{pmatrix}  
+-2\\  
+4  
+\end{pmatrix}]_\mathcal{E}=\begin{pmatrix}  
+-2\\  
+4  
+\end{pmatrix}  
+$$  
+$$  
+[\begin{pmatrix}  
+x\\  
+y  
+\end{pmatrix}]_\mathcal{E}=\begin{pmatrix}  
+x\\  
+y  
+\end{pmatrix}\qquad\forall\ \begin{pmatrix}  
+x\\  
+y  
+\end{pmatrix}\in \mathbb{R}^2  
+$$  
+  
+*Esempio 2*  
+$\mathbb{R}^3$ con base  
+$$  
+\mathbb{B}=\{\begin{pmatrix}  
+2\\ 3\end{pmatrix},\begin{pmatrix}  
+0\\ 1\end{pmatrix}\}  
+$$  
+$$  
+\underline{v}=\begin{pmatrix}  
+2\\ 3\end{pmatrix}\qquad [\ \underline{v}\ ]_\mathbb{B}=\begin{pmatrix}1\\ 0\end{pmatrix}  
+$$  
+$$  
+\underline{v}=\begin{pmatrix}2\\ 3\end{pmatrix}=1\cdot\begin{pmatrix}2\\ 3\end{pmatrix}+0\cdot\begin{pmatrix}1\\ 0\end{pmatrix}  
+$$  
+  
+*Esempio 3*  
+$$  
+M(\mathbb{R},\ 2\times2)\qquad\begin{pmatrix}a&b\\ c&d\end{pmatrix}  
+$$  
+$$  
+\mathbb{B}=\left\{\begin{pmatrix}1&0\\ 0&0\end{pmatrix},\begin{pmatrix}0&1\\ 0&0\end{pmatrix},\begin{pmatrix}0&0\\ 1&0\end{pmatrix},\begin{pmatrix}0&0\\ 0&1\end{pmatrix}\right\}  
+$$  
+$$  
+A=\begin{pmatrix}2&3\\ 4&5\end{pmatrix}=  
+2\begin{pmatrix}1&0\\ 0&0\end{pmatrix}+3\begin{pmatrix}0&1\\ 0&0\end{pmatrix}+4\begin{pmatrix}0&0\\ 1&0\end{pmatrix}+5\begin{pmatrix}0&0\\ 0&1\end{pmatrix}  
+$$  
+  
+#### **Applicazione delle coordinate: cos’è**  
+Hai uno spazio vettoriale V di dimensione n e scegli una base  
+$$  
+\mathcal B=\{v_1,\dots,v_n\}.  
+$$  
+Ogni vettore v\in V si scrive **in modo unico** come  
+$$  
+v=b_1v_1+\cdots+b_nv_n.  
+$$  
+L’**applicazione delle coordinate** è la funzione  
+$$  
+\varphi_{\mathcal B}:V\to\mathbb R^n,\qquad v\longmapsto [v]_{\mathcal B}= \begin{pmatrix} b_1\\ \vdots\\ b_n \end{pmatrix}.  
+$$  
+Non cambia il vettore: **cambia solo come lo descrivi**.  
+  
+##### **Corollario: perché due spazi di stessa dimensione sono isomorfi**  
+Se:  
+$$  
+\dim V=\dim W=n,  
+$$  
+allora:  
+$$  
+V \xrightarrow{\;\varphi_{\mathcal B}\;} \mathbb R^n \xleftarrow{\;\varphi_{\mathcal C}\;} W  
+$$  
+Componendo ottieni un isomorfismo $V\to W$.  
+  
+**La dimensione è l’unico invariante** per gli spazi vettoriali (su uno stesso campo).  
+  
+#### Matrice del cambiamento di base  
+$V$ fissiamo due basi   
+$$  
+\begin{align}  
+&\mathbb{B}=\{\underline{v_1},\underline{v_2},\ldots,\underline{v_n}\}\\  
+&\mathcal{E}=\{\underline{w_1},\underline{w_2},\ldots,\underline{w_n}\}  
+\end{align}  
+$$  
+In particolare $\dim V=n$.]  
+Definiamo la matrice  
+$$  
+_\mathcal{E}M_\mathbb{B}=\begin{pmatrix}|&|& &|\\ [\underline{v_1}]_\mathcal{E}&[\underline{v_2}]_\mathcal{E}&\ldots&[\underline{v_n}]_\mathcal{E}\\ |&|& &|\end{pmatrix}  
+$$  
+detta matrice del cambiamento di coordinate dalla base $\mathbb{B}$ alla base $\mathcal{E}$.  
+  
+**Proprietà**  
+$$  
+[\underline{v}]_\mathcal{E}=_\mathcal{E}M_\mathbb{B}\cdot[\underline{v}]_\mathbb{B}\quad\forall\ \underline{v}\in V  
+$$  
+$_\mathcal{E}M_\mathbb{B}$ trasforma le $\mathbb{B}$ coordinate di un vettore nelle sue $\mathcal{E}$ coordinate.  
+  
+*Esempio*  
+$$  
+\mathbb{R}^2\quad\begin{align}  
+&\mathcal{E}=\{\begin{pmatrix}1\\0\end{pmatrix},\begin{pmatrix}1\\1\end{pmatrix}\}\\  
+&\mathbb{B}=\{\begin{pmatrix}2\\3\end{pmatrix},\begin{pmatrix}0\\1\end{pmatrix}\}  
+\end{align}  
+$$  
+Scriviamo $_\mathbb{B}M_\mathcal{E}$.  
+$$  
+_\mathbb{B}M_\mathcal{E}=\begin{pmatrix}|&|\\ [\begin{pmatrix}1\\0\end{pmatrix}]_\mathbb{B}&[\begin{pmatrix}0\\1\end{pmatrix}]_\mathbb{B}\\ |&|\end{pmatrix}=\begin{pmatrix}\frac{1}{2}\\ -\frac{3}{2}\end{pmatrix}  
+$$  
+$$  
+\begin{pmatrix} 1\\0\end{pmatrix}=  
+\begin{pmatrix}2x+0y\\ 3x+1y\end{pmatrix}\implies\begin{cases}2x=1\\ 3x+y=0\end{cases}\implies x=\frac{1}{2},y=-\frac{3}{2}  
+$$  
+$$  
+\implies\begin{pmatrix}1\\0\end{pmatrix}=\frac{1}{2}\begin{pmatrix}2\\3\end{pmatrix}-\frac{3}{2}\begin{pmatrix}0\\1\end{pmatrix}\implies [\begin{pmatrix}1\\0\end{pmatrix}]_\mathbb{B}=\begin{pmatrix}\frac{1}{2}\\ -\frac{3}{2}\end{pmatrix}  
+$$  
+$$  
+[\begin{pmatrix}0\\1\end{pmatrix}]_\mathbb{B}=?  
+$$  
+$$  
+\begin{pmatrix}0\\1\end{pmatrix}=0\cdot\begin{pmatrix}2\\3\end{pmatrix}+1\cdot\begin{pmatrix}0\\1\end{pmatrix}\implies [\begin{pmatrix}0\\1\end{pmatrix}]_\mathbb{B}=\begin{pmatrix}0\\1\end{pmatrix}  
+$$  
+$$  
+_\mathbb{B}M_\mathcal{E}=\begin{pmatrix}\frac{1}{2}&0\\ -\frac{3}{2}&1\end{pmatrix}  
+$$  
+è la matrice del cambiamento di coordinate.  
+  
+### Endomorfismi  
+Se $W=V$, $f:V\to V$ è detto endomorfismo su $V$ (applicazione da $V$ in se stesso).  
+Siano $\mathbb{B}$ e $\mathcal{E}$ due basi di $V$.   
+Abbiamo due matrici rappresentanti di $f$:  
+$$  
+_\mathbb{B}M_\mathbb{B}(f)\quad\text{ e }\quad _\mathcal{E}M_\mathcal{E}(f)  
+$$  
+$$  
+_\mathcal{E}M_\mathcal{E}(f)=\ _\mathcal{E}M_\mathbb{B}\cdot _\mathbb{B}M_\mathbb{B}(f)\cdot\ _\mathbb{B}M_\mathcal{E}  
+$$  
+  
+*Esercizio*  
+$$  
+f_k:\mathbb{R}^2\to\mathbb{R}^2  
+$$  
+$$  
+f_k\begin{pmatrix}x\\ y\end{pmatrix}=\begin{pmatrix}x+2k^2y\\ 2x+y\end{pmatrix}  
+$$  
+$$  
+k\in\mathbb{R}\quad\text{è un parametro}  
+$$  
+$$  
+\begin{align}  
+&\boxed{1}\text{ matrice rappresentativa }_\mathcal{E}M_\mathcal{E}(f)\\  
+&\boxed{2}\text{ per quali }k,f_k\text{ è iniettiva?}\\  
+&\boxed{3}\text{ per quali }k,f_k\text{ è suriettiva?}\\  
+&\boxed{4}\text{ per quali }k,f_k\text{ è diagonalizzabile?}\\  
+\end{align}  
+$$  
+  
+1)  
+$$  
+\mathcal{E}=\{\begin{pmatrix}  
+1\\0\end{pmatrix},\begin{pmatrix}  
+0\\1  
+\end{pmatrix}\}\qquad  
+\text{base canonica}  
+$$  
+$$  
+A=_\mathcal{E}M_\mathcal{E}(f_k)=\begin{pmatrix}1&2k^2\\ 2&1\end{pmatrix}  
+$$  
+  
+3)  
+$f_k$ suriettiva se e solo se  
+$$  
+\Im(f_k)=\mathbb{R}^2\implies \operatorname{rank}(A)=2  
+$$  
+Calcoliamo una base del sottospazio $\Im(f_k)$:  
+$$  
+\Im(f_k)=\{\underline{w}\in\mathbb{R}^2\mid f(\ \underline{v}\ )=\underline{w}\text{ per qualche }\underline{v}\in\mathbb{R}^2\}  
+$$  
+$$  
+f(\ \underline{v}\ )=\underline{w}\iff A\cdot \underline{v}=\underline{w}  
+$$  
+$$  
+\text{dove }A=\begin{pmatrix}  
+1&2k^2\\ 2&1  
+\end{pmatrix}  
+$$  
+quindi una base di $\Im(f_k)$ è nient'altro che una base formata dai vettori lineari indipendenti sei vettori colonna di $A$.  
+  
+Perciò:  
+$$  
+\dim(\Im(f_k))=\operatorname{rank}(A)  
+$$  
+$$  
+f_k\text{ suriettiva}\begin{align}  
+&\iff\dim(\Im(f_k))=2\\  
+&\iff\operatorname{rank}(A)=2\\  
+\end{align}  
+$$  
+però rango è massimo se $\det\neq0$.  
+$$  
+\det A=\det\begin{pmatrix}  
+1&2k^2\\ 2&1  
+\end{pmatrix}=1-4k^2\neq0  
+$$  
+$$  
+\begin{align}  
+&\iff -4k^2\neq -1\\  
+&\iff k^2\neq \frac{1}{4}\\  
+&\iff k\neq \pm \frac{1}{2}  
+\end{align}  
+$$  
+per cui  
+$$  
+\operatorname{rank}(A)=2\begin{align}  
+&\iff k\neq \pm \frac{1}{2}\\  
+&\iff f_k\text{ suriettiva}  
+\end{align}  
+$$  
+e una base di $\Im(f_k)$ è data dalle colonne di $A$.  
+  
+2)  
+$$  
+f_k\text{ iniettiva}\iff \ker(f_k)=\{\underline{0}\}  
+$$  
+utilizziamo il teorema fondamentale dell'algebra lineare:  
+$$  
+\begin{align}  
+\dim V&=\dim(\ker(f_k))+\dim(\Im(f_k))\\  
+\dim(\ker(f_k))&=\dim V-\dim(\Im(f_k))\\  
+&=2-\dim(\Im(f_k))  
+\end{align}  
+$$  
+abbiamo visto che:  
+$$  
+\begin{align}  
+\dim(\Im(f))=2&\iff k\neq \pm \frac{1}{2}\\  
+\dim(\Im(f))=1&\iff k=\pm \frac{1}{2}  
+\end{align}  
+$$  
+$$  
+=\begin{cases}  
+2-2=0&\text{se }k\neq \pm \frac{1}{2}\\  
+2-1=1&\text{se }k=\pm \frac{1}{2}  
+\end{cases}  
+$$  
+$$  
+f_k\text{ iniettiva}\iff k\neq \pm \frac{1}{2}  
+$$  
+  
+*In generale:*  
+  
+1. $f:V\to V$ endo suriettivo, allora è anche iniettivo  
+2. $f:V\to V$ endo iniettivo, allora è anche suriettivo  
+  
+> **Corollario**  
+> $f:V\to V$ endomorfismo e sia $A$ una matrice rappresentativa di $f$.  
+> Allora:  
+  
+$$  
+\det A\neq 0\iff f\text{ iniettiva}\iff f\text{ suriettiva}  
+$$  
+  
+4)  
+$f_k$ è diagonalizzabile?  
+$$  
+\iff A=\begin{pmatrix} 1&2k^2\\ 2&1\end{pmatrix}\text{ è diagonalizzabile}  
+$$  
+abbiamo il criterio di diagonalizzazione delle matrici:  
+$$  
+A\text{ diagonalizzabile}\iff\begin{align}  
+&x_A(t)\text{ non ha radici complesse}\\  
+&m_A(\lambda)=m_G(\lambda)\quad\forall\ \lambda\text{ autovalore di }A  
+\end{align}  
+$$  
+$$  
+A-tI=\begin{pmatrix}  
+1-t&2k^2\\ 2&1-t  
+\end{pmatrix}  
+$$  
+$$  
+x_A(t)=\det(A-tI)=(1-t)^2-4k^2=t^2-2t+1-4k^2=0  
+$$  
+troviamo le radici di $x_A(t)$:  
+  
+$$  
+(1-t)^2=4k^2  
+$$  
+prendiamo le radici quadrate  
+$$  
+\sqrt{(1-t)^2}=\sqrt{4k^2}=\sqrt{(2k)^2}  
+$$  
+$$  
+\implies |1-t|=|2k|  
+$$  
+$$  
+\implies 1-t=\pm 2k  
+$$  
+$$  
+\implies t=1\pm 2k  
+$$  
+gli autovalori sono  
+$$  
+\{1+2k,\ 1-2k\}  
+$$  
+per $k=0$ gli autovalori coincidono:  
+$$  
+\{1,\ 1\}  
+$$  
+vuol dire che la moltiplicazione algebrica è  
+$$  
+2\to m_A(1)=2  
+$$  
+per $k\neq0$, ho due autovalori distinti $1+2k$ e $1-2k$, ognuno di moltiplicazione algebrica 1:  
+$$  
+\begin{align}  
+&\to m_a(1+2k)=1\\  
+&\to m_a(1-2k)=1  
+\end{align}  
+$$  
+ci sono due casi da studiare: $k=0$ e $k\neq0$.  
+In ogni caso $x_A(t)$ non ha radici complesse.  
+Oppure che la somma delle moltiplicazioni algebriche degli autovalori è 2.  
+Per cui la prima condizione del criterio è vera.  
+Ora vediamo le moltiplicazioni geometriche nei due casi.  
+  
+*Caso 1* $k\neq0$  
+$$  
+\begin{align}  
+&m_a(1+2k)=1\implies m_g(1+2k)=1\\  
+&m_a(1-2k)=1\implies m_g(1-2k)=1  
+\end{align}  
+$$  
+le moltiplicazioni coincidono.  
+$$  
+\implies A\text{ diagonalizzabile per }k\neq0  
+$$  
+  
+*Caso 2* $k=0$  
+$$  
+m_A(1)=2\qquad A-tI=\begin{pmatrix}  
+1-t&0\\  
+2&1-t  
+\end{pmatrix}  
+$$  
+$t=1$  
+$$  
+V_1:\begin{pmatrix}0&0\\2&0\end{pmatrix}\begin{pmatrix}x\\ y\end{pmatrix}=\begin{pmatrix}0\\ 0\end{pmatrix}  
+$$  
+$$  
+\begin{cases}  
+0=0\\  
+2x=0  
+\end{cases}  
+\implies x=0  
+$$  
+$y$ è una variabile libera  
+$$  
+y=t\qquad t\in\mathbb{R}  
+$$  
+soluzioni  
+$$  
+\begin{pmatrix}0\\ t\end{pmatrix}=t\begin{pmatrix}0\\ 1\end{pmatrix}  
+$$  
+$\{\begin{pmatrix}0\\ 1\end{pmatrix}\}$ è una base di $V_1$.  
+$$  
+\dim V_1=1\implies m_g(1)=1  
+$$  
+le molteplicità sono diverse $\implies$ non è diagonalizzabile.  
+  
+Conclusione:  
+$$  
+f_k\text{ diagonalizzabile}\iff k\neq0  
+$$  
+  
+**Definizione**  
+Diciamo che un endomorfismo $f:V\to V$ è *diagonalizzabile* se esiste una base $\mathbb{B}$ di $V$ tale che la matrice rappresentativa $_\mathbb{B}M_\mathbb{B}(f)$ è diagonale.  
+In questo caso, la matrice rappresentativa di $f$ rispetto a qualsiasi altra base è simile a una matrice diagonale.
