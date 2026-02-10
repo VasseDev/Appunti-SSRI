@@ -241,7 +241,7 @@ $$
 \end{align}  
 $$  
   
-**Domanda**   
+**Domanda**  
 **1)**  
   
 Se  
