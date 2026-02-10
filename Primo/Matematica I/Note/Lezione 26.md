@@ -10,7 +10,6 @@ $V$ spazio vettoriale su $\mathbb{R}$ (in generale su un campo qualsiasi $\mathb
 Fissiamo una base $\mathbb{B}=\{\underline{v_1},\underline v_2,\ldots,\underline{v_n}\}$ di $V$. Quindi $\dim V=N$  
   
 **Teorema**  
-  
 Ogni vettore $\underline v\in V$ si scrive in modo unico come combinazione lineare dei vettori della base, cioè  
   
 $$  
@@ -124,7 +123,7 @@ $$
 $$  
   
 $$  
-\underline{v}=\begin{pmatrix}2\\ 3\end{pmatrix}=1\cdot\begin{pmatrix}2\\ 3\end{pmatrix}+0\cdot\begin{pmatrix}1\\ 0\end{pmatrix}  
+\underline{v}=\begin{pmatrix}2\\ 3\end{pmatrix}=1\cdot\begin{pmatrix}2\\ 3\end{pmatrix}+0\cdot\begin{pmatrix}0\\ 1\end{pmatrix}  
 $$  
   
 *Esempio 3*  
@@ -167,7 +166,7 @@ $$
 *Esercizio*  
   
 $$  
-\mathbb{R}[x]\leq2\qquad\mathbb{B}=\{x^2+1,x^2,x^2-1\}  
+\mathbb{R}[x]\leq2\qquad\mathbb{B}=\{x^2+1,x,x^2-1\}  
 $$  
   
 $$  
@@ -244,40 +243,28 @@ $_\mathcal{E}M_\mathbb{B}$ trasforma le $\mathbb{B}$ coordinate di un vettore ne
 *Esempio*  
   
 $$  
-\mathbb{R}^2\quad\begin{align}  
-&\mathcal{E}=\{\begin{pmatrix}1\\0\end{pmatrix},\begin{pmatrix}1\\1\end{pmatrix}\}\\  
-&\mathbb{B}=\{\begin{pmatrix}2\\3\end{pmatrix},\begin{pmatrix}0\\1\end{pmatrix}\}  
-\end{align}  
+f:\mathbb{R}^2\to\mathbb{R}^2  
+$$  
+$$  
+f\begin{pmatrix}x\\ y\end{pmatrix}=\begin{pmatrix}x+2y\\ 2x+y\end{pmatrix}  
 $$  
   
 Scriviamo $_\mathbb{B}M_\mathcal{E}$.  
   
 $$  
-_\mathbb{B}M_\mathcal{E}=\begin{pmatrix}|&|\\ [\begin{pmatrix}1\\0\end{pmatrix}]_\mathbb{B}&[\begin{pmatrix}0\\1\end{pmatrix}]_\mathbb{B}\\ |&|\end{pmatrix}=\begin{pmatrix}\frac{1}{2}\\ -\frac{3}{2}\end{pmatrix}  
+_\mathbb{B}M_\mathcal{E}=\begin{pmatrix}|&|\\ [f\begin{pmatrix}1\\0\end{pmatrix}]_\mathbb{B}&[f\begin{pmatrix}0\\1\end{pmatrix}]_\mathbb{B}\\ |&|\end{pmatrix}=\begin{pmatrix}|&|\\f\begin{pmatrix}1\\0\end{pmatrix}&f\begin{pmatrix}0\\1\end{pmatrix}\\ |&|\end{pmatrix}=\begin{pmatrix}1&2\\ 2&1\end{pmatrix}  
 $$  
   
 $$  
-\begin{pmatrix} 1\\0\end{pmatrix}=  
-\begin{pmatrix}2x+0y\\ 3x+1y\end{pmatrix}\implies\begin{cases}2x=1\\ 3x+y=0\end{cases}\implies x=\frac{1}{2},y=-\frac{3}{2}  
+\mathcal{E}=\{\begin{pmatrix}1\\0\end{pmatrix},\begin{pmatrix}0\\1\end{pmatrix}\}  
 $$  
   
 $$  
-\implies\begin{pmatrix}1\\0\end{pmatrix}=\frac{1}{2}\begin{pmatrix}2\\3\end{pmatrix}-\frac{3}{2}\begin{pmatrix}0\\1\end{pmatrix}\implies [\begin{pmatrix}1\\0\end{pmatrix}]_\mathbb{B}=\begin{pmatrix}\frac{1}{2}\\ -\frac{3}{2}\end{pmatrix}  
+f\begin{pmatrix}1\\0\end{pmatrix}=\begin{pmatrix}1\\2\end{pmatrix}\quad\implies\quad [f\begin{pmatrix}1\\0\end{pmatrix}]_\mathbb{B}=\begin{pmatrix}1\\2\end{pmatrix}  
 $$  
-  
 $$  
-[\begin{pmatrix}0\\1\end{pmatrix}]_\mathbb{B}=?  
+f\begin{pmatrix}0\\1\end{pmatrix}=\begin{pmatrix}2\\1\end{pmatrix}\quad\implies\quad [f\begin{pmatrix}0\\1\end{pmatrix}]_\mathbb{B}=\begin{pmatrix}2\\1\end{pmatrix}  
 $$  
-  
-$$  
-\begin{pmatrix}0\\1\end{pmatrix}=0\cdot\begin{pmatrix}2\\3\end{pmatrix}+1\cdot\begin{pmatrix}0\\1\end{pmatrix}\implies [\begin{pmatrix}0\\1\end{pmatrix}]_\mathbb{B}=\begin{pmatrix}0\\1\end{pmatrix}  
-$$  
-  
-$$  
-_\mathbb{B}M_\mathcal{E}=\begin{pmatrix}\frac{1}{2}&0\\ -\frac{3}{2}&1\end{pmatrix}  
-$$  
-  
-è la matrice del cambiamento di coordinate.  
   
 # Applicazioni lineari  
   
@@ -523,7 +510,7 @@ $$
 \end{pmatrix}  
 $$  
   
-quindi una base di $\Im(f_k)$ è nient'altro che una base formata dai vettori lineari indipendenti sei vettori colonna di $A$.  
+quindi una base di $\Im(f_k)$ è nient'altro che una base formata dai vettori lineari indipendenti dei vettori colonna di $A$.  
   
 Perciò:  
   
@@ -673,13 +660,13 @@ $$
 \{1,\ 1\}  
 $$  
   
-vuol dire che la moltiplicazione algebrica è  
+vuol dire che la molteplicità algebrica è  
   
 $$  
 2\to m_A(1)=2  
 $$  
   
-per $k\neq0$, ho due autovalori distinti $1+2k$ e $1-2k$, ognuno di moltiplicazione algebrica 1:  
+per $k\neq0$, ho due autovalori distinti $1+2k$ e $1-2k$, ognuno di molteplicità algebrica 1:  
   
 $$  
 \begin{align}  
@@ -690,10 +677,10 @@ $$
   
 ci sono due casi da studiare: $k=0$ e $k\neq0$.  
 In ogni caso $x_A(t)$ non ha radici complesse.  
-Oppure che la somma delle moltiplicazioni algebriche degli autovalori è 2.  
+Oppure che la somma delle molteplicità algebriche degli autovalori è 2.  
 Per cui la prima condizione del criterio è vera.  
   
-Ora vediamo le moltiplicazioni geometriche nei due casi.  
+Ora vediamo le molteplicità geometriche nei due casi.  
   
 *Caso 1* $k\neq0$  
   
@@ -704,7 +691,7 @@ $$
 \end{align}  
 $$  
   
-le moltiplicazioni coincidono.  
+le molteplicità coincidono.  
   
 $$  
 \implies A\text{ diagonalizzabile per }k\neq0  

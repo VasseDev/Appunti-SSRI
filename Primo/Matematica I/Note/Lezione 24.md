@@ -162,11 +162,8 @@ $$
 ossia l'insieme degli autovettori relativi a $\lambda$ più il vettore nullo.  
   
 $$  
-=\{\underline{v}\in\mathbb{K}^N\mid A\underline{v}- V\underline{v}=\underline{0}\}=\{ \underline{v}\in\mathbb{K}^N\mid (A-\lambda I)\underline{v}=\underline{0}\}  
+=\{\underline{v}\in\mathbb{K}^N\mid A\underline{v}- \lambda\underline{v}=\underline{0}\}=\{ \underline{v}\in\mathbb{K}^N\mid (A-\lambda I)\underline{v}=\underline{0}\}  
 $$  
-  
-*Esercizio*  
-$V_\lambda$ è un sottospazio.  
   
 > **Definizione**  
 > La molteplicità geometrica dell'autovalore $\lambda$ è la dimensione di $V_\lambda$. Si indica con  
