@@ -1563,6 +1563,63 @@ $$
 $$  
 Formata dagli autovalori di $A$.  
   
+*Esempio*  
+$$  
+A=\begin{pmatrix}  
+1 & 2\\  
+4 & -1  
+\end{pmatrix},\quad \mathbb{K}=\mathbb{R}  
+$$  
+è diagonalizzabile? Applichiamo il criterio.  
+$$  
+\chi_A(t)=t^2-9=(t-3)(t+3)  
+$$  
+Autovalori:  
+$$  
+\lambda_1=3\quad\text{e}\quad\lambda_2=-3  
+$$  
+  
+| molteplicità algebrica      | $m_A(3)=1$          | $m_A(-3)=1$             |  
+| --------------------------- | ------------------- | ----------------------- |  
+| **molteplicità geometrica** | $\dim V_3=1=m_G(3)$ | $\dim V_{-3}=1=m_G(-3)$ |  
+  
+$$  
+m_A(3)=m_G(3)\qquad m_A(-3)=m_G(-3)  
+$$  
+le molteplicità algebriche/geometriche di ogni autovalore coincidono  
+$\implies$ valgono entrambe le condizioni del criterio  
+$\implies A$ è diagonalizzabile.  
+$\implies$ cioè ammette una forma diagonale  
+  
+che è  
+$$  
+\land=\begin{pmatrix}  
+3 & 0\\  
+0 & -3  
+\end{pmatrix}  
+$$  
+(formata dagli autovalori)  
+  
+e la matrice diagonalizzante  
+$$  
+C=\begin{pmatrix}  
+1 & -\frac{1}{2}\\  
+1 & 1  
+\end{pmatrix}  
+\qquad\begin{align}  
+&V_3=\left\langle\begin{pmatrix}  
+1\\ 1  
+\end{pmatrix}\right\rangle\\  
+&V_{-3}=\left\langle\begin{pmatrix}  
+-\frac{1}{2}\\ 1  
+\end{pmatrix}\right\rangle  
+\end{align}  
+$$  
+cioè vale  
+$$  
+C^{-1}AC=\land  
+$$  
+  
 ### Applicazioni lineari / Omomorfismi tra spazi vettoriali  
 Siano $V$ e $W$ spazi vettoriali su un campo $\mathbb{K}$. Un omomorfismo/applicazione lineare tra $V$ e $W$ è una funzione  
 $$  
@@ -1636,6 +1693,7 @@ $$
 &f(v_n)=a_{1n}w_1+a_{2n}w_2+\dots+a_{mn}w_m  
 \end{align}  
 $$  
+Risolvo il sistema per ogni $f(v_i)$ e ottengo gli scalari $a_{ij}$.  
 $$  
 A=\begin{pmatrix}  
 a_{11} & a_{12} & \cdots & a_{1n}\\  
@@ -1652,6 +1710,54 @@ $$
 f(v)=f\left(\sum_{i=1}^n b_iv_i\right)=\overset{\text{vettori}}{(w_1,\dots,w_m)}^TA\cdot\begin{pmatrix}b_1\\ b_2\\ \vdots\\ b_n\end{pmatrix}  
 $$  
 Se sai che $v$ ha coefficienti $b_1,\dots, b_n$ rispetto alla base $\mathbb{V}$, allora $f(v)$ ha coefficienti $^TA\cdot\begin{pmatrix}b_1\\ b_2\\ \vdots\\ b_n\end{pmatrix}$ rispetto alla base $\mathbb{W}$.  
+  
+**Procedura generica**  
+Siano  
+- $f: V \to W$ un’applicazione lineare  
+- $\mathcal B_V=\{v_1,\dots,v_n\}$ una base di $V$  
+- $\mathcal B_W=\{w_1,\dots,w_m\}$ una base di $W$  
+  
+La **matrice rappresentativa** di f rispetto alle basi $\mathcal B_V,\mathcal B_W$ è la matrice  
+  
+$$  
+[f]_{\mathcal B_V}^{\mathcal B_W}=(a_{ij})\in M_{m\times n}  
+$$  
+  
+Per ogni vettore della base del dominio $v_j$:  
+1. **Calcola l’immagine**$$  
+    f(v_j)\in W  
+    $$  
+2. **Scrivi** $f(v_j)$ **come combinazione lineare della base di** $W$:$$  
+    f(v_j)=a_{1j}w_1+a_{2j}w_2+\dots+a_{mj}w_m  
+    $$  
+3. Risolvi il sistema  
+  
+4. **Inserisci i coefficienti nella matrice**:  
+    la **colonna** j **-esima** della matrice è$$  
+    \begin{pmatrix}  
+    a_{1j}\  
+    a_{2j}\  
+    \vdots\  
+    a_{mj}  
+    \end{pmatrix}  
+    $$  
+  
+**Forma finale**  
+$$  
+[f]_{\mathcal B_V}^{\mathcal B_W}  
+\begin{pmatrix}  
+a_{11} & a_{12} & \dots & a_{1n}\  
+a_{21} & a_{22} & \dots & a_{2n}\  
+\vdots & \vdots &        & \vdots\  
+a_{m1} & a_{m2} & \dots & a_{mn}  
+\end{pmatrix}  
+$$  
+dove la **colonna** $j$ contiene le coordinate di $f(v_j)$ rispetto alla base $\mathcal B_W$.  
+  
+**Caso particolare: basi canoniche**  
+Se $V=\mathbb R^n, W=\mathbb R^m$ e si usano le basi canoniche, allora:  
+- $f(e_j)$ è direttamente la **colonna** j della matrice  
+- non serve cambiare base  
   
 #### **Esempio**  
 Sia  
@@ -1818,11 +1924,11 @@ A=\begin{pmatrix}2&3\\ 4&5\end{pmatrix}=
 $$  
   
 #### **Applicazione delle coordinate: cos’è**  
-Hai uno spazio vettoriale V di dimensione n e scegli una base  
+Hai uno spazio vettoriale $V$ di dimensione $n$ e scegli una base  
 $$  
 \mathcal B=\{v_1,\dots,v_n\}.  
 $$  
-Ogni vettore v\in V si scrive **in modo unico** come  
+Ogni vettore $v\in V$ si scrive **in modo unico** come  
 $$  
 v=b_1v_1+\cdots+b_nv_n.  
 $$  
@@ -1866,34 +1972,75 @@ $$
 $$  
 $_\mathcal{E}M_\mathbb{B}$ trasforma le $\mathbb{B}$ coordinate di un vettore nelle sue $\mathcal{E}$ coordinate.  
   
-*Esempio*  
+*Esempio 1*  
 $$  
-\mathbb{R}^2\quad\begin{align}  
-&\mathcal{E}=\{\begin{pmatrix}1\\0\end{pmatrix},\begin{pmatrix}1\\1\end{pmatrix}\}\\  
-&\mathbb{B}=\{\begin{pmatrix}2\\3\end{pmatrix},\begin{pmatrix}0\\1\end{pmatrix}\}  
-\end{align}  
-$$  
-Scriviamo $_\mathbb{B}M_\mathcal{E}$.  
-$$  
-_\mathbb{B}M_\mathcal{E}=\begin{pmatrix}|&|\\ [\begin{pmatrix}1\\0\end{pmatrix}]_\mathbb{B}&[\begin{pmatrix}0\\1\end{pmatrix}]_\mathbb{B}\\ |&|\end{pmatrix}=\begin{pmatrix}\frac{1}{2}\\ -\frac{3}{2}\end{pmatrix}  
+f:\mathbb{R}^2\to\mathbb{R}^2  
 $$  
 $$  
-\begin{pmatrix} 1\\0\end{pmatrix}=  
-\begin{pmatrix}2x+0y\\ 3x+1y\end{pmatrix}\implies\begin{cases}2x=1\\ 3x+y=0\end{cases}\implies x=\frac{1}{2},y=-\frac{3}{2}  
+f\begin{pmatrix}x\\ y\end{pmatrix}=\begin{pmatrix}x+2y\\ 2x+y\end{pmatrix}  
+$$  
+Scriviamo $_\mathcal{E}M_\mathcal{E}$.  
+  
+$$  
+_\mathcal{E}M_\mathcal{E}=\begin{pmatrix}|&|\\ [f\begin{pmatrix}1\\0\end{pmatrix}]_\mathcal{E}&[f\begin{pmatrix}0\\1\end{pmatrix}]_\mathcal{E}\\ |&|\end{pmatrix}=\begin{pmatrix}|&|\\f\begin{pmatrix}1\\0\end{pmatrix}&f\begin{pmatrix}0\\1\end{pmatrix}\\ |&|\end{pmatrix}=\begin{pmatrix}1&2\\ 2&1\end{pmatrix}  
 $$  
 $$  
-\implies\begin{pmatrix}1\\0\end{pmatrix}=\frac{1}{2}\begin{pmatrix}2\\3\end{pmatrix}-\frac{3}{2}\begin{pmatrix}0\\1\end{pmatrix}\implies [\begin{pmatrix}1\\0\end{pmatrix}]_\mathbb{B}=\begin{pmatrix}\frac{1}{2}\\ -\frac{3}{2}\end{pmatrix}  
+\mathcal{E}=\{\begin{pmatrix}1\\0\end{pmatrix},\begin{pmatrix}0\\1\end{pmatrix}\}  
 $$  
 $$  
-[\begin{pmatrix}0\\1\end{pmatrix}]_\mathbb{B}=?  
+f\begin{pmatrix}1\\0\end{pmatrix}=\begin{pmatrix}1\\2\end{pmatrix}\quad\implies\quad [f\begin{pmatrix}1\\0\end{pmatrix}]_\mathbb{B}=\begin{pmatrix}1\\2\end{pmatrix}  
 $$  
 $$  
-\begin{pmatrix}0\\1\end{pmatrix}=0\cdot\begin{pmatrix}2\\3\end{pmatrix}+1\cdot\begin{pmatrix}0\\1\end{pmatrix}\implies [\begin{pmatrix}0\\1\end{pmatrix}]_\mathbb{B}=\begin{pmatrix}0\\1\end{pmatrix}  
+f\begin{pmatrix}0\\1\end{pmatrix}=\begin{pmatrix}2\\1\end{pmatrix}\quad\implies\quad [f\begin{pmatrix}0\\1\end{pmatrix}]_\mathbb{B}=\begin{pmatrix}2\\1\end{pmatrix}  
+$$  
+  
+> Coordinate rispetto alla base canonica di un vettore sono il vettore stesso.  
+  
+*Esempio 2*  
+Fissiamo la base  
+$$  
+\mathcal{B}=\left\{  
+\begin{pmatrix}1 & 0 \\ 0 & 0\end{pmatrix},  
+\begin{pmatrix}0 & 1 \\ 0 & 0\end{pmatrix},  
+\begin{pmatrix}0 & 0 \\ 1 & 0\end{pmatrix},  
+\begin{pmatrix}0 & 0 \\ 0 & 1\end{pmatrix}  
+\right\}  
+$$  
+Fissiamo la base  
+$$  
+\mathcal{E}={1,x,x^2,x^3}  
+$$  
+La matrice di $f$ rispetto alle basi $\mathcal{B}$ ed $\mathcal{E}$ è  
+$$  
+_\mathcal{E}M_\mathcal{B}(f)=\begin{pmatrix}|&|&|&|\\  
+f[\begin{pmatrix}1&0\\0&0\end{pmatrix}]_\mathcal{E}&[f\begin{pmatrix}0&1\\0&0\end{pmatrix}]_\mathcal{E}&[f\begin{pmatrix}0&0\\1&0\end{pmatrix}]_\mathcal{E}&f[\begin{pmatrix}0&0\\0&1\end{pmatrix}]_\mathcal{E}\\ |&|&|&|\end{pmatrix}=  
+$$  
+dove:  
+$$  
+[f\begin{pmatrix}1&0\\0&0\end{pmatrix}]_\mathcal{E}=f(1)=1  
 $$  
 $$  
-_\mathbb{B}M_\mathcal{E}=\begin{pmatrix}\frac{1}{2}&0\\ -\frac{3}{2}&1\end{pmatrix}  
+[f\begin{pmatrix}0&1\\0&0\end{pmatrix}]_\mathcal{E}=f(x)=x  
 $$  
-è la matrice del cambiamento di coordinate.  
+$$  
+[f\begin{pmatrix}0&0\\1&0\end{pmatrix}]_\mathcal{E}=f(x^2)=x^2  
+$$  
+$$  
+[f\begin{pmatrix}0&0\\0&1\end{pmatrix}]_\mathcal{E}=f(x^3)=x^3  
+$$  
+$$  
+[1]_\mathcal{E}=\begin{pmatrix} 1\\0\\0\\0 \end{pmatrix}\quad [x]_\mathcal{E}=\begin{pmatrix} 0\\1\\0\\0 \end{pmatrix}\quad [x^2]_\mathcal{E}=\begin{pmatrix} 0\\0\\1\\0 \end{pmatrix}\quad [x^3]_\mathcal{E}=\begin{pmatrix} 0\\0\\0\\1 \end{pmatrix}  
+$$  
+  
+Quindi  
+$$  
+_\mathcal{E}M_\mathcal{B}(f)=\begin{pmatrix}  
+1&0&0&0\\  
+0&1&0&0\\  
+0&0&1&0\\  
+0&0&0&1  
+\end{pmatrix}  
+$$  
   
 ### Endomorfismi  
 Se $W=V$, $f:V\to V$ è detto endomorfismo su $V$ (applicazione da $V$ in se stesso).  
@@ -2076,11 +2223,11 @@ per $k=0$ gli autovalori coincidono:
 $$  
 \{1,\ 1\}  
 $$  
-vuol dire che la moltiplicazione algebrica è  
+vuol dire che la molteplicità algebrica è  
 $$  
 2\to m_A(1)=2  
 $$  
-per $k\neq0$, ho due autovalori distinti $1+2k$ e $1-2k$, ognuno di moltiplicazione algebrica 1:  
+per $k\neq0$, ho due autovalori distinti $1+2k$ e $1-2k$, ognuno di molteplicità algebrica 1:  
 $$  
 \begin{align}  
 &\to m_a(1+2k)=1\\  
@@ -2089,9 +2236,9 @@ $$
 $$  
 ci sono due casi da studiare: $k=0$ e $k\neq0$.  
 In ogni caso $x_A(t)$ non ha radici complesse.  
-Oppure che la somma delle moltiplicazioni algebriche degli autovalori è 2.  
+Oppure che la somma delle molteplicità algebriche degli autovalori è 2.  
 Per cui la prima condizione del criterio è vera.  
-Ora vediamo le moltiplicazioni geometriche nei due casi.  
+Ora vediamo le molteplicità geometriche nei due casi.  
   
 *Caso 1* $k\neq0$  
 $$  
@@ -2100,7 +2247,7 @@ $$
 &m_a(1-2k)=1\implies m_g(1-2k)=1  
 \end{align}  
 $$  
-le moltiplicazioni coincidono.  
+le molteplicità coincidono.  
 $$  
 \implies A\text{ diagonalizzabile per }k\neq0  
 $$  
@@ -2144,4 +2291,72 @@ $$
   
 **Definizione**  
 Diciamo che un endomorfismo $f:V\to V$ è *diagonalizzabile* se esiste una base $\mathbb{B}$ di $V$ tale che la matrice rappresentativa $_\mathbb{B}M_\mathbb{B}(f)$ è diagonale.  
-In questo caso, la matrice rappresentativa di $f$ rispetto a qualsiasi altra base è simile a una matrice diagonale.
+In questo caso, la matrice rappresentativa di $f$ rispetto a qualsiasi altra base è simile a una matrice diagonale.  
+  
+### Rango  
+Il rango di una matrice $A$ è anche uguale al massimo ordine di un minore non nullo.  
+Un minore di ordine $k$ è il determinante di una sottomatrice formata da $k$ righe e $k$ colonne di $A$.  
+Quindi il rango della matrice è il numero di righe e colonne della sottomatrice più grande possibile che ha determinante non Dario.  
+$$  
+\begin{pmatrix}  
+1 & 0 & 0\\  
+0 & 1 & 1\\  
+0 & 2 & 2  
+\end{pmatrix}  
+\qquad  
+\det\begin{pmatrix}  
+1 & 0\\  
+0 & 1  
+\end{pmatrix}=1\neq0  
+$$  
+ordine minore $2$.  
+$$  
+\det\begin{pmatrix}  
+1 & 0 & 0\\  
+0 & 1 & 1\\  
+0 & 2 & 2  
+\end{pmatrix}=0  
+$$  
+$3\times3$ minore nullo.  
+  
+$\implies$ ordine minore non nullo è $2$.  
+  
+*Esempio*  
+$$  
+A=\begin{pmatrix}  
+0 & k+1\\  
+-k+2 & 1\\  
+-k+3 & k-1  
+\end{pmatrix}  
+$$  
+$$  
+|1|\neq0\implies \operatorname{rank}(A)\geq1  
+$$  
+$$  
+\det\begin{pmatrix}  
+0 & k+1\\  
+-k+2 & 1  
+\end{pmatrix}=k^2-2k-1\neq0  
+$$  
+allora $\operatorname{rank}(A)=2$ (ossia quando $k\neq-1,2$).  
+  
+Se $k=-1$  
+$$  
+A=\begin{pmatrix}  
+0 & 0\\  
+3 & 1\\  
+4 & -2  
+\end{pmatrix}\qquad  
+\operatorname{rank}(A)=2  
+$$  
+  
+Se $k=2$  
+$$  
+A=\begin{pmatrix}  
+0 & 3\\  
+0 & 1\\  
+1 & 1  
+\end{pmatrix}\qquad  
+\operatorname{rank}(A)=2  
+$$  
+  
