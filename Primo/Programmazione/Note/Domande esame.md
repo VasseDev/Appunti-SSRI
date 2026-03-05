@@ -628,8 +628,8 @@ Sono i diagrammi che mostrano come gli oggetti interagiscono tra loro lungo una 
 - Associazione.  
   
 ### Che tipo di associazioni ci sono?  
-- Associazione tramite attributi delle classi;  
-- Associazione tramite classi specifiche.  
+- Associazione tramite attributi delle classi (aggregazione);  
+- Associazione tramite classi specifiche (composizione).  
   
 ### Cos'è un pattern?  
 È una soluzione progettuale atta a risolvere un problema.  
